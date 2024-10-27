@@ -5,6 +5,8 @@ import vercelStatic from "@astrojs/vercel/static";
 
 import sitemap from "@astrojs/sitemap";
 
+import tailwind from "@astrojs/tailwind";
+
 // https://astro.build/config
 export default defineConfig({
   // Must be 'static' or 'hybrid'
@@ -17,5 +19,5 @@ export default defineConfig({
     },
   }),
 
-  integrations: [sitemap()],
+  integrations: [sitemap(), tailwind()],
 });
