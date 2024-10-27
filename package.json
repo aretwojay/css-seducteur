@@ -1,11 +1,11 @@
 {
-  "name": "",
+  "name": "css-seducteur",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build --force",
     "preview": "astro preview",
     "astro": "astro"
   },
