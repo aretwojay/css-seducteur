@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="CssSéducteur is a collection of CSS tutorials and examples to help you learn and master CSS"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v4.16.6"><meta name="robots" content="index, follow"><link rel="stylesheet" href="/src/css/custom.css"><title>First steps - CSSSéducteur</title><style>@tailwind base layer(base);.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.m-\[0px\]{margin:0}.mx-auto{margin-left:auto;margin-right:auto}.mb-space-4{margin-bottom:var(--space-4)}.mb-space-5{margin-bottom:var(--space-5)}.ml-space-4{margin-left:var(--space-4)}.mt-space-7{margin-top:var(--space-7)}.flex{display:flex}.max-w-\[500px\]{max-width:500px}.max-w-\[800px\]{max-width:800px}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.flex-col{flex-direction:column}.whitespace-pre{white-space:pre}.p-space-2{padding:var(--space-2)}.p-space-3{padding:var(--space-3)}.p-space-4{padding:var(--space-4)}.text-center{text-align:center}.text-1{font-size:var(--text-1)}.text-3{font-size:var(--text-3)}.text-4{font-size:var(--text-4)}.text-\[36px\]{font-size:36px}.text-\[60px\]{font-size:60px}.font-extralight{font-weight:200}.font-semibold{font-weight:600}.leading-none{line-height:1}.text-color-contrast{color:var(--color-contrast)}.no-underline{text-decoration-line:none}.shadow-md{--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}*{font-family:Inter,sans-serif}@media (prefers-color-scheme: dark){.dark\:bg-color-1{background-color:var(--color-1)}}.theme-light{--base-1: #edeade;--base-2: #e8e5d9;--base-3: #dedacf;--base-4: #d5d1c6;--base-5: #ccc9bd;--base-6: #c1c0bc;--base-7: #b7b4ab;--base-8: #a4a196;--base-9: #77746b;--base-10: #6d6a5f;--base-11: #504e47;--base-12: #21201e;--base-a1: #dfaf0d10;--base-a2: #a6810615;--base-a3: #6f4f0520;--base-a4: #573e062a;--base-a5: #44350133;--base-a6: #120d0134;--base-a7: #291e0347;--base-a8: #241b015d;--base-a9: #1610028c;--base-a10: #17120199;--base-a11: #0d0a01b3;--base-a12: #040200df;--base-contrast: #fff;--base-background: #eeeeec;--brand-1: #ece9e8;--brand-2: #efe1dc;--brand-3: #f5d3c8;--brand-4: #ffbba3;--brand-5: #ffa88a;--brand-6: #fb9b7c;--brand-7: #e9896a;--brand-8: #dd6f4a;--brand-9: #f50;--brand-10: #f14700;--brand-11: #bb2500;--brand-12: #5b2a1a;--brand-a1: #991a4306;--brand-a2: #ff11000f;--brand-a3: #ffad9569;--brand-a4: #ffbba3;--brand-a5: #ffa88a;--brand-a6: #ff825ac3;--brand-a7: #e538008d;--brand-a8: #d53602b0;--brand-a9: #ff5500;--brand-a10: #ff00002d;--brand-a11: #bb2500;--brand-a12: #491200e3;--brand-contrast: #fff;--brand-background: #eeeeec;--color-scheme: light}:root,.theme-dark{--base-1: #111110;--base-2: #191918;--base-3: #232221;--base-4: #2a2928;--base-5: #32312e;--base-6: #3b3a37;--base-7: #494844;--base-8: #62605a;--base-9: #6f6d66;--base-10: #7d7b74;--base-11: #b5b3ad;--base-12: #eeeeec;--base-a1: #00000000;--base-a2: #f4f4f309;--base-a3: #f7eae914;--base-a4: #fef4f31b;--base-a5: #fbf4e524;--base-a6: #fffaed2d;--base-a7: #fffbed3c;--base-a8: #fff9e957;--base-a9: #fffae965;--base-a10: #fffbec74;--base-a11: #fffcf4b0;--base-a12: #fffffded;--base-contrast: #fff;--base-background: #111110;--brand-1: #160f0d;--brand-2: #201411;--brand-3: #38190f;--brand-4: #4f1602;--brand-5: #5e1e07;--brand-6: #6f2c15;--brand-7: #873c23;--brand-8: #ae4d2c;--brand-9: #f50;--brand-10: #f14700;--brand-11: #ff9973;--brand-12: #ffd8c9;--brand-a1: #e6000006;--brand-a2: #f23e1f11;--brand-a3: #fe420a2a;--brand-a4: #fd240043;--brand-a5: #fe390053;--brand-a6: #ff561d65;--brand-a7: #fd67377f;--brand-a8: #fe6b3ba9;--brand-a9: #ff5500;--brand-a10: #ff4a00f0;--brand-a11: #ff9973;--brand-a12: #ffd8c9;--brand-contrast: #fff;--brand-background: #111110;--color-scheme: dark}
+:root{--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}html{background:#13151a}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
+</style><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		var script = document.createElement('script');
+		script.defer = true;
+		script.src = '/_vercel/insights/script.js';
+		var head = document.querySelector('head');
+		head.appendChild(script);
+	</script></head> <body class="m-[0px]">  <header class="dark:bg-color-1 text-white shadow-md"> <div class="container p-space-2"> <a class="no-underline text-color-contrast" href="/"></a><h1 class="font-extralight text-4 ml-space-4"><a class="no-underline text-color-contrast" href="/">CssSéducteur
+        🚀
+</a> <!-- <nav>
+        <ul class="flex space-x-4">
+          <li><a href="/" class="hover:text-blue-300">Home</a></li>
+          <li><a href="/tutorials" class="hover:text-blue-300">Tutorials</a></li>
+          <li><a href="/examples" class="hover:text-blue-300">Examples</a></li>
+          <li><a href="/about" class="hover:text-blue-300">About</a></li>
+        </ul>
+      </nav> --> </h1></div> </header> <main class="p-space-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] leading-none mt-space-7 mb-space-4">First steps - CSSSéducteur</h1> <p class="font-extralight text-3 mt-space-7 mb-space-5">An introduction to the basics of CSS to control the appearance of your web pages.</p> <div class="prose whitespace-pre"> 
+# First Steps with CSS
+
+Welcome to your first steps in learning CSS (Cascading Style Sheets)! CSS is a powerful tool for controlling the look and feel of your web pages. This guide will help you get started with the basics.
+
+## What is CSS?
+
+CSS is a stylesheet language used to describe the presentation of a document written in HTML or XML. It allows you to separate content from design, making your web pages more flexible and easier to maintain.
+
+## Adding CSS to Your HTML
+
+There are three ways to add CSS to your HTML documents:
+
+1. **Inline CSS**: Using the `style` attribute within HTML tags.
+
+   ```html
+   &lt;p style=&quot;color: blue;&quot;&gt;This is a blue paragraph.&lt;/p&gt;
+   ```
+
+2. **Internal CSS**: Using the `&lt;style&gt;` tag within the `&lt;head&gt;` section of your HTML document.
+
+   ```html
+   &lt;head&gt;
+     &lt;style&gt;
+       p {
+         color: blue;
+       }
+     &lt;/style&gt;
+   &lt;/head&gt;
+   ```
+
+3. **External CSS**: Linking to an external CSS file using the `&lt;link&gt;` tag.
+   ```html
+   &lt;head&gt;
+     &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot; /&gt;
+   &lt;/head&gt;
+   ```
+
+## Basic CSS Syntax
+
+CSS rules are made up of selectors and declarations. A selector targets the HTML element you want to style, and declarations define the styles to be applied.
+
+```css
+selector {
+  property: value;
+}
+```
+
+Example:
+
+```css
+p {
+  color: blue;
+  font-size: 16px;
+}
+```
+
+## Common CSS Properties
+
+- **Color**: Sets the color of text.
+
+  ```css
+  color: red;
+  ```
+
+- **Font-size**: Sets the size of the font.
+
+  ```css
+  font-size: 20px;
+  ```
+
+- **Margin**: Sets the space outside an element.
+
+  ```css
+  margin: 10px;
+  ```
+
+- **Padding**: Sets the space inside an element.
+
+  ```css
+  padding: 10px;
+  ```
+
+- **Background-color**: Sets the background color of an element.
+  ```css
+  background-color: yellow;
+  ```
+
+## Conclusion
+
+These are just the basics to get you started with CSS. As you continue to learn, you&#39;ll discover many more properties and techniques to create beautiful and responsive web designs. Happy coding!
+ </div> </article> </main> <footer class="text-color-contrast p-space-3 mt-space-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2024 CssSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>

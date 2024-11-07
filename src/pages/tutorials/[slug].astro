@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import Card from 'fulldev-ui/components/Card.astro';
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const data = await getCollection("tutorials");
+
+  return data.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+const {post} = Astro.props;
+---
+
+<Layout title={post.data.title}>
+    <Header />
+    <main class="p-space-4 max-w-[800px] mx-auto text-color-contrast">
+        <article>
+            <h1 class="text-[60px] leading-none mt-space-7 mb-space-4">{post.data.title}</h1>
+            <p class="font-extralight text-3 mt-space-7 mb-space-5">{post.data.description}</p>
+            <div class="prose whitespace-pre-line">
+                {post.body}
+            </div>
+        </article>
+        <Card/>
+    </main>
+    <Footer />
+</Layout>

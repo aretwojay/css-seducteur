@@ -1,37 +1,48 @@
 ---
+import { getCollection } from 'astro:content';
+import Card from 'fulldev-ui/components/Card.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
+
+
 export const prerender = true;
+
+const allTutorialPosts = await getCollection('tutorials');
 
 ---
 
 <Layout title="CssSéducteur - CSS tutorials">
 	<Header />
-	<main class="min-h-screen">
-		<h1 class="text-3xl sm:text-6xl my-6">CssSéducteur</h1>
-		<h2>
-			Welcome to CssSéducteur, a collection of CSS tutorials and examples to help you learn and master CSS.
-		</h2>
-		<p class="my-3">
-			Whether you're a beginner or an experienced developer, you'll find something here to help you improve your CSS skills.
-		</p>
+	<main class="text-color-contrast p-space-4 max-w-[800px] mx-auto">
+		<section class="text-center">
+			<h1 class="text-[60px] leading-none mt-space-7 mb-space-4">The Next CSS Blog for developpers</h1>
+			<span class="text-4">Always updated and writted by CssSéducteur.</span>
+			<p class="font-extralight text-3 mt-space-7 mb-space-5">
+				CssSéducteur is a collection of CSS tutorials and examples to help you learn and master CSS. 
+				Whether you're a beginner or an experienced developer, you'll find something here to help you improve your CSS skills.
+			</p>
+		</section>
 
-		<p>We are building the website, stay tuned !</p>
+
+		<section class="flex flex-col">
+			<h1 class="font-semibold text-[36px] text-center">Latest blogs</h1>
+			<div class="max-w-[500px] mx-auto">
+				{allTutorialPosts.map((post) => (
+					<Card
+						frame='panel'
+						heading={post.data.title}
+						level={2}
+						text={post.data.description}
+						href={`/tutorials/${post.slug}`}
+					/>
+				
+				))}
+			</div>
+
+		</section>
 
 
 	</main>
 	<Footer/>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-</style>
