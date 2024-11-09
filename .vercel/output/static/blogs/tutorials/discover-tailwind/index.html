@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="CssSéducteur is a collection of CSS tutorials and examples to help you learn and master CSS"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v4.16.6"><meta name="robots" content="index, follow"><link rel="stylesheet" href="/src/css/custom.css"><title>Discover Tailwind CSS</title><link rel="stylesheet" href="/_astro/_page_.Dri7UU3c.css">
+<link rel="stylesheet" href="/_astro/_page_.BPvvg2Xz.css">
+<style>:root{--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}html{background:#13151a}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
+</style><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		var script = document.createElement('script');
+		script.defer = true;
+		script.src = '/_vercel/insights/script.js';
+		var head = document.querySelector('head');
+		head.appendChild(script);
+	</script></head> <body class="m-[0px]">  <header class="dark:bg-color-1 text-white shadow-md"> <div class="flex justify-between container p-space-2"> <a class="flex items-center gap-space-2 no-underline text-color-contrast" href="/"> <h1 class="font-extralight text-4 ml-space-4">CssSéducteur</h1>
+🚀
+</a> <nav> <ul class="flex gap-space-4 space-x-4"> <li><a href="/blogs/tutorials" class="no-underline text-color-11 transition-all hover:text-color-contrast">Tutorials</a></li> <li><a href="/blogs/css" class="no-underline text-color-11 transition-all hover:text-color-contrast">CSS</a></li> </ul> </nav> </div> </header> <main class="p-space-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-space-7 mb-space-4">Discover Tailwind CSS</h1> <div class="flex gap-space-2"> <a href="/blogs/css" class="hover:text-color-contrast cursor-pointer badge root radius-full"> CSS   </a> <a href="/blogs/tailwind" class="hover:text-color-contrast cursor-pointer badge root radius-full"> Tailwind   </a> <a href="/blogs/framework" class="hover:text-color-contrast cursor-pointer badge root radius-full"> Framework   </a>  </div> <p class="text-2 font-light">Expected time to read : 2 min read</p> <p class="font-extralight text-3 mt-space-7 mb-space-5">An introduction to Tailwind CSS, a utility-first CSS framework for building modern web designs.</p> <div class="prose whitespace-pre-line"> <h1 id="discover-tailwind-css">Discover Tailwind CSS</h1>
+<p>Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without writing CSS. It offers a highly customizable, responsive, and modern approach to styling web applications.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>Utility-First</strong>: Tailwind provides a wide range of utility classes for common CSS properties like margin, padding, color, and more.</li>
+<li><strong>Responsive Design</strong>: Easily create responsive designs with Tailwind’s built-in responsive utilities.</li>
+<li><strong>Customization</strong>: Tailwind is highly customizable, allowing you to configure your design system and extend the framework with your own utilities, components, and plugins.</li>
+<li><strong>Performance</strong>: Tailwind’s approach to styling can lead to smaller CSS bundles and improved performance.</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>To get started with Tailwind CSS, you can install it via npm:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> tailwindcss</span></span>
+<span class="line"></span></code></pre>
+<p>Then, create a <code>tailwind.config.js</code> file to customize your Tailwind setup:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> tailwindcss</span><span style="color:#9ECBFF"> init</span></span>
+<span class="line"></span></code></pre>
+<p>Add Tailwind’s directives to your CSS file:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">@tailwind</span><span style="color:#E1E4E8"> base;</span></span>
+<span class="line"><span style="color:#F97583">@tailwind</span><span style="color:#E1E4E8"> components;</span></span>
+<span class="line"><span style="color:#F97583">@tailwind</span><span style="color:#E1E4E8"> utilities;</span></span>
+<span class="line"></span></code></pre>
+<p>Finally, build your CSS:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> tailwindcss</span><span style="color:#9ECBFF"> build</span><span style="color:#9ECBFF"> src/styles.css</span><span style="color:#79B8FF"> -o</span><span style="color:#9ECBFF"> dist/styles.css</span></span>
+<span class="line"></span></code></pre>
+<h2 id="example">Example</h2>
+<p>Here’s a simple example of a responsive card component using Tailwind CSS:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"max-w-sm rounded overflow-hidden shadow-lg"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">img</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"w-full"</span><span style="color:#B392F0"> src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"img/card-top.jpg"</span><span style="color:#B392F0"> alt</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Sunset in the mountains"</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"px-6 py-4"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"font-bold text-xl mb-2"</span><span style="color:#E1E4E8">>The Coldest Sunset&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">p</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"text-gray-700 text-base"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus</span></span>
+<span class="line"><span style="color:#E1E4E8">      quia, nulla! Maiores et perferendis eaque, exercitationem praesentium</span></span>
+<span class="line"><span style="color:#E1E4E8">      nihil.</span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"px-6 pt-4 pb-2"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#B392F0">      class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"</span></span>
+<span class="line"><span style="color:#E1E4E8">      >#photography&#x3C;/</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#E1E4E8">    ></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#B392F0">      class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"</span></span>
+<span class="line"><span style="color:#E1E4E8">      >#travel&#x3C;/</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#E1E4E8">    ></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#B392F0">      class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"</span></span>
+<span class="line"><span style="color:#E1E4E8">      >#winter&#x3C;/</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#E1E4E8">    ></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span></code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>Tailwind CSS is a powerful tool for building modern, responsive web designs quickly and efficiently. Its utility-first approach and extensive customization options make it a popular choice among developers.</p>
+<p>For more information, visit the <a href="https://tailwindcss.com/docs">official Tailwind CSS documentation</a>.</p> </div> </article>   </main> <footer class="text-color-contrast p-space-3 mt-space-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2024 CssSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>

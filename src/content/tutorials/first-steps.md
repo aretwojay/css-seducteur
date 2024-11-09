@@ -1,6 +1,8 @@
 ---
 title: First steps - CSSSéducteur
 description: An introduction to the basics of CSS to control the appearance of your web pages.
+tags: ["CSS", "Tutorials", "Basics"]
+publishDate: 2024-08-21
 ---
 
 # First Steps with CSS

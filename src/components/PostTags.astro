@@ -1,0 +1,14 @@
+---
+import Badge from "fulldev-ui/components/Badge.astro";
+
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+{
+    tags.map((tag) => (
+      <Badge class="hover:text-color-contrast cursor-pointer" href={`/blogs/${tag.toLowerCase()}`}>{tag}</Badge>
+    ))
+  }

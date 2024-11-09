@@ -11,7 +11,6 @@ const tutorials = defineCollection({
       alt: z.string(),
     }),
     author: z.string().default("Anonymous"),
-    language: z.enum(["en", "es"]),
     tags: z.array(z.string()),
     // An optional frontmatter property. Very common!
     footnote: z.string().optional(),

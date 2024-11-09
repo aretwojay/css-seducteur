@@ -9,12 +9,16 @@ import tailwind from "@astrojs/tailwind";
 
 import fulldev from "fulldev-ui/integration";
 
+import { remarkReadingTime } from "./remark-reading-time.mjs";
+
 // https://astro.build/config
 export default defineConfig({
   // Must be 'static' or 'hybrid'
   site: "https://css-seducteur-css.site",
   output: "static",
-
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
   adapter: vercelStatic({
     webAnalytics: {
       enabled: true,

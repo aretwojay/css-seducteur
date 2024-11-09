@@ -1,14 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
-import Card from 'fulldev-ui/components/Card.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import PostCards from '../components/PostCards.astro';
 import Layout from '../layouts/Layout.astro';
 
 
 export const prerender = true;
 
-const allTutorialPosts = await getCollection('tutorials');
+const allTutorialPosts = (await getCollection('tutorials'))?.sort((a, b) => new Date(b.data.publishDate as string) > new Date(a.data.publishDate as string) ? 1 : -1);
+const basicsPosts = allTutorialPosts.filter((post) => (post.data.tags as string[]).map((tag) => tag.toLowerCase()).includes('basics'));
 
 ---
 
@@ -26,23 +27,22 @@ const allTutorialPosts = await getCollection('tutorials');
 
 
 		<section class="flex flex-col">
-			<h1 class="font-semibold text-[36px] text-center">Latest blogs</h1>
-			<div class="max-w-[500px] mx-auto">
-				{allTutorialPosts.map((post) => (
-					<Card
-						frame='panel'
-						heading={post.data.title}
-						level={2}
-						text={post.data.description}
-						href={`/tutorials/${post.slug}`}
-					/>
-				
-				))}
+			<h1 class="font-semibold text-[36px] text-center">Getting started</h1>
+			<div class="max-w-[800px] mx-auto">
+				<PostCards
+					posts={basicsPosts}	
+				/>
 			</div>
-
 		</section>
 
-
+		<section class="flex flex-col">
+			<h1 class="font-semibold text-[36px] text-center">Latest blogs</h1>
+			<div class="max-w-[800px] mx-auto">
+				<PostCards
+					posts={allTutorialPosts}	
+				/>
+			</div>
+		</section>
 	</main>
 	<Footer/>
 </Layout>
