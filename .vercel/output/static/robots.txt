@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://css-seducteur.vercel.app/sitemap-index.xml
+Sitemap: https://css-seducteur-css.site/sitemap-index.xml

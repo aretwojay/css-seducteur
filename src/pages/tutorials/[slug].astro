@@ -19,6 +19,8 @@ export async function getStaticPaths() {
 }
 
 const {post} = Astro.props;
+const { Content } = await post.render();
+
 ---
 
 <Layout title={post.data.title}>
@@ -28,7 +30,7 @@ const {post} = Astro.props;
             <h1 class="text-[60px] leading-none mt-space-7 mb-space-4">{post.data.title}</h1>
             <p class="font-extralight text-3 mt-space-7 mb-space-5">{post.data.description}</p>
             <div class="prose whitespace-pre-line">
-                {post.body}
+                <Content />
             </div>
         </article>
         <Card/>
