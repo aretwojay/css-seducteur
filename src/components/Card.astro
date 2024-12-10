@@ -10,7 +10,6 @@ interface Props {
 }
 
 const { title, description, href = "#", info, tags } = Astro.props;
-console.log(tags);
 ---
 <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href={href}>
     <div class="p-4 md:p-5 h-full">
