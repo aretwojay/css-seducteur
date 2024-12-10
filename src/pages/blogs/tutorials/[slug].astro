@@ -1,9 +1,9 @@
 ---
-import { getCollection } from "astro:content";
-import Card from 'fulldev-ui/components/Card.astro';
+import { getCollection, render } from 'astro:content';
 import Footer from "../../../components/Footer.astro";
 import Header from "../../../components/Header.astro";
 import PostTags from "../../../components/PostTags.astro";
+import Prose from '../../../components/Prose.astro';
 import Layout from "../../../layouts/Layout.astro";
 
 export const prerender = true;
@@ -13,32 +13,31 @@ export async function getStaticPaths() {
 
   return data.map((post) => {
     return {
-      params: { slug: post.slug },
+      params: { slug: post.id },
       props: { post },
     };
   });
 }
 
 const {post} = Astro.props;
-const { Content, remarkPluginFrontmatter } = await post.render();
+const { Content, remarkPluginFrontmatter } = await render(post);
 
 ---
 
 <Layout title={post.data.title}>
     <Header />
-    <main class="p-space-4 max-w-[800px] mx-auto text-color-contrast">
+    <main class="text-white p-4 max-w-[800px] mx-auto text-color-contrast">
         <article>
-            <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-space-7 mb-space-4">{post.data.title}</h1>
-            <div class="flex gap-space-2">
+            <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">{post.data.title}</h1>
+            <div class="flex gap-2 mb-6">
               <PostTags tags={post.data.tags} />
             </div>
-            <p class="text-2 font-light">Expected time to read : {remarkPluginFrontmatter.minutesRead}</p>
-            <p class="font-extralight text-3 mt-space-7 mb-space-5">{post.data.description}</p>
-            <div class="prose whitespace-pre-line">
-                <Content />
-            </div>
+            <p class="text-sm font-light">Expected time to read : {remarkPluginFrontmatter.minutesRead}</p>
+            <p class="font-extralight mt-2 mb-5">{post.data.description}</p>
+            <Prose>
+              <Content />
+            </Prose>
         </article>
-        <Card/>
     </main>
     <Footer />
 </Layout>

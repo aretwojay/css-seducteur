@@ -4,31 +4,31 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import PostCards from '../components/PostCards.astro';
 import Layout from '../layouts/Layout.astro';
-
+import { sortByPublishDate } from "../lib/utils";
 
 export const prerender = true;
 
-const allTutorialPosts = (await getCollection('tutorials'))?.sort((a, b) => new Date(b.data.publishDate as string) > new Date(a.data.publishDate as string) ? 1 : -1);
+const tutorialPosts = await getCollection('tutorials');
+const allTutorialPosts = sortByPublishDate(tutorialPosts, "desc");
 const basicsPosts = allTutorialPosts.filter((post) => (post.data.tags as string[]).map((tag) => tag.toLowerCase()).includes('basics'));
 
 ---
 
 <Layout title="CssSéducteur - CSS tutorials">
 	<Header />
-	<main class="text-color-contrast p-space-4 max-w-[800px] mx-auto">
+	<main class="text-white p-4 max-w-[800px] mx-auto">
 		<section class="text-center">
-			<h1 class="text-[60px] leading-none mt-space-7 mb-space-4">The Next CSS Blog for developpers</h1>
+			<h1 class="text-[60px] leading-none mt-7 mb-4">The Next CSS Blog for developpers</h1>
 			<span class="text-4">Always updated and writted by CssSéducteur.</span>
-			<p class="font-extralight text-3 mt-space-7 mb-space-5">
+			<p class="font-extralight text-3 mt-7 mb-5">
 				CssSéducteur is a collection of CSS tutorials and examples to help you learn and master CSS. 
 				Whether you're a beginner or an experienced developer, you'll find something here to help you improve your CSS skills.
 			</p>
 		</section>
 
 
-		<section class="flex flex-col">
-			<h1 class="font-semibold text-[36px] text-center">Getting started</h1>
-			<div class="max-w-[800px] mx-auto">
+		<section class="flex flex-col my-6">
+			<h1 class="font-semibold text-[36px] text-center mb-4">Getting started</h1>
 				<PostCards
 					posts={basicsPosts}	
 				/>
@@ -36,12 +36,10 @@ const basicsPosts = allTutorialPosts.filter((post) => (post.data.tags as string[
 		</section>
 
 		<section class="flex flex-col">
-			<h1 class="font-semibold text-[36px] text-center">Latest blogs</h1>
-			<div class="max-w-[800px] mx-auto">
-				<PostCards
-					posts={allTutorialPosts}	
-				/>
-			</div>
+			<h1 class="font-semibold text-[36px] text-center mb-4">Latest blogs</h1>
+			<PostCards
+				posts={allTutorialPosts}	
+			/>
 		</section>
 	</main>
 	<Footer/>

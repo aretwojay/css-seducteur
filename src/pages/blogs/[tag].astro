@@ -4,12 +4,14 @@ import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import PostCards from "../../components/PostCards.astro";
 import Layout from "../../layouts/Layout.astro";
+import { sortByPublishDate } from "../../lib/utils";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-    const data = (await getCollection('tutorials'))?.sort((a, b) => new Date(b.data.publishDate as string) > new Date(a.data.publishDate as string) ? 1 : -1);
-    const allTags = data.map((post) => (post.data.tags as string[]).map((tag) => tag.toLowerCase())).flat();
+  const tutorials = await getCollection("tutorials");
+  const data = sortByPublishDate(tutorials);
+  const allTags = data.map((post) => (post.data.tags as string[]).map((tag) => tag.toLowerCase())).flat();
 
   return allTags.map((tag) => {
     return {
@@ -26,10 +28,10 @@ const {posts} = Astro.props;
 
 <Layout title={tag}>
     <Header />
-    <main class="p-space-4 max-w-[800px] mx-auto text-color-contrast">
+    <main class="text-white p-4 max-w-[800px] mx-auto">
       <section class="flex flex-col">
         <h1 class="text-[36px] text-center">Blogs about <strong class="capitalize">{tag}</strong></h1>
-        <div class="max-w-[800px] mx-auto">
+        <div class="max-w-[800px] mx-auto mt-6">
           <PostCards 
             posts={posts}
           />

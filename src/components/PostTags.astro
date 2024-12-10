@@ -1,5 +1,5 @@
 ---
-import Badge from "fulldev-ui/components/Badge.astro";
+import Badge from './Badge.astro';
 
 interface Props {
   tags: string[];
@@ -9,6 +9,8 @@ const { tags } = Astro.props;
 ---
 {
     tags.map((tag) => (
-      <Badge class="hover:text-color-contrast cursor-pointer" href={`/blogs/${tag.toLowerCase()}`}>{tag}</Badge>
+      <a href={`/blogs/${tag.toLowerCase()}`}>
+        <Badge text={tag.toString()}/>
+      </a>
     ))
   }

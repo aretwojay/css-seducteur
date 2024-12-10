@@ -1,13 +1,9 @@
 // @ts-check
+import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel";
 import { defineConfig } from "astro/config";
 
-import vercelStatic from "@astrojs/vercel/static";
-
-import sitemap from "@astrojs/sitemap";
-
 import tailwind from "@astrojs/tailwind";
-
-import fulldev from "fulldev-ui/integration";
 
 import { remarkReadingTime } from "./remark-reading-time.mjs";
 
@@ -19,7 +15,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
-  adapter: vercelStatic({
+  adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
@@ -29,24 +25,7 @@ export default defineConfig({
     sitemap(),
     tailwind({
       // Disable injecting styles, import manually instead
-      applyBaseStyles: false,
-    }),
-    fulldev({
-      injectRoutes: true,
-      css: "/src/css/custom.css",
-      colors: {
-        theme: "dark",
-        dark: {
-          background: "#111110",
-          base: "#6F6D66",
-          brand: "#F50",
-        },
-        light: {
-          background: "#EEEEEC",
-          base: "#6F6D66",
-          brand: "#F50",
-        },
-      },
+      applyBaseStyles: true,
     }),
   ],
 });
