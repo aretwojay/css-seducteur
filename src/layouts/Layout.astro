@@ -3,15 +3,16 @@ import Head from '../components/Head.astro';
 
 interface Props {
 	title: string;
+	robots?: string;
 }
-
+const { title, robots } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<Head title="CSSéducteur"/>
+		<Head title={title} robots={robots}/>
 	</head>
 	<body class="m-[0px] dark:text-white">
 		<slot />
