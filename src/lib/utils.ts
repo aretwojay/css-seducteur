@@ -1,7 +1,7 @@
-import type { CollectionEntry, CollectionKey } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 export function sortByPublishDate(
-  tutorials: CollectionEntry<CollectionKey>[],
+  tutorials: CollectionEntry<"tutorials">[],
   order: "asc" | "desc" = "asc"
 ) {
   return tutorials.sort((a, b) => {

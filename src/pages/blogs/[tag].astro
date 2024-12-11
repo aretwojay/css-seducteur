@@ -1,4 +1,5 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
@@ -10,13 +11,21 @@ export const prerender = true;
 
 export async function getStaticPaths() {
   const tutorials = await getCollection("tutorials");
-  const data = sortByPublishDate(tutorials);
-  const allTags = data.map((post) => (post.data.tags as string[]).map((tag) => tag.toLowerCase())).flat();
+  const sortedTutorials = sortByPublishDate(tutorials, "desc");
+  const allTags = sortedTutorials.map((post) => post.data.tags.map((tag) => tag.toLowerCase())).flat();
+  const uniqueTags = [...new Set(allTags)];
 
-  return allTags.map((tag) => {
+  const postsByTags = uniqueTags.reduce((acc, tag) => {
     return {
-      params: { tag: tag },
-      props: { posts: data.filter((post) => (post.data.tags as string[]).map((tag) => tag.toLowerCase()).includes(tag)) },
+      ...acc,
+      [tag]: sortedTutorials.filter((post) => post.data.tags.map((tag) => tag.toLowerCase()).includes(tag)),
+    };
+  }, {} as Record<string, CollectionEntry<"tutorials">[]>);
+
+  return Object.keys(postsByTags).map((tag) => {
+    return {
+      params: { tag },
+      props: { posts: postsByTags[tag] },
     };
   });
 }

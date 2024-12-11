@@ -1,7 +1,8 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, getEntries, getEntry, render } from 'astro:content';
 import Footer from "../../../components/Footer.astro";
 import Header from "../../../components/Header.astro";
+import PostCards from '../../../components/PostCards.astro';
 import PostTags from "../../../components/PostTags.astro";
 import Prose from '../../../components/Prose.astro';
 import Layout from "../../../layouts/Layout.astro";
@@ -21,6 +22,8 @@ export async function getStaticPaths() {
 
 const {post} = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(post);
+const author = await getEntry("authors", post.data.author.id);
+const relatedPosts = await getEntries(post.data.relatedPosts);
 
 ---
 
@@ -29,6 +32,10 @@ const { Content, remarkPluginFrontmatter } = await render(post);
     <main class="text-white p-4 max-w-[800px] mx-auto text-color-contrast">
         <article>
             <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">{post.data.title}</h1>
+            <a href={author?.data.github} class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]">
+              <img src={author?.data.image} alt={author?.data.name} class="size-8 rounded-full" />
+              <p>{author?.data.name}</p>
+            </a>
             <div class="flex gap-2 mb-6">
               <PostTags tags={post.data.tags} />
             </div>
@@ -37,6 +44,12 @@ const { Content, remarkPluginFrontmatter } = await render(post);
             <Prose>
               <Content />
             </Prose>
+
+            <section class="mt-12">
+              <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">Related posts</h2>
+              <PostCards posts={relatedPosts} />
+            </section>
+
         </article>
     </main>
     <Footer />

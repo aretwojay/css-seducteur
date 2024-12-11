@@ -3,6 +3,9 @@ title: Discover Tailwind CSS
 description: An introduction to Tailwind CSS, a utility-first CSS framework for building modern web designs.
 tags: ["CSS", "Tailwind", "Framework"]
 publishDate: 2024-10-01
+author: r2j
+relatedPosts:
+  - first-steps
 ---
 
 # Discover Tailwind CSS
