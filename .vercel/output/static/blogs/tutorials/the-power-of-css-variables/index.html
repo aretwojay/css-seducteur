@@ -1,20 +1,134 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><link rel="sitemap" href="/sitemap-index.xml"><title>CssSéducteur</title><meta name="description" content="CssSéducteur, the next CSS blog for developers"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.0.4"><meta name="robots" content="index, follow"><!-- Open Graph tags --><meta property="og:title" content="CssSéducteur"><meta property="og:type" content="website"><meta property="og:url" content="https://css-seducteur-css.site"><meta property="og:description" content="CssSéducteur, the next CSS blog for developers"><link rel="stylesheet" href="/_astro/_tag_.CMRoY1mV.css"><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-		var script = document.createElement('script');
-		script.defer = true;
-		script.src = '/_vercel/insights/script.js';
-		var head = document.querySelector('head');
-		head.appendChild(script);
-	</script></head> <body class="m-[0px] dark:text-white">  <header class="dark:bg-color-1 shadow-sm"> <div class="flex items-center justify-between container p-2"> <a class="flex items-center gap-2 no-underline text-color-contrast" href="/"> <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">CssSéducteur</h1>
-🚀
-</a> <nav> <ul class="flex gap-4 space-x-4"> <li><a href="/blogs/basics" class="no-underline text-color-11 transition-all hover:text-color-contrast">Basics</a></li> <li><a href="/blogs/css" class="no-underline text-color-11 transition-all hover:text-color-contrast">CSS Tutorials</a></li> </ul> </nav> </div> </header> <main class="p-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">The Power of CSS Variables</h1> <a href="https://github.com/aretwojay" class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"> <img src="https://avatars.githubusercontent.com/u/81377220?v=4" alt="R2J" class="size-8 rounded-full"> <p>R2J</p> </a> <div class="flex gap-2 mb-6"> <a href="/blogs/css"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span></a><a href="/blogs/variables"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Variables</span></a><a href="/blogs/web design"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Web Design</span></a> </div> <p class="text-sm font-light">Expected time to read : 3 min read</p> <p class="font-extralight mt-2 mb-5">Unlock the potential of CSS variables to simplify and optimize your styling workflow.</p> <div class="prose dark:prose-invert
-  prose-h1:font-bold prose-h1:text-xl
-  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
-  prose-headings:underline">  <h1 id="the-power-of-css-variables">The Power of CSS Variables</h1>
-<p>CSS variables, also known as custom properties, are a game-changer for web developers. They allow you to store reusable values in your stylesheet, making your CSS more dynamic, maintainable, and efficient.</p>
-<h2 id="what-are-css-variables">What are CSS Variables?</h2>
-<p>CSS variables are declared using the <code>--</code> prefix and are accessible throughout your CSS file. They are scoped, meaning you can define them globally or within specific selectors.</p>
-<h3 id="example">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">:root</span><span style="color:#E1E4E8"> {</span></span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>CSSéducteur</title>
+    <meta
+      name="description"
+      content="CSSéducteur, the next CSS blog for developers"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content="Astro v5.0.4" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="CSSéducteur" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://css-seducteur-css.site" />
+    <meta
+      property="og:description"
+      content="CSSéducteur, the next CSS blog for developers"
+    />
+    <link rel="stylesheet" href="/_astro/_tag_.CMRoY1mV.css" />
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+      var script = document.createElement("script");
+      script.defer = true;
+      script.src = "/_vercel/insights/script.js";
+      var head = document.querySelector("head");
+      head.appendChild(script);
+    </script>
+  </head>
+  <body class="m-[0px] dark:text-white">
+    <header class="dark:bg-color-1 shadow-sm">
+      <div class="flex items-center justify-between container p-2">
+        <a
+          class="flex items-center gap-2 no-underline text-color-contrast"
+          href="/"
+        >
+          <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">
+            CSSéducteur
+          </h1>
+          🚀
+        </a>
+        <nav>
+          <ul class="flex gap-4 space-x-4">
+            <li>
+              <a
+                href="/blogs/basics"
+                class="no-underline text-color-11 transition-all hover:text-color-contrast"
+                >Basics</a
+              >
+            </li>
+            <li>
+              <a
+                href="/blogs/css"
+                class="no-underline text-color-11 transition-all hover:text-color-contrast"
+                >CSS Tutorials</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
+      <article>
+        <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">
+          The Power of CSS Variables
+        </h1>
+        <a
+          href="https://github.com/aretwojay"
+          class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"
+        >
+          <img
+            src="https://avatars.githubusercontent.com/u/81377220?v=4"
+            alt="R2J"
+            class="size-8 rounded-full"
+          />
+          <p>R2J</p>
+        </a>
+        <div class="flex gap-2 mb-6">
+          <a href="/blogs/css"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >CSS</span
+            ></a
+          ><a href="/blogs/variables"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >Variables</span
+            ></a
+          ><a href="/blogs/web design"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >Web Design</span
+            ></a
+          >
+        </div>
+        <p class="text-sm font-light">Expected time to read : 3 min read</p>
+        <p class="font-extralight mt-2 mb-5">
+          Unlock the potential of CSS variables to simplify and optimize your
+          styling workflow.
+        </p>
+        <div
+          class="prose dark:prose-invert prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl prose-headings:underline"
+        >
+          <h1 id="the-power-of-css-variables">The Power of CSS Variables</h1>
+          <p>
+            CSS variables, also known as custom properties, are a game-changer
+            for web developers. They allow you to store reusable values in your
+            stylesheet, making your CSS more dynamic, maintainable, and
+            efficient.
+          </p>
+          <h2 id="what-are-css-variables">What are CSS Variables?</h2>
+          <p>
+            CSS variables are declared using the <code>--</code> prefix and are
+            accessible throughout your CSS file. They are scoped, meaning you
+            can define them globally or within specific selectors.
+          </p>
+          <h3 id="example">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#B392F0">:root</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#FFAB70">  --primary-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#3498db</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#FFAB70">  --secondary-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#2ecc71</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#FFAB70">  --font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
@@ -32,19 +146,48 @@
 <span class="line"><span style="color:#79B8FF">  border</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">none</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  border-radius</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">>Click Me&#x3C;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">></span></span></code></pre>
-<p>In this example, the <code>--primary-color</code>, <code>--secondary-color</code>, and <code>--font-size</code> variables are defined in the <code>:root</code> selector, making them available globally.</p>
-<h2 id="benefits-of-css-variables">Benefits of CSS Variables</h2>
-<h3 id="1-reusability">1. <strong>Reusability</strong></h3>
-<p>CSS variables reduce repetition in your code by allowing you to define a value once and reuse it across multiple rules.</p>
-<h3 id="2-easy-maintenance">2. <strong>Easy Maintenance</strong></h3>
-<p>If you need to update a value (e.g., change a theme color), you can do so in a single location.</p>
-<h3 id="3-dynamic-updates">3. <strong>Dynamic Updates</strong></h3>
-<p>CSS variables can change dynamically in response to user interaction or JavaScript, enabling themes and more.</p>
-<h2 id="using-css-variables-with-scoping">Using CSS Variables with Scoping</h2>
-<p>Variables can be scoped to specific elements, overriding global definitions.</p>
-<h3 id="example-1">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">:root</span><span style="color:#E1E4E8"> {</span></span>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="html"
+          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">>Click Me&#x3C;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">></span></span></code></pre>
+          <p>
+            In this example, the <code>--primary-color</code>,
+            <code>--secondary-color</code>, and
+            <code>--font-size</code> variables are defined in the
+            <code>:root</code> selector, making them available globally.
+          </p>
+          <h2 id="benefits-of-css-variables">Benefits of CSS Variables</h2>
+          <h3 id="1-reusability">1. <strong>Reusability</strong></h3>
+          <p>
+            CSS variables reduce repetition in your code by allowing you to
+            define a value once and reuse it across multiple rules.
+          </p>
+          <h3 id="2-easy-maintenance">2. <strong>Easy Maintenance</strong></h3>
+          <p>
+            If you need to update a value (e.g., change a theme color), you can
+            do so in a single location.
+          </p>
+          <h3 id="3-dynamic-updates">3. <strong>Dynamic Updates</strong></h3>
+          <p>
+            CSS variables can change dynamically in response to user interaction
+            or JavaScript, enabling themes and more.
+          </p>
+          <h2 id="using-css-variables-with-scoping">
+            Using CSS Variables with Scoping
+          </h2>
+          <p>
+            Variables can be scoped to specific elements, overriding global
+            definitions.
+          </p>
+          <h3 id="example-1">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#B392F0">:root</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#FFAB70">  --button-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#e74c3c</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span>
@@ -59,22 +202,53 @@
 <span class="line"><span style="color:#79B8FF">  border</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">none</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  border-radius</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"card"</span><span style="color:#E1E4E8">></span></span>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="html"
+          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"card"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">>Card Button&#x3C;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">>Global Button&#x3C;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">></span></span></code></pre>
-<p>Here, the button inside <code>.card</code> uses the locally scoped <code>--button-color</code>, while the global button uses the <code>:root</code> variable.</p>
-<h2 id="fallback-values">Fallback Values</h2>
-<p>CSS variables support fallback values in case the variable is not defined.</p>
-<h3 id="example-2">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">div</span><span style="color:#E1E4E8"> {</span></span>
+          <p>
+            Here, the button inside <code>.card</code> uses the locally scoped
+            <code>--button-color</code>, while the global button uses the
+            <code>:root</code> variable.
+          </p>
+          <h2 id="fallback-values">Fallback Values</h2>
+          <p>
+            CSS variables support fallback values in case the variable is not
+            defined.
+          </p>
+          <h3 id="example-2">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#85E89D">div</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">var</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">--undefined-color</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">#95a5a6</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<p>The <code>#95a5a6</code> color is applied if <code>--undefined-color</code> is not defined.</p>
-<h2 id="dynamic-theming-with-css-variables">Dynamic Theming with CSS Variables</h2>
-<p>One of the most exciting uses of CSS variables is dynamic theming. You can change variables with JavaScript to implement light and dark modes, user preferences, or other interactive features.</p>
-<h3 id="example-3">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">:root</span><span style="color:#E1E4E8"> {</span></span>
+          <p>
+            The <code>#95a5a6</code> color is applied if
+            <code>--undefined-color</code> is not defined.
+          </p>
+          <h2 id="dynamic-theming-with-css-variables">
+            Dynamic Theming with CSS Variables
+          </h2>
+          <p>
+            One of the most exciting uses of CSS variables is dynamic theming.
+            You can change variables with JavaScript to implement light and dark
+            modes, user preferences, or other interactive features.
+          </p>
+          <h3 id="example-3">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#B392F0">:root</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#FFAB70">  --bg-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#ffffff</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#FFAB70">  --text-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#333333</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
@@ -88,7 +262,12 @@
 <span class="line"><span style="color:#79B8FF">  margin</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 15</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">button</span><span style="color:#B392F0"> onclick</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"</span><span style="color:#B392F0">toggleTheme</span><span style="color:#9ECBFF">()"</span><span style="color:#E1E4E8">>Toggle Theme&#x3C;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">></span></span>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="html"
+          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">button</span><span style="color:#B392F0"> onclick</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"</span><span style="color:#B392F0">toggleTheme</span><span style="color:#9ECBFF">()"</span><span style="color:#E1E4E8">>Toggle Theme&#x3C;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">script</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#F97583">  function</span><span style="color:#B392F0"> toggleTheme</span><span style="color:#E1E4E8">() {</span></span>
@@ -99,21 +278,47 @@
 <span class="line"><span style="color:#E1E4E8">    root.style.</span><span style="color:#B392F0">setProperty</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"--text-color"</span><span style="color:#E1E4E8">, isDark </span><span style="color:#F97583">?</span><span style="color:#9ECBFF"> "#ffffff"</span><span style="color:#F97583"> :</span><span style="color:#9ECBFF"> "#333333"</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">script</span><span style="color:#E1E4E8">></span></span></code></pre>
-<p>Clicking the button toggles between light and dark themes by dynamically updating the <code>--bg-color</code> and <code>--text-color</code> variables.</p>
-<h2 id="accessibility-considerations">Accessibility Considerations</h2>
-<p>When using CSS variables for theming, ensure sufficient color contrast and test accessibility with tools like WCAG compliance checkers.</p>
-<h2 id="limitations-of-css-variables">Limitations of CSS Variables</h2>
-<ol>
-<li>
-<p><strong>Browser Support</strong>
-CSS variables are supported in all modern browsers but may not work in older versions like IE11.</p>
-</li>
-<li>
-<p><strong>Cannot Be Used in Media Queries</strong>
-CSS variables are not directly supported inside media queries.</p>
-<h3 id="workaround">Workaround:</h3>
-<p>Use media queries to redefine variables:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">:root</span><span style="color:#E1E4E8"> {</span></span>
+          <p>
+            Clicking the button toggles between light and dark themes by
+            dynamically updating the <code>--bg-color</code> and
+            <code>--text-color</code> variables.
+          </p>
+          <h2 id="accessibility-considerations">
+            Accessibility Considerations
+          </h2>
+          <p>
+            When using CSS variables for theming, ensure sufficient color
+            contrast and test accessibility with tools like WCAG compliance
+            checkers.
+          </p>
+          <h2 id="limitations-of-css-variables">
+            Limitations of CSS Variables
+          </h2>
+          <ol>
+            <li>
+              <p>
+                <strong>Browser Support</strong> CSS variables are supported in
+                all modern browsers but may not work in older versions like
+                IE11.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Cannot Be Used in Media Queries</strong> CSS variables
+                are not directly supported inside media queries.
+              </p>
+              <h3 id="workaround">Workaround:</h3>
+              <p>Use media queries to redefine variables:</p>
+              <pre
+                class="astro-code github-dark"
+                style="
+                  background-color: #24292e;
+                  color: #e1e4e8;
+                  overflow-x: auto;
+                "
+                tabindex="0"
+                data-language="css"
+              ><code><span class="line"><span style="color:#B392F0">:root</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#FFAB70">  --font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span>
@@ -126,7 +331,61 @@ CSS variables are not directly supported inside media queries.</p>
 <span class="line"><span style="color:#85E89D">body</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">var</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">--font-size</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-</li>
-</ol>
-<h2 id="conclusion">Conclusion</h2>
-<p>CSS variables are a powerful addition to your styling toolkit. They improve maintainability, enable dynamic updates, and streamline theming. By integrating CSS variables into your workflow, you can create flexible and scalable designs that are easier to manage and adapt.</p>  </div> <section class="mt-12"> <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">Related posts</h2> <div class="grid gap-5"> <div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/mastering-css-animations"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Animations</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Web Design</span> </div> <p class="text-[#92939c] font-light"> December 11, 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Mastering CSS Animations </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Learn how to create smooth, engaging, and dynamic web experiences using advanced CSS animation techniques. </p> </section> </a> </div> </div> </section> </article> </main> <footer class="text-color-contrast p-3 mt-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2024 CssSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>
+            </li>
+          </ol>
+          <h2 id="conclusion">Conclusion</h2>
+          <p>
+            CSS variables are a powerful addition to your styling toolkit. They
+            improve maintainability, enable dynamic updates, and streamline
+            theming. By integrating CSS variables into your workflow, you can
+            create flexible and scalable designs that are easier to manage and
+            adapt.
+          </p>
+        </div>
+        <section class="mt-12">
+          <h2
+            class="text-[36px] max-md:text-3xl text-center font-semibold my-4"
+          >
+            Related posts
+          </h2>
+          <div class="grid gap-5">
+            <div class="h-full">
+              <a
+                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
+                href="/blogs/tutorials/mastering-css-animations"
+              >
+                <section class="p-4 md:p-5 h-full">
+                  <div class="flex overflow-auto gap-2 mb-2">
+                    <span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >CSS</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Animations</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Web Design</span
+                    >
+                  </div>
+                  <p class="text-[#92939c] font-light">December 11, 2024</p>
+                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
+                    Mastering CSS Animations
+                  </h1>
+                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                    Learn how to create smooth, engaging, and dynamic web
+                    experiences using advanced CSS animation techniques.
+                  </p>
+                </section>
+              </a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="text-color-contrast p-3 mt-7">
+      <div class="container mx-auto text-center font-extralight text-1">
+        <p>&copy; 2024 CSSéducteur. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

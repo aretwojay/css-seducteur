@@ -1,20 +1,134 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><link rel="sitemap" href="/sitemap-index.xml"><title>CssSéducteur</title><meta name="description" content="CssSéducteur, the next CSS blog for developers"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.0.4"><meta name="robots" content="index, follow"><!-- Open Graph tags --><meta property="og:title" content="CssSéducteur"><meta property="og:type" content="website"><meta property="og:url" content="https://css-seducteur-css.site"><meta property="og:description" content="CssSéducteur, the next CSS blog for developers"><link rel="stylesheet" href="/_astro/_tag_.CMRoY1mV.css"><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-		var script = document.createElement('script');
-		script.defer = true;
-		script.src = '/_vercel/insights/script.js';
-		var head = document.querySelector('head');
-		head.appendChild(script);
-	</script></head> <body class="m-[0px] dark:text-white">  <header class="dark:bg-color-1 shadow-sm"> <div class="flex items-center justify-between container p-2"> <a class="flex items-center gap-2 no-underline text-color-contrast" href="/"> <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">CssSéducteur</h1>
-🚀
-</a> <nav> <ul class="flex gap-4 space-x-4"> <li><a href="/blogs/basics" class="no-underline text-color-11 transition-all hover:text-color-contrast">Basics</a></li> <li><a href="/blogs/css" class="no-underline text-color-11 transition-all hover:text-color-contrast">CSS Tutorials</a></li> </ul> </nav> </div> </header> <main class="p-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">Mastering CSS Animations</h1> <a href="https://github.com/aretwojay" class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"> <img src="https://avatars.githubusercontent.com/u/81377220?v=4" alt="R2J" class="size-8 rounded-full"> <p>R2J</p> </a> <div class="flex gap-2 mb-6"> <a href="/blogs/css"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span></a><a href="/blogs/animations"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Animations</span></a><a href="/blogs/web design"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Web Design</span></a> </div> <p class="text-sm font-light">Expected time to read : 3 min read</p> <p class="font-extralight mt-2 mb-5">Learn how to create smooth, engaging, and dynamic web experiences using advanced CSS animation techniques.</p> <div class="prose dark:prose-invert
-  prose-h1:font-bold prose-h1:text-xl
-  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
-  prose-headings:underline">  <h1 id="mastering-css-animations">Mastering CSS Animations</h1>
-<p>Animations can add a layer of polish and interactivity to your web designs. With CSS, you can create animations that enhance user experience without relying on JavaScript. This guide will delve into advanced animation techniques to help you craft visually compelling and performance-friendly animations.</p>
-<h2 id="css-keyframes">CSS Keyframes</h2>
-<p>The <code>@keyframes</code> rule is the backbone of CSS animations. It allows you to define the stages of an animation.</p>
-<h3 id="example">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> slideIn</span><span style="color:#E1E4E8"> {</span></span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>CSSéducteur</title>
+    <meta
+      name="description"
+      content="CSSéducteur, the next CSS blog for developers"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content="Astro v5.0.4" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="CSSéducteur" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://css-seducteur-css.site" />
+    <meta
+      property="og:description"
+      content="CSSéducteur, the next CSS blog for developers"
+    />
+    <link rel="stylesheet" href="/_astro/_tag_.CMRoY1mV.css" />
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+      var script = document.createElement("script");
+      script.defer = true;
+      script.src = "/_vercel/insights/script.js";
+      var head = document.querySelector("head");
+      head.appendChild(script);
+    </script>
+  </head>
+  <body class="m-[0px] dark:text-white">
+    <header class="dark:bg-color-1 shadow-sm">
+      <div class="flex items-center justify-between container p-2">
+        <a
+          class="flex items-center gap-2 no-underline text-color-contrast"
+          href="/"
+        >
+          <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">
+            CSSéducteur
+          </h1>
+          🚀
+        </a>
+        <nav>
+          <ul class="flex gap-4 space-x-4">
+            <li>
+              <a
+                href="/blogs/basics"
+                class="no-underline text-color-11 transition-all hover:text-color-contrast"
+                >Basics</a
+              >
+            </li>
+            <li>
+              <a
+                href="/blogs/css"
+                class="no-underline text-color-11 transition-all hover:text-color-contrast"
+                >CSS Tutorials</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
+      <article>
+        <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">
+          Mastering CSS Animations
+        </h1>
+        <a
+          href="https://github.com/aretwojay"
+          class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"
+        >
+          <img
+            src="https://avatars.githubusercontent.com/u/81377220?v=4"
+            alt="R2J"
+            class="size-8 rounded-full"
+          />
+          <p>R2J</p>
+        </a>
+        <div class="flex gap-2 mb-6">
+          <a href="/blogs/css"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >CSS</span
+            ></a
+          ><a href="/blogs/animations"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >Animations</span
+            ></a
+          ><a href="/blogs/web design"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >Web Design</span
+            ></a
+          >
+        </div>
+        <p class="text-sm font-light">Expected time to read : 3 min read</p>
+        <p class="font-extralight mt-2 mb-5">
+          Learn how to create smooth, engaging, and dynamic web experiences
+          using advanced CSS animation techniques.
+        </p>
+        <div
+          class="prose dark:prose-invert prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl prose-headings:underline"
+        >
+          <h1 id="mastering-css-animations">Mastering CSS Animations</h1>
+          <p>
+            Animations can add a layer of polish and interactivity to your web
+            designs. With CSS, you can create animations that enhance user
+            experience without relying on JavaScript. This guide will delve into
+            advanced animation techniques to help you craft visually compelling
+            and performance-friendly animations.
+          </p>
+          <h2 id="css-keyframes">CSS Keyframes</h2>
+          <p>
+            The <code>@keyframes</code> rule is the backbone of CSS animations.
+            It allows you to define the stages of an animation.
+          </p>
+          <h3 id="example">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> slideIn</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#B392F0">  from</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">translateX</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">-100</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#79B8FF">    opacity</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">;</span></span>
@@ -28,12 +142,30 @@
 <span class="line"><span style="color:#B392F0">.element</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  animation</span><span style="color:#E1E4E8">: slideIn </span><span style="color:#79B8FF">2</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> ease-in-out</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"element"</span><span style="color:#E1E4E8">>Welcome!&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
-<p>In this example, the <code>.element</code> slides in from the left and becomes fully visible over 2 seconds.</p>
-<h2 id="animation-properties">Animation Properties</h2>
-<p>CSS animations are controlled using properties like <code>animation-duration</code>, <code>animation-timing-function</code>, and <code>animation-delay</code>.</p>
-<h3 id="example-1">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.bounce</span><span style="color:#E1E4E8"> {</span></span>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="html"
+          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"element"</span><span style="color:#E1E4E8">>Welcome!&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
+          <p>
+            In this example, the <code>.element</code> slides in from the left
+            and becomes fully visible over 2 seconds.
+          </p>
+          <h2 id="animation-properties">Animation Properties</h2>
+          <p>
+            CSS animations are controlled using properties like
+            <code>animation-duration</code>,
+            <code>animation-timing-function</code>, and
+            <code>animation-delay</code>.
+          </p>
+          <h3 id="example-1">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#B392F0">.bounce</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  animation</span><span style="color:#E1E4E8">: bounce </span><span style="color:#79B8FF">1</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> infinite</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span>
@@ -46,11 +178,19 @@
 <span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">translateY</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">-30</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<p>This creates a “bouncing” effect that repeats indefinitely.</p>
-<h2 id="transition-effects">Transition Effects</h2>
-<p>Transitions are used to animate property changes smoothly when an element’s state changes, like on hover.</p>
-<h3 id="example-2">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.button</span><span style="color:#E1E4E8"> {</span></span>
+          <p>This creates a “bouncing” effect that repeats indefinitely.</p>
+          <h2 id="transition-effects">Transition Effects</h2>
+          <p>
+            Transitions are used to animate property changes smoothly when an
+            element’s state changes, like on hover.
+          </p>
+          <h3 id="example-2">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#B392F0">.button</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#007bff</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">white</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
@@ -61,12 +201,30 @@
 <span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#0056b3</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">scale</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1.1</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">button</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"button"</span><span style="color:#E1E4E8">>Hover Me&#x3C;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">></span></span></code></pre>
-<p>The button changes its background color and slightly enlarges when hovered.</p>
-<h2 id="combining-transitions-and-animations">Combining Transitions and Animations</h2>
-<p>Transitions and animations can be combined to create more sophisticated effects.</p>
-<h3 id="example-3">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.card</span><span style="color:#E1E4E8"> {</span></span>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="html"
+          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">button</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"button"</span><span style="color:#E1E4E8">>Hover Me&#x3C;/</span><span style="color:#85E89D">button</span><span style="color:#E1E4E8">></span></span></code></pre>
+          <p>
+            The button changes its background color and slightly enlarges when
+            hovered.
+          </p>
+          <h2 id="combining-transitions-and-animations">
+            Combining Transitions and Animations
+          </h2>
+          <p>
+            Transitions and animations can be combined to create more
+            sophisticated effects.
+          </p>
+          <h3 id="example-3">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#B392F0">.card</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">white</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  border</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> solid</span><span style="color:#79B8FF"> #ddd</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  transition</span><span style="color:#E1E4E8">: transform </span><span style="color:#79B8FF">0.5</span><span style="color:#F97583">s</span><span style="color:#E1E4E8">, box-shadow </span><span style="color:#79B8FF">0.5</span><span style="color:#F97583">s</span><span style="color:#E1E4E8">;</span></span>
@@ -76,19 +234,45 @@
 <span class="line"><span style="color:#79B8FF">  transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">translateY</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">-10</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#79B8FF">  box-shadow</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#79B8FF"> 8</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 16</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> rgba</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.2</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"card"</span><span style="color:#E1E4E8">>Hover over me!&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
-<p>The card lifts slightly and gains a shadow when hovered.</p>
-<h2 id="animation-performance-optimization">Animation Performance Optimization</h2>
-<p>Poorly optimized animations can cause performance issues, especially on mobile devices. Follow these tips:</p>
-<ol>
-<li><strong>Use Transform and Opacity:</strong> Animations involving <code>transform</code> and <code>opacity</code> are GPU-accelerated and more efficient than animating layout properties like <code>width</code> or <code>height</code>.</li>
-<li><strong>Avoid Large Repaints:</strong> Minimize changes to the DOM tree during animations.</li>
-<li><strong>Limit Animation Scope:</strong> Use animations sparingly and avoid animating too many elements simultaneously.</li>
-</ol>
-<h2 id="animating-svgs">Animating SVGs</h2>
-<p>CSS can also animate SVGs for intricate effects.</p>
-<h3 id="example-4">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">path</span><span style="color:#E1E4E8"> {</span></span>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="html"
+          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"card"</span><span style="color:#E1E4E8">>Hover over me!&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
+          <p>The card lifts slightly and gains a shadow when hovered.</p>
+          <h2 id="animation-performance-optimization">
+            Animation Performance Optimization
+          </h2>
+          <p>
+            Poorly optimized animations can cause performance issues, especially
+            on mobile devices. Follow these tips:
+          </p>
+          <ol>
+            <li>
+              <strong>Use Transform and Opacity:</strong> Animations involving
+              <code>transform</code> and <code>opacity</code> are
+              GPU-accelerated and more efficient than animating layout
+              properties like <code>width</code> or <code>height</code>.
+            </li>
+            <li>
+              <strong>Avoid Large Repaints:</strong> Minimize changes to the DOM
+              tree during animations.
+            </li>
+            <li>
+              <strong>Limit Animation Scope:</strong> Use animations sparingly
+              and avoid animating too many elements simultaneously.
+            </li>
+          </ol>
+          <h2 id="animating-svgs">Animating SVGs</h2>
+          <p>CSS can also animate SVGs for intricate effects.</p>
+          <h3 id="example-4">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#85E89D">path</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  stroke-dasharray</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">300</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  stroke-dashoffset</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">300</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  animation</span><span style="color:#E1E4E8">: draw </span><span style="color:#79B8FF">2</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> linear</span><span style="color:#79B8FF"> forwards</span><span style="color:#E1E4E8">;</span></span>
@@ -99,7 +283,12 @@
 <span class="line"><span style="color:#79B8FF">    stroke-dashoffset</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">svg</span><span style="color:#B392F0"> width</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"200"</span><span style="color:#B392F0"> height</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"200"</span><span style="color:#B392F0"> xmlns</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"http://www.w3.org/2000/svg"</span><span style="color:#E1E4E8">></span></span>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="html"
+          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">svg</span><span style="color:#B392F0"> width</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"200"</span><span style="color:#B392F0"> height</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"200"</span><span style="color:#B392F0"> xmlns</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"http://www.w3.org/2000/svg"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">path</span></span>
 <span class="line"><span style="color:#B392F0">    d</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"</span></span>
 <span class="line"><span style="color:#B392F0">    stroke</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"black"</span></span>
@@ -107,16 +296,83 @@
 <span class="line"><span style="color:#B392F0">    stroke-width</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"2"</span></span>
 <span class="line"><span style="color:#E1E4E8">  /></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">svg</span><span style="color:#E1E4E8">></span></span></code></pre>
-<p>The path appears to be “drawn” as the animation plays.</p>
-<h2 id="animations-for-accessibility">Animations for Accessibility</h2>
-<p>Ensure animations are accessible and do not cause discomfort for users with motion sensitivity. Respect the <code>prefers-reduced-motion</code> media query.</p>
-<h3 id="example-5">Example:</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">@media</span><span style="color:#E1E4E8"> (prefers-reduced-motion: reduce) {</span></span>
+          <p>The path appears to be “drawn” as the animation plays.</p>
+          <h2 id="animations-for-accessibility">
+            Animations for Accessibility
+          </h2>
+          <p>
+            Ensure animations are accessible and do not cause discomfort for
+            users with motion sensitivity. Respect the
+            <code>prefers-reduced-motion</code> media query.
+          </p>
+          <h3 id="example-5">Example:</h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#F97583">@media</span><span style="color:#E1E4E8"> (prefers-reduced-motion: reduce) {</span></span>
 <span class="line"><span style="color:#85E89D">  *</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">    animation</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">none</span><span style="color:#F97583"> !important</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">    transition</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">none</span><span style="color:#F97583"> !important</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<p>This disables animations and transitions for users who prefer reduced motion.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>CSS animations offer endless possibilities for enhancing web design. By mastering keyframes, transitions, and performance best practices, you can create immersive experiences that captivate users. Always prioritize accessibility and optimize for smooth performance.</p>  </div> <section class="mt-12"> <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">Related posts</h2> <div class="grid gap-5"> <div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/the-power-of-css-variables"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Variables</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Web Design</span> </div> <p class="text-[#92939c] font-light"> February 11, 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> The Power of CSS Variables </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Unlock the potential of CSS variables to simplify and optimize your styling workflow. </p> </section> </a> </div> </div> </section> </article> </main> <footer class="text-color-contrast p-3 mt-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2024 CssSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>
+          <p>
+            This disables animations and transitions for users who prefer
+            reduced motion.
+          </p>
+          <h2 id="conclusion">Conclusion</h2>
+          <p>
+            CSS animations offer endless possibilities for enhancing web design.
+            By mastering keyframes, transitions, and performance best practices,
+            you can create immersive experiences that captivate users. Always
+            prioritize accessibility and optimize for smooth performance.
+          </p>
+        </div>
+        <section class="mt-12">
+          <h2
+            class="text-[36px] max-md:text-3xl text-center font-semibold my-4"
+          >
+            Related posts
+          </h2>
+          <div class="grid gap-5">
+            <div class="h-full">
+              <a
+                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
+                href="/blogs/tutorials/the-power-of-css-variables"
+              >
+                <section class="p-4 md:p-5 h-full">
+                  <div class="flex overflow-auto gap-2 mb-2">
+                    <span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >CSS</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Variables</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Web Design</span
+                    >
+                  </div>
+                  <p class="text-[#92939c] font-light">February 11, 2024</p>
+                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
+                    The Power of CSS Variables
+                  </h1>
+                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                    Unlock the potential of CSS variables to simplify and
+                    optimize your styling workflow.
+                  </p>
+                </section>
+              </a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="text-color-contrast p-3 mt-7">
+      <div class="container mx-auto text-center font-extralight text-1">
+        <p>&copy; 2024 CSSéducteur. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
