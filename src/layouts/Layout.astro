@@ -13,7 +13,7 @@ interface Props {
 		<meta charset="UTF-8" />
 		<Head title="CssSéducteur"/>
 	</head>
-	<body class="m-[0px] text-white">
+	<body class="m-[0px] dark:text-white">
 		<slot />
 	</body>
 </html>
@@ -30,7 +30,12 @@ interface Props {
 		);
 	}
 	html {
-		background: #13151a;
+		background: #f8f8f8;
+	}
+	@media (prefers-color-scheme: dark) {
+		html {
+			background: #13151a;
+		}
 	}
 	code {
 		font-family:

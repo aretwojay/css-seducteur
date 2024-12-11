@@ -29,7 +29,7 @@ const relatedPosts = await getEntries(post.data.relatedPosts);
 
 <Layout title={post.data.title}>
     <Header />
-    <main class="text-white p-4 max-w-[800px] mx-auto text-color-contrast">
+    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
         <article>
             <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">{post.data.title}</h1>
             <a href={author?.data.github} class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]">
