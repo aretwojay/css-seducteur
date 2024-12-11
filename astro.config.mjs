@@ -16,6 +16,10 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime],
   },
   adapter: vercel({
+    isr: {
+      // caches all pages on first request and saves for 1 day
+      expiration: 60 * 60 * 24,
+    },
     webAnalytics: {
       enabled: true,
     },
