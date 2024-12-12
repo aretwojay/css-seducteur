@@ -2,6 +2,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /blogs/*/
-
 Sitemap: https://css-seducteur-css.site/sitemap-index.xml

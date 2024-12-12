@@ -4,8 +4,6 @@ const getRobotsTxt = (sitemapURL: URL) => `
 User-agent: *
 Allow: /
 
-Disallow: /blogs/*/
-
 Sitemap: ${sitemapURL.href}
 `;
 
