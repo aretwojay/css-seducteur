@@ -42,6 +42,7 @@ const schema: WithContext<Blog> = {
   },
   blogPost: allTutorialPosts.map((post) => ({
     "@id": `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
+    headline: post.data.title,
   })),
 };
 ---
