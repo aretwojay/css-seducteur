@@ -3,8 +3,9 @@ title: Mastering CSS Animations
 description: Learn how to create smooth, engaging, and dynamic web experiences using advanced CSS animation techniques.
 tags: ["CSS", "Animations", "Web Design"]
 publishDate: 2024-12-11
+proficiencyLevel: Intermediate
 author: r2j
-relatedPosts: [the-power-of-css-variables]
+relatedPosts: ["the-power-of-css-variables"]
 ---
 
 # Mastering CSS Animations

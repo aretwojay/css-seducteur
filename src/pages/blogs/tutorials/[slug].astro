@@ -1,11 +1,13 @@
 ---
-import { getCollection, getEntries, getEntry, render } from 'astro:content';
+import { getCollection, getEntries, getEntry, render } from "astro:content";
+import type { TechArticle, WithContext } from "schema-dts";
 import Footer from "../../../components/Footer.astro";
 import Header from "../../../components/Header.astro";
-import PostCards from '../../../components/PostCards.astro';
+import PostCards from "../../../components/PostCards.astro";
 import PostTags from "../../../components/PostTags.astro";
-import Prose from '../../../components/Prose.astro';
+import Prose from "../../../components/Prose.astro";
 import Layout from "../../../layouts/Layout.astro";
+import { WEBSITE_DOMAIN } from "../../../lib/utils";
 
 export const prerender = true;
 
@@ -20,37 +22,97 @@ export async function getStaticPaths() {
   });
 }
 
-const {post} = Astro.props;
+const { post } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(post);
 const author = await getEntry("authors", post.data.author.id);
 const relatedPosts = await getEntries(post.data.relatedPosts);
 
+const schema: WithContext<TechArticle> = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  // specific to TechArticle schema
+  proficiencyLevel: post.data.proficiencyLevel,
+  // specific to Article schema
+  articleBody: post.body,
+  articleSection: "Tutorials",
+  wordCount: remarkPluginFrontmatter.words,
+  // common
+  headline: post.data.title,
+  description: post.data.description,
+  author: {
+    "@type": "Person",
+    name: author?.data.name,
+    image: author?.data.image,
+    url: author?.data.github,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "CSSéducteur",
+    logo: {
+      "@type": "ImageObject",
+      url: `https://${WEBSITE_DOMAIN}/faivcon.svg`,
+    },
+  },
+  url: `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
+  about: post.data.tags.map((tag) => ({
+    "@type": "Thing",
+    "@id": `https://${WEBSITE_DOMAIN}/blogs/tutorials/${tag.toLowerCase()}`,
+    name: tag,
+  })),
+  isPartOf: {
+    "@type": "Blog",
+    "@id": `https://${WEBSITE_DOMAIN}`,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
+  },
+  keywords: post.data.tags.join(", "),
+  datePublished: post.data.publishDate.toLocaleDateString("en-US"),
+  dateModified: post.data.publishDate.toLocaleDateString("en-US"),
+};
 ---
 
-<Layout title={`CSSéducteur - ${post.data.title}`}>
-    <Header />
-    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
-        <article>
-            <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">{post.data.title}</h1>
-            <a href={author?.data.github} class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]">
-              <img src={author?.data.image} alt={author?.data.name} class="size-8 rounded-full" />
-              <p>{author?.data.name}</p>
-            </a>
-            <div class="flex gap-2 mb-6">
-              <PostTags tags={post.data.tags} />
-            </div>
-            <p class="text-sm font-light">Expected time to read : {remarkPluginFrontmatter.minutesRead}</p>
-            <p class="font-extralight mt-2 mb-5">{post.data.description}</p>
-            <Prose>
-              <Content />
-            </Prose>
+<Layout
+  title={`CSSéducteur - ${post.data.title}`}
+  description={post.data.description}
+  schema={JSON.stringify(schema)}
+>
+  <Header />
+  <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
+    <article>
+      <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">
+        {post.data.title}
+      </h1>
+      <a
+        href={author?.data.github}
+        class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"
+      >
+        <img
+          src={author?.data.image}
+          alt={author?.data.name}
+          class="size-8 rounded-full"
+        />
+        <p>{author?.data.name}</p>
+      </a>
+      <div class="flex gap-2 mb-6">
+        <PostTags tags={post.data.tags} />
+      </div>
+      <p class="text-sm font-light">
+        Expected time to read : {remarkPluginFrontmatter.minutesRead}
+      </p>
+      <p class="font-extralight mt-2 mb-5">{post.data.description}</p>
+      <Prose>
+        <Content />
+      </Prose>
 
-            <section class="mt-12">
-              <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">Related posts</h2>
-              <PostCards posts={relatedPosts} />
-            </section>
-
-        </article>
-    </main>
-    <Footer />
+      <section class="mt-12">
+        <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
+          Related posts
+        </h2>
+        <PostCards posts={relatedPosts} />
+      </section>
+    </article>
+  </main>
+  <Footer />
 </Layout>

@@ -12,15 +12,22 @@ export const prerender = true;
 export async function getStaticPaths() {
   const tutorials = await getCollection("tutorials");
   const sortedTutorials = sortByPublishDate(tutorials, "desc");
-  const allTags = sortedTutorials.map((post) => post.data.tags.map((tag) => tag.toLowerCase())).flat();
+  const allTags = sortedTutorials
+    .map((post) => post.data.tags.map((tag) => tag.toLowerCase()))
+    .flat();
   const uniqueTags = [...new Set(allTags)];
 
-  const postsByTags = uniqueTags.reduce((acc, tag) => {
-    return {
-      ...acc,
-      [tag]: sortedTutorials.filter((post) => post.data.tags.map((tag) => tag.toLowerCase()).includes(tag)),
-    };
-  }, {} as Record<string, CollectionEntry<"tutorials">[]>);
+  const postsByTags = uniqueTags.reduce(
+    (acc, tag) => {
+      return {
+        ...acc,
+        [tag]: sortedTutorials.filter((post) =>
+          post.data.tags.map((tag) => tag.toLowerCase()).includes(tag)
+        ),
+      };
+    },
+    {} as Record<string, CollectionEntry<"tutorials">[]>
+  );
 
   return Object.keys(postsByTags).map((tag) => {
     return {
@@ -29,23 +36,25 @@ export async function getStaticPaths() {
     };
   });
 }
+const { tag } = Astro.params;
+const { posts } = Astro.props;
 
-const {tag} = Astro.params;
-const {posts} = Astro.props;
-
+const title = `CSSéducteur - ${tag} blogs`;
+const description =
+  "CSSéducteur, the next CSS blog for developers, offering tutorials, tips, and advanced techniques to enhance your web design skills.";
 ---
 
-<Layout title={`CSSéducteur - ${tag} blogs`} robots="none">
-    <Header />
-    <main class="p-4 max-w-[800px] mx-auto">
-      <section class="flex flex-col">
-        <h1 class="text-[36px] text-center">Blogs about <strong class="capitalize">{tag}</strong></h1>
-        <div class="max-w-[800px] mx-auto mt-6">
-          <PostCards 
-            posts={posts}
-          />
-        </div>
-      </section>
-    </main>
-    <Footer />
+<Layout title={title} description={description} robots="none">
+  <Header />
+  <main class="p-4 max-w-[800px] mx-auto">
+    <section class="flex flex-col">
+      <h1 class="text-[36px] text-center">
+        Blogs about <strong class="capitalize">{tag}</strong>
+      </h1>
+      <div class="max-w-[800px] mx-auto mt-6">
+        <PostCards posts={posts} />
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Layout>

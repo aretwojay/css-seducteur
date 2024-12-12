@@ -1,47 +1,82 @@
 ---
-import { getCollection } from 'astro:content';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import PostCards from '../components/PostCards.astro';
-import Layout from '../layouts/Layout.astro';
-import { sortByPublishDate } from "../lib/utils";
+import { getCollection } from "astro:content";
+import type { Blog, WithContext } from "schema-dts";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import PostCards from "../components/PostCards.astro";
+import Layout from "../layouts/Layout.astro";
+import { sortByPublishDate, WEBSITE_DOMAIN } from "../lib/utils";
 
 export const prerender = true;
 
-const tutorialPosts = await getCollection('tutorials');
+const tutorialPosts = await getCollection("tutorials");
 const allTutorialPosts = sortByPublishDate(tutorialPosts, "desc").slice(0, 5);
 const latestPosts = allTutorialPosts.slice(0, 5);
-const basicsPosts = allTutorialPosts.filter((post) => (post.data.tags as string[]).map((tag) => tag.toLowerCase()).includes('basics')).slice(0, 3);
+const basicsPosts = allTutorialPosts
+  .filter((post) =>
+    (post.data.tags as string[])
+      .map((tag) => tag.toLowerCase())
+      .includes("basics")
+  )
+  .slice(0, 3);
 
+// Metadata for the page
+const title = "CSSéducteur - CSS tutorials";
+const description =
+  "CSSéducteur, the next CSS blog for developers, offering tutorials, tips, and advanced techniques to enhance your web design skills.";
+const schema: WithContext<Blog> = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://css-seducteur-css.site",
+  name: "CSSéducteur",
+  headline: title,
+  description,
+  url: "https://css-seducteur-css.site",
+  publisher: {
+    "@type": "Organization",
+    name: "CSSéducteur",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://css-seducteur-css.site/favicon.svg",
+    },
+  },
+  blogPost: allTutorialPosts.map((post) => ({
+    "@id": `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
+  })),
+};
 ---
 
-<Layout title="CSSéducteur - CSS tutorials">
-	<Header />
-	<main class="dark:text-white p-4 max-w-[800px] mx-auto">
-		<section class="text-center">
-			<h1 class="text-[60px] leading-none mt-7 mb-4">The Next CSS Blog for developpers</h1>
-			<span class="text-4">Always updated and writted by CSSéducteur.</span>
-			<p class="font-extralight text-3 mt-7 mb-5">
-				CSSéducteur is a collection of CSS tutorials and examples to help you learn and master CSS. 
-				Whether you're a beginner or an experienced developer, you'll find something here to help you improve your CSS skills.
-			</p>
-		</section>
+<Layout
+  title="CSSéducteur - CSS tutorials"
+  description={description}
+  schema={JSON.stringify(schema)}
+>
+  <Header />
+  <main class="dark:text-white p-4 max-w-[800px] mx-auto">
+    <section class="text-center">
+      <h1 class="text-[60px] leading-none mt-7 mb-4">
+        The Next CSS Blog for developpers
+      </h1>
+      <span class="text-4">Always updated and writted by CSSéducteur.</span>
+      <p class="font-extralight text-3 mt-7 mb-5">
+        CSSéducteur is a collection of CSS tutorials and examples to help you
+        learn and master CSS. Whether you're a beginner or an experienced
+        developer, you'll find something here to help you improve your CSS
+        skills.
+      </p>
+    </section>
 
+    <section class="flex flex-col my-6">
+      <h1 class="font-semibold text-[36px] text-center mb-4">
+        Getting started
+      </h1>
+      <PostCards posts={basicsPosts} />
+    </section>
 
-		<section class="flex flex-col my-6">
-			<h1 class="font-semibold text-[36px] text-center mb-4">Getting started</h1>
-				<PostCards
-					posts={basicsPosts}	
-				/>
-			</div>
-		</section>
-
-		<section class="flex flex-col">
-			<h1 class="font-semibold text-[36px] text-center mb-4">Latest blogs</h1>
-			<PostCards
-				posts={latestPosts}	
-			/>
-		</section>
-	</main>
-	<Footer/>
+    <section class="flex flex-col">
+      <h1 class="font-semibold text-[36px] text-center mb-4">Latest blogs</h1>
+      <PostCards posts={latestPosts} />
+    </section>
+  </main>
 </Layout>
+<Footer />

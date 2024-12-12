@@ -4,7 +4,10 @@ description: Unlock the potential of CSS variables to simplify and optimize your
 tags: ["CSS", "Variables", "Web Design"]
 author: r2j
 publishDate: 2024-02-11
-relatedPosts: [mastering-css-animations]
+proficiencyLevel: Intermediate
+relatedPosts:
+  - mastering-css-animations
+  - discover-tailwind
 ---
 
 # The Power of CSS Variables
@@ -131,15 +134,7 @@ button {
 ```html
 <button onclick="toggleTheme()">Toggle Theme</button>
 
-<script>
-  function toggleTheme() {
-    const root = document.documentElement;
-    const isDark = root.style.getPropertyValue("--bg-color") === "#ffffff";
-
-    root.style.setProperty("--bg-color", isDark ? "#333333" : "#ffffff");
-    root.style.setProperty("--text-color", isDark ? "#ffffff" : "#333333");
-  }
-</script>
+...
 ```
 
 Clicking the button toggles between light and dark themes by dynamically updating the `--bg-color` and `--text-color` variables.

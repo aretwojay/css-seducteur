@@ -3,9 +3,11 @@ title: Introduction to CSS
 description: A beginner-friendly guide to getting started with CSS for styling web pages.
 tags: ["CSS", "Basics", "Web Development"]
 publishDate: 2024-12-10
+proficiencyLevel: Beginner
 author: r2j
 relatedPosts:
   - first-steps
+  - discover-tailwind
 ---
 
 # Introduction to CSS

@@ -1,17 +1,27 @@
 ---
-
 interface Props {
-    title: string;
-    robots?: string;
+  title: string;
+  description: string;
+  robots?: string;
+  schema?: string;
 }
 
-const { title, robots = "all" } = Astro.props;
+const { title, description, robots = "all", schema } = Astro.props;
 ---
-<link rel="sitemap" href="/sitemap-index.xml">
+
 <title>{title}</title>
-<meta name="description" content="CSSéducteur, the next CSS blog for developers, offering tutorials, tips, and advanced techniques to enhance your web design skills." />
+<meta name="description" content={description} />
 <meta name="viewport" content="width=device-width" />
+<!-- favicon  -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<!-- add schema.org if setted -->
+<script is:inline type="application/ld+json" set:html={schema} />
+
+<!-- sitemaps and co -->
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
 <meta name="robots" content={robots} />
@@ -20,4 +30,7 @@ const { title, robots = "all" } = Astro.props;
 <meta property="og:title" content="CSSéducteur - CSS Tutorials" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://css-seducteur-css.site" />
-<meta property="og:description" content="CSSéducteur, the next CSS blog for developers, offering tutorials, tips, and advanced techniques to enhance your web design skills." />
+<meta
+  property="og:description"
+  content="CSSéducteur, the next CSS blog for developers, offering tutorials, tips, and advanced techniques to enhance your web design skills."
+/>

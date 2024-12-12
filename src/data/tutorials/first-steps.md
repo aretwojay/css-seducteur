@@ -3,9 +3,9 @@ title: First steps
 description: An introduction to the basics of CSS to control the appearance of your web pages.
 tags: ["CSS", "Basics"]
 publishDate: 2024-08-21
+proficiencyLevel: Beginner
 author: r2j
 relatedPosts:
-  - advanced-css
   - introduction-to-css
 ---
 

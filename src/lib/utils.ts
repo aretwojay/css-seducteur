@@ -1,5 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 
+export const WEBSITE_DOMAIN = "css-seducteur-css.site";
+
 export function sortByPublishDate(
   tutorials: CollectionEntry<"tutorials">[],
   order: "asc" | "desc" = "asc"

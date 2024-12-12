@@ -3,9 +3,11 @@ title: Advanced CSS Techniques
 description: A deep dive into advanced CSS techniques to enhance your web design skills.
 tags: ["CSS", "Advanced", "Techniques"]
 publishDate: 2024-09-15
+proficiencyLevel: Intermediate
 author: r2j
 relatedPosts:
-  - first-steps
+  - mastering-css-animations
+  - the-power-of-css-variables
 ---
 
 # Advanced CSS Techniques
