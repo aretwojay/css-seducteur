@@ -1,20 +1,35 @@
 ---
 import { getCollection } from "astro:content";
+import type { ItemList, WithContext } from "schema-dts";
 import Footer from "../../../components/Footer.astro";
 import Header from "../../../components/Header.astro";
 import PostCards from "../../../components/PostCards.astro";
 import Layout from "../../../layouts/Layout.astro";
+import { WEBSITE_DOMAIN } from "../../../lib/utils";
 
 export const prerender = true;
 
 const allTutorials = await getCollection("tutorials");
+
+const title = "CSSéducteur - All latest CSS tutorials";
+const description =
+  "Learn CSS with our tutorials, tips, and advanced techniques to enhance your web design skills.";
+const schema: WithContext<ItemList> = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Tutorials",
+  itemListElement: allTutorials.map((post, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
+    name: post.data.title,
+  })),
+  description,
+  url: `https://${WEBSITE_DOMAIN}/blogs/tutorials`,
+};
 ---
 
-<Layout
-  title="CSSéducteur - All latest CSS tutorials"
-  description="Learn CSS with our tutorials, tips, and advanced techniques to enhance your web design skills."
-  robots="none"
->
+<Layout title={title} description={description} schema={JSON.stringify(schema)}>
   <Header />
   <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
     <h1 class="text-[36px] text-center">Tutorials</h1>
