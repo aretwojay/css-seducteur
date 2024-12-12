@@ -56,7 +56,7 @@ const schema: WithContext<TechArticle> = {
   url: `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
   about: post.data.tags.map((tag) => ({
     "@type": "Thing",
-    "@id": `https://${WEBSITE_DOMAIN}/blogs/tutorials/${tag.toLowerCase()}`,
+    "@id": `https://${WEBSITE_DOMAIN}/blogs/${tag.toLowerCase()}`,
     name: tag,
   })),
   isPartOf: {
