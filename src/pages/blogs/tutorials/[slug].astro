@@ -68,8 +68,8 @@ const schema: WithContext<TechArticle> = {
     "@id": `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
   },
   keywords: post.data.tags.join(", "),
-  datePublished: post.data.publishDate.toString(),
-  dateModified: post.data.publishDate.toString(),
+  datePublished: post.data.publishDate.toDateString(),
+  dateModified: post.data.publishDate.toDateString(),
 };
 ---
 
@@ -99,7 +99,9 @@ const schema: WithContext<TechArticle> = {
         <PostTags tags={post.data.tags} />
       </div>
       <p class="text-sm font-light">
-        Expected time to read : {remarkPluginFrontmatter.minutesRead}
+        Temps estimé de lecture : {
+          (remarkPluginFrontmatter.minutesRead as string).replace("read", "")
+        }
       </p>
       <p class="font-extralight mt-2 mb-5">{post.data.description}</p>
       <Prose>
@@ -108,7 +110,7 @@ const schema: WithContext<TechArticle> = {
 
       <section class="mt-12">
         <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
-          Related posts
+          Articles connexes
         </h2>
         <PostCards posts={relatedPosts} />
       </section>

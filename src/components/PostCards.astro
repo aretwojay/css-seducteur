@@ -7,16 +7,23 @@ interface Props {
 
 const { posts } = Astro.props;
 ---
+
 <div class="grid gap-5">
-  {posts.map((post) => (
-    <div class="h-full">
-        <Card 
+  {
+    posts.map((post) => (
+      <div class="h-full">
+        <Card
           title={post.data.title}
           description={post.data.description}
           href={`/blogs/tutorials/${post.id}`}
-          info={new Date(post.data.publishDate).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}
+          info={new Date(post.data.publishDate).toLocaleDateString("fr-FR", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
           tags={post.data.tags}
-        /> 
+        />
       </div>
-  ))}
+    ))
+  }
 </div>

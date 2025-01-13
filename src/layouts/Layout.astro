@@ -1,54 +1,59 @@
 ---
-import Head from '../components/Head.astro';
+import Head from "../components/Head.astro";
 
 interface Props {
-	title: string;
-	description: string;
-	robots?: string;
-	schema?: string;
+  title: string;
+  description: string;
+  robots?: string;
+  schema?: string;
 }
 const { title, description, robots, schema } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<Head title={title} description={description} robots={robots} schema={schema}/>
-	</head>
-	<body class="m-[0px] dark:text-white">
-		<slot />
-	</body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <Head
+      title={title}
+      description={description}
+      robots={robots}
+      schema={schema}
+    />
+  </head>
+  <body class="m-[0px] dark:text-white">
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		background: #f8f8f8;
-	}
-	@media (prefers-color-scheme: dark) {
-		html {
-			background: #13151a;
-		}
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    background: #f8f8f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    html {
+      background: #13151a;
+    }
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
 </style>

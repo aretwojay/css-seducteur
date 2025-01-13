@@ -6,12 +6,7 @@ const tutorials = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    proficiencyLevel: z.enum([
-      "Beginner",
-      "Intermediate",
-      "Advanced",
-      "Expert",
-    ]),
+    proficiencyLevel: z.enum(["Débutant", "Intermédiaire", "Avancé", "Expert"]),
     // // In frontmatter, dates written without quotes around them are interpreted as Date objects
     publishDate: z.date(),
     author: reference("authors"),

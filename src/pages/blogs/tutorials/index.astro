@@ -9,7 +9,11 @@ import { WEBSITE_DOMAIN } from "../../../lib/utils";
 
 export const prerender = true;
 
-const allTutorials = await getCollection("tutorials");
+const allTutorials = (await getCollection("tutorials")).sort(
+  (a, b) =>
+    new Date(b.data.publishDate).getTime() -
+    new Date(a.data.publishDate).getTime()
+);
 
 const title = "CSSéducteur - All latest CSS tutorials";
 const description =
@@ -32,10 +36,10 @@ const schema: WithContext<ItemList> = {
 <Layout title={title} description={description} schema={JSON.stringify(schema)}>
   <Header />
   <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
-    <h1 class="text-[36px] text-center">Tutorials</h1>
+    <h1 class="text-[36px] text-center">Tutoriels</h1>
     <p class="text-center my-4">
-      Learn CSS with our tutorials, tips, and advanced techniques to enhance
-      your web design skills.
+      Apprenez le CSS avec nos tutoriels, astuces et techniques avancées pour
+      améliorer vos compétences en design web.
     </p>
     <PostCards posts={allTutorials} />
   </main>

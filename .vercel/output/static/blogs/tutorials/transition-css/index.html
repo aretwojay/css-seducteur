@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      CSSéducteur - Transitions et Animations CSS : Créer des Effets Dynamiques
+    </title>
+    <meta
+      name="description"
+      content="Découvrez comment utiliser les transitions et les animations CSS pour créer des effets dynamiques sur vos pages web. Apprenez à animer les propriétés CSS, à définir des animations complexes et à combiner transitions et animations pour des effets visuels impressionnants."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- add schema.org if setted -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "proficiencyLevel": "Avancé",
+        "articleBody": "# Transitions et Animations CSS : Créer des Effets Dynamiques\n\nLes **transitions** et **animations CSS** sont des outils puissants pour ajouter du dynamisme et de l'interactivité à vos pages web sans avoir à recourir à JavaScript. Que vous souhaitiez améliorer l'expérience utilisateur avec des effets visuels subtils ou créer des animations complexes, CSS propose des solutions performantes et simples à utiliser.\n\nDans ce guide, nous explorerons en détail comment utiliser les transitions et les animations pour créer des effets dynamiques sur vos pages web.\n\n## 1. Qu'est-ce qu'une Transition CSS ?\n\nUne **transition CSS** permet de changer une propriété CSS d'un état à un autre sur une période de temps. Contrairement aux animations, les transitions ne sont déclenchées que par une interaction de l'utilisateur, comme un survol de souris, un focus ou un clic.\n\n### Propriétés de Base d'une Transition\n\nUne transition nécessite trois éléments essentiels :\n\n- La **propriété** que vous voulez animer.\n- La **durée** de la transition.\n- L'**option de timing** (facultative), qui définit la vitesse de la transition.\n\n### Syntaxe de Base des Transitions\n\n```css\nelement {\n  transition: property duration timing-function delay;\n}\n```\n\n### Exemple de Transition\n\nImaginons que vous ayez un bouton et que vous souhaitiez animer son fond lorsque l'utilisateur survole ce bouton. Voici comment procéder :\n\n```css\nbutton {\n  background-color: #3498db;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\nbutton:hover {\n  background-color: #2980b9;\n}\n```\n\nDans cet exemple :\n\n- La propriété `background-color` est animée.\n- La transition dure 0.3 seconde (`0.3s`).\n- La fonction de timing est `ease`, ce qui signifie que la transition commencera lentement, accélérera, puis ralentira à la fin.\n\n---\n\n## 2. Les Animations CSS\n\nContrairement aux transitions, les **animations CSS** permettent de créer des effets plus complexes qui peuvent se répéter indéfiniment ou être joués en boucle. Une animation peut être définie pour plusieurs propriétés à la fois, et elle peut être configurée pour démarrer, s'arrêter ou se répéter à volonté.\n\n### Syntaxe de Base des Animations\n\nLes animations CSS reposent sur les **@keyframes**, qui définissent les étapes de l'animation. Ensuite, vous appliquez ces étapes à un élément via la propriété `animation`.\n\n```css\n@keyframes nom-animation {\n  from {\n    property: value;\n  }\n  to {\n    property: value;\n  }\n}\n\nelement {\n  animation: nom-animation duration timing-function iteration-count direction;\n}\n```\n\n### Exemple d'Animation Simple\n\nSupposons que vous souhaitiez créer un effet où un carré change de couleur et se déplace sur l'écran. Voici un exemple d'animation :\n\n```css\n@keyframes moveAndChangeColor {\n  0% {\n    background-color: #3498db;\n    transform: translateX(0);\n  }\n  50% {\n    background-color: #e74c3c;\n    transform: translateX(100px);\n  }\n  100% {\n    background-color: #2ecc71;\n    transform: translateX(0);\n  }\n}\n\n.box {\n  width: 100px;\n  height: 100px;\n  background-color: #3498db;\n  animation: moveAndChangeColor 4s ease-in-out infinite;\n}\n```\n\nDans cet exemple :\n\n- **@keyframes** définit l'animation de `moveAndChangeColor`, qui change la couleur de fond et déplace le carré.\n- L'animation dure 4 secondes (`4s`), utilise une fonction de timing `ease-in-out`, et se répète à l'infini (`infinite`).\n\n---\n\n## 3. Propriétés d'Animation CSS\n\nLes animations CSS disposent de plusieurs propriétés que vous pouvez utiliser pour personnaliser leur comportement :\n\n- **`animation-name`** : définit le nom de l'animation (référez-vous à un `@keyframes`).\n- **`animation-duration`** : définit la durée de l'animation.\n- **`animation-timing-function`** : détermine la courbe de vitesse de l'animation.\n- **`animation-delay`** : spécifie un délai avant que l'animation commence.\n- **`animation-iteration-count`** : définit combien de fois l'animation doit être jouée.\n- **`animation-direction`** : définit si l'animation doit être jouée dans le sens normal ou inversé.\n- **`animation-fill-mode`** : détermine l'état de l'élément avant ou après l'animation.\n\n### Exemple avec Plusieurs Propriétés d'Animation\n\n```css\n@keyframes exampleAnimation {\n  0% {\n    transform: rotate(0deg);\n    opacity: 1;\n  }\n  100% {\n    transform: rotate(360deg);\n    opacity: 0;\n  }\n}\n\n.element {\n  animation-name: exampleAnimation;\n  animation-duration: 5s;\n  animation-timing-function: linear;\n  animation-delay: 1s;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n```\n\nCet exemple fait tourner un élément à 360 degrés tout en diminuant son opacité. L'animation :\n\n- Commence après un délai de 1 seconde.\n- Tourne de manière continue en alternant entre un état transparent et opaque.\n\n---\n\n## 4. Transitions et Animations Avancées\n\n### Chaining d'Animations\n\nIl est possible de créer une **enchaînement d'animations** en combinant plusieurs animations dans une même déclaration. Vous pouvez utiliser des `@keyframes` multiples ou appliquer plusieurs animations à un élément.\n\n#### Exemple :\n\n```css\n@keyframes moveUp {\n  0% {\n    transform: translateY(0);\n  }\n  100% {\n    transform: translateY(-50px);\n  }\n}\n\n@keyframes changeColor {\n  0% {\n    background-color: red;\n  }\n  100% {\n    background-color: green;\n  }\n}\n\n.element {\n  animation: moveUp 2s ease-in-out, changeColor 2s ease-in-out;\n}\n```\n\nDans cet exemple, deux animations se produisent simultanément :\n\n- Le carré se déplace vers le haut.\n- Sa couleur passe du rouge au vert.\n\n### Animations avec des `transform` et `transition`\n\nLes propriétés comme `scale()`, `rotate()`, `translate()`, et `skew()` peuvent être combinées avec des transitions et des animations pour créer des effets visuels dynamiques et fluides.\n\n#### Exemple :\n\n```css\n.element {\n  transition: transform 0.5s ease;\n}\n\n.element:hover {\n  transform: scale(1.2) rotate(15deg);\n}\n```\n\nCela agrandira et fera pivoter l'élément lorsque l'utilisateur passera la souris dessus.\n\n---\n\n## 5. Conclusion\n\nLes **transitions** et **animations CSS** sont des outils essentiels pour dynamiser vos pages web, améliorer l'interactivité et offrir une expérience utilisateur agréable. Grâce à ces techniques, vous pouvez créer des effets visuels impressionnants sans utiliser JavaScript. N'hésitez pas à expérimenter avec les différentes propriétés et à combiner des transitions et animations pour créer des effets encore plus complexes.\n\n### Ressources Supplémentaires\n\n- [Documentation sur les transitions CSS - MDN](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Transitions)\n- [Documentation sur les animations CSS - MDN](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Animations)",
+        "articleSection": "Tutorials",
+        "wordCount": 804,
+        "headline": "Transitions et Animations CSS : Créer des Effets Dynamiques",
+        "description": "Découvrez comment utiliser les transitions et les animations CSS pour créer des effets dynamiques sur vos pages web. Apprenez à animer les propriétés CSS, à définir des animations complexes et à combiner transitions et animations pour des effets visuels impressionnants.",
+        "author": {
+          "@type": "Person",
+          "name": "R2J",
+          "image": "https://avatars.githubusercontent.com/u/81377220?v=4",
+          "url": "https://github.com/aretwojay"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "CSSéducteur",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://css-seducteur-css.site/faivcon.svg"
+          }
+        },
+        "url": "https://css-seducteur-css.site/blogs/tutorials/transition-css",
+        "about": [
+          {
+            "@type": "Thing",
+            "@id": "https://css-seducteur-css.site/blogs/css",
+            "name": "CSS"
+          },
+          {
+            "@type": "Thing",
+            "@id": "https://css-seducteur-css.site/blogs/animations",
+            "name": "Animations"
+          },
+          {
+            "@type": "Thing",
+            "@id": "https://css-seducteur-css.site/blogs/transitions",
+            "name": "Transitions"
+          }
+        ],
+        "isPartOf": {
+          "@type": "Blog",
+          "@id": "https://css-seducteur-css.site"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://css-seducteur-css.site/blogs/tutorials/transition-css"
+        },
+        "keywords": "CSS, Animations, Transitions",
+        "datePublished": "Sat Dec 28 2024",
+        "dateModified": "Sat Dec 28 2024"
+      }
+    </script>
+    <!-- sitemaps and co -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content="Astro v5.1.6" />
+    <meta name="robots" content="all" />
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="CSSéducteur - Tutoriels CSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://css-seducteur-css.site" />
+    <meta
+      property="og:description"
+      content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."
+    />
+    <meta
+      property="og:image"
+      content="https://css-seducteur-css.site/web-app-manifest-512x512.png"
+    />
+    <meta property="og:site_name" content="CSSéducteur" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="stylesheet" href="/_astro/_tag_.D1ucBM1H.css" />
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+      var script = document.createElement("script");
+      script.defer = true;
+      script.src = "/_vercel/insights/script.js";
+      var head = document.querySelector("head");
+      head.appendChild(script);
+    </script>
+  </head>
+  <body class="m-[0px] dark:text-white">
+    <header class="dark:bg-color-1 shadow-sm">
+      <div class="flex items-center justify-between container p-2">
+        <a
+          class="flex items-center gap-2 no-underline text-color-contrast"
+          href="/"
+        >
+          <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">
+            CSSéducteur
+          </h1>
+          🚀
+        </a>
+        <nav>
+          <ul class="flex gap-4 space-x-4">
+            <li>
+              <a
+                href="/blogs/basique"
+                class="no-underline text-color-11 transition-all hover:text-color-contrast"
+                >Les basiques</a
+              >
+            </li>
+            <li>
+              <a
+                href="/blogs/tutorials"
+                class="no-underline text-color-11 transition-all hover:text-color-contrast"
+                >Tutoriels CSS</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
+      <article>
+        <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">
+          Transitions et Animations CSS : Créer des Effets Dynamiques
+        </h1>
+        <a
+          href="https://github.com/aretwojay"
+          class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"
+        >
+          <img
+            src="https://avatars.githubusercontent.com/u/81377220?v=4"
+            alt="R2J"
+            class="size-8 rounded-full"
+          />
+          <p>R2J</p>
+        </a>
+        <div class="flex gap-2 mb-6">
+          <a href="/blogs/css"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >CSS</span
+            ></a
+          ><a href="/blogs/animations"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >Animations</span
+            ></a
+          ><a href="/blogs/transitions"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >Transitions</span
+            ></a
+          >
+        </div>
+        <p class="text-sm font-light">Temps estimé de lecture : 5 min</p>
+        <p class="font-extralight mt-2 mb-5">
+          Découvrez comment utiliser les transitions et les animations CSS pour
+          créer des effets dynamiques sur vos pages web. Apprenez à animer les
+          propriétés CSS, à définir des animations complexes et à combiner
+          transitions et animations pour des effets visuels impressionnants.
+        </p>
+        <div
+          class="prose dark:prose-invert prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl prose-headings:underline"
+        >
+          <h1 id="transitions-et-animations-css--créer-des-effets-dynamiques">
+            Transitions et Animations CSS : Créer des Effets Dynamiques
+          </h1>
+          <p>
+            Les <strong>transitions</strong> et
+            <strong>animations CSS</strong> sont des outils puissants pour
+            ajouter du dynamisme et de l’interactivité à vos pages web sans
+            avoir à recourir à JavaScript. Que vous souhaitiez améliorer
+            l’expérience utilisateur avec des effets visuels subtils ou créer
+            des animations complexes, CSS propose des solutions performantes et
+            simples à utiliser.
+          </p>
+          <p>
+            Dans ce guide, nous explorerons en détail comment utiliser les
+            transitions et les animations pour créer des effets dynamiques sur
+            vos pages web.
+          </p>
+          <h2 id="1-quest-ce-quune-transition-css">
+            1. Qu’est-ce qu’une Transition CSS ?
+          </h2>
+          <p>
+            Une <strong>transition CSS</strong> permet de changer une propriété
+            CSS d’un état à un autre sur une période de temps. Contrairement aux
+            animations, les transitions ne sont déclenchées que par une
+            interaction de l’utilisateur, comme un survol de souris, un focus ou
+            un clic.
+          </p>
+          <h3 id="propriétés-de-base-dune-transition">
+            Propriétés de Base d’une Transition
+          </h3>
+          <p>Une transition nécessite trois éléments essentiels :</p>
+          <ul>
+            <li>La <strong>propriété</strong> que vous voulez animer.</li>
+            <li>La <strong>durée</strong> de la transition.</li>
+            <li>
+              L’<strong>option de timing</strong> (facultative), qui définit la
+              vitesse de la transition.
+            </li>
+          </ul>
+          <h3 id="syntaxe-de-base-des-transitions">
+            Syntaxe de Base des Transitions
+          </h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#85E89D">element</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  transition</span><span style="color:#E1E4E8">: property duration timing-function delay;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+          <h3 id="exemple-de-transition">Exemple de Transition</h3>
+          <p>
+            Imaginons que vous ayez un bouton et que vous souhaitiez animer son
+            fond lorsque l’utilisateur survole ce bouton. Voici comment procéder
+            :
+          </p>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#85E89D">button</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#3498db</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">white</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> 20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  border</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">none</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  border-radius</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  cursor</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">pointer</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  transition</span><span style="color:#E1E4E8">: background-color </span><span style="color:#79B8FF">0.3</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> ease</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">button</span><span style="color:#B392F0">:hover</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#2980b9</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+          <p>Dans cet exemple :</p>
+          <ul>
+            <li>La propriété <code>background-color</code> est animée.</li>
+            <li>La transition dure 0.3 seconde (<code>0.3s</code>).</li>
+            <li>
+              La fonction de timing est <code>ease</code>, ce qui signifie que
+              la transition commencera lentement, accélérera, puis ralentira à
+              la fin.
+            </li>
+          </ul>
+          <hr />
+          <h2 id="2-les-animations-css">2. Les Animations CSS</h2>
+          <p>
+            Contrairement aux transitions, les
+            <strong>animations CSS</strong> permettent de créer des effets plus
+            complexes qui peuvent se répéter indéfiniment ou être joués en
+            boucle. Une animation peut être définie pour plusieurs propriétés à
+            la fois, et elle peut être configurée pour démarrer, s’arrêter ou se
+            répéter à volonté.
+          </p>
+          <h3 id="syntaxe-de-base-des-animations">
+            Syntaxe de Base des Animations
+          </h3>
+          <p>
+            Les animations CSS reposent sur les <strong>@keyframes</strong>, qui
+            définissent les étapes de l’animation. Ensuite, vous appliquez ces
+            étapes à un élément via la propriété <code>animation</code>.
+          </p>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> nom-animation</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">  from</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    property</span><span style="color:#E1E4E8">: value;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#B392F0">  to</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    property</span><span style="color:#E1E4E8">: value;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">element</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  animation</span><span style="color:#E1E4E8">: nom-animation duration timing-function iteration-count direction;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+          <h3 id="exemple-danimation-simple">Exemple d’Animation Simple</h3>
+          <p>
+            Supposons que vous souhaitiez créer un effet où un carré change de
+            couleur et se déplace sur l’écran. Voici un exemple d’animation :
+          </p>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> moveAndChangeColor</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">  0%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#3498db</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">translateX</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#B392F0">  50%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#e74c3c</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">translateX</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">100</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#B392F0">  100%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#2ecc71</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">translateX</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.box</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  width</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  height</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#3498db</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  animation</span><span style="color:#E1E4E8">: moveAndChangeColor </span><span style="color:#79B8FF">4</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> ease-in-out</span><span style="color:#79B8FF"> infinite</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+          <p>Dans cet exemple :</p>
+          <ul>
+            <li>
+              <strong>@keyframes</strong> définit l’animation de
+              <code>moveAndChangeColor</code>, qui change la couleur de fond et
+              déplace le carré.
+            </li>
+            <li>
+              L’animation dure 4 secondes (<code>4s</code>), utilise une
+              fonction de timing <code>ease-in-out</code>, et se répète à
+              l’infini (<code>infinite</code>).
+            </li>
+          </ul>
+          <hr />
+          <h2 id="3-propriétés-danimation-css">
+            3. Propriétés d’Animation CSS
+          </h2>
+          <p>
+            Les animations CSS disposent de plusieurs propriétés que vous pouvez
+            utiliser pour personnaliser leur comportement :
+          </p>
+          <ul>
+            <li>
+              <strong><code>animation-name</code></strong> : définit le nom de
+              l’animation (référez-vous à un <code>@keyframes</code>).
+            </li>
+            <li>
+              <strong><code>animation-duration</code></strong> : définit la
+              durée de l’animation.
+            </li>
+            <li>
+              <strong><code>animation-timing-function</code></strong> :
+              détermine la courbe de vitesse de l’animation.
+            </li>
+            <li>
+              <strong><code>animation-delay</code></strong> : spécifie un délai
+              avant que l’animation commence.
+            </li>
+            <li>
+              <strong><code>animation-iteration-count</code></strong> : définit
+              combien de fois l’animation doit être jouée.
+            </li>
+            <li>
+              <strong><code>animation-direction</code></strong> : définit si
+              l’animation doit être jouée dans le sens normal ou inversé.
+            </li>
+            <li>
+              <strong><code>animation-fill-mode</code></strong> : détermine
+              l’état de l’élément avant ou après l’animation.
+            </li>
+          </ul>
+          <h3 id="exemple-avec-plusieurs-propriétés-danimation">
+            Exemple avec Plusieurs Propriétés d’Animation
+          </h3>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> exampleAnimation</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">  0%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">rotate</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#F97583">deg</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#79B8FF">    opacity</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#B392F0">  100%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">rotate</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">360</span><span style="color:#F97583">deg</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#79B8FF">    opacity</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.element</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  animation-name</span><span style="color:#E1E4E8">: exampleAnimation;</span></span>
+<span class="line"><span style="color:#79B8FF">  animation-duration</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5</span><span style="color:#F97583">s</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  animation-timing-function</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">linear</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  animation-delay</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#F97583">s</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  animation-iteration-count</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">infinite</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#79B8FF">  animation-direction</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">alternate</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+          <p>
+            Cet exemple fait tourner un élément à 360 degrés tout en diminuant
+            son opacité. L’animation :
+          </p>
+          <ul>
+            <li>Commence après un délai de 1 seconde.</li>
+            <li>
+              Tourne de manière continue en alternant entre un état transparent
+              et opaque.
+            </li>
+          </ul>
+          <hr />
+          <h2 id="4-transitions-et-animations-avancées">
+            4. Transitions et Animations Avancées
+          </h2>
+          <h3 id="chaining-danimations">Chaining d’Animations</h3>
+          <p>
+            Il est possible de créer une
+            <strong>enchaînement d’animations</strong> en combinant plusieurs
+            animations dans une même déclaration. Vous pouvez utiliser des
+            <code>@keyframes</code> multiples ou appliquer plusieurs animations
+            à un élément.
+          </p>
+          <h4 id="exemple">Exemple :</h4>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> moveUp</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">  0%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">translateY</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#B392F0">  100%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">translateY</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">-50</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> changeColor</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#B392F0">  0%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">red</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#B392F0">  100%</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">    background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">green</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.element</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  animation</span><span style="color:#E1E4E8">: moveUp </span><span style="color:#79B8FF">2</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> ease-in-out</span><span style="color:#E1E4E8">, changeColor </span><span style="color:#79B8FF">2</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> ease-in-out</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+          <p>Dans cet exemple, deux animations se produisent simultanément :</p>
+          <ul>
+            <li>Le carré se déplace vers le haut.</li>
+            <li>Sa couleur passe du rouge au vert.</li>
+          </ul>
+          <h3 id="animations-avec-des-transform-et-transition">
+            Animations avec des <code>transform</code> et
+            <code>transition</code>
+          </h3>
+          <p>
+            Les propriétés comme <code>scale()</code>, <code>rotate()</code>,
+            <code>translate()</code>, et <code>skew()</code> peuvent être
+            combinées avec des transitions et des animations pour créer des
+            effets visuels dynamiques et fluides.
+          </p>
+          <h4 id="exemple--1">Exemple :</h4>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#B392F0">.element</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  transition</span><span style="color:#E1E4E8">: transform </span><span style="color:#79B8FF">0.5</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> ease</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">.element:hover</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">  transform</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">scale</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1.2</span><span style="color:#E1E4E8">) </span><span style="color:#79B8FF">rotate</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">15</span><span style="color:#F97583">deg</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+          <p>
+            Cela agrandira et fera pivoter l’élément lorsque l’utilisateur
+            passera la souris dessus.
+          </p>
+          <hr />
+          <h2 id="5-conclusion">5. Conclusion</h2>
+          <p>
+            Les <strong>transitions</strong> et
+            <strong>animations CSS</strong> sont des outils essentiels pour
+            dynamiser vos pages web, améliorer l’interactivité et offrir une
+            expérience utilisateur agréable. Grâce à ces techniques, vous pouvez
+            créer des effets visuels impressionnants sans utiliser JavaScript.
+            N’hésitez pas à expérimenter avec les différentes propriétés et à
+            combiner des transitions et animations pour créer des effets encore
+            plus complexes.
+          </p>
+          <h3 id="ressources-supplémentaires">Ressources Supplémentaires</h3>
+          <ul>
+            <li>
+              <a
+                href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Transitions"
+                >Documentation sur les transitions CSS - MDN</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Animations"
+                >Documentation sur les animations CSS - MDN</a
+              >
+            </li>
+          </ul>
+        </div>
+        <section class="mt-12">
+          <h2
+            class="text-[36px] max-md:text-3xl text-center font-semibold my-4"
+          >
+            Articles connexes
+          </h2>
+          <div class="grid gap-5">
+            <div class="h-full">
+              <a
+                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
+                href="/blogs/tutorials/flexbox"
+              >
+                <section class="p-4 md:p-5 h-full">
+                  <div class="flex overflow-auto gap-2 mb-2">
+                    <span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >CSS</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Flexbox</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Mise en Page</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Web Design</span
+                    >
+                  </div>
+                  <p class="text-[#92939c] font-light">2 janvier 2025</p>
+                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
+                    Flexbox en CSS : Créer des Mises en Page Flexibles
+                  </h1>
+                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                    Découvrez comment utiliser Flexbox en CSS pour créer des
+                    mises en page flexibles et réactives. Apprenez les concepts
+                    de base et les propriétés avancées de Flexbox. Exemples
+                    pratiques inclus.
+                  </p>
+                </section>
+              </a>
+            </div>
+            <div class="h-full">
+              <a
+                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
+                href="/blogs/tutorials/advanced-css"
+              >
+                <section class="p-4 md:p-5 h-full">
+                  <div class="flex overflow-auto gap-2 mb-2">
+                    <span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >CSS</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Techniques</span
+                    >
+                  </div>
+                  <p class="text-[#92939c] font-light">15 septembre 2024</p>
+                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
+                    Les techniques CSS avancées
+                  </h1>
+                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                    Explorez des techniques CSS avancées pour créer des mises en
+                    page complexes et des animations dynamiques sur vos pages
+                    web.
+                  </p>
+                </section>
+              </a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="text-color-contrast p-3 mt-7">
+      <div class="container mx-auto text-center font-extralight text-1">
+        <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

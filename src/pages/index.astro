@@ -16,14 +16,14 @@ const basicsPosts = allTutorialPosts
   .filter((post) =>
     (post.data.tags as string[])
       .map((tag) => tag.toLowerCase())
-      .includes("basics")
+      .includes("basique")
   )
   .slice(0, 3);
 
 // Metadata for the page
-const title = "CSSéducteur - CSS tutorials";
+const title = "CSSéducteur - Tutoriels CSS";
 const description =
-  "CSSéducteur, the next CSS blog for developers, offering tutorials, tips, and advanced techniques to enhance your web design skills.";
+  "CSSéducteur, la référence en CSS et design web, vous propose des tutoriels, astuces et techniques avancées pour améliorer vos compétences en design web.";
 const schema: WithContext<Blog> = {
   "@context": "https://schema.org",
   "@type": "Blog",
@@ -56,26 +56,27 @@ const schema: WithContext<Blog> = {
   <main class="dark:text-white p-4 max-w-[800px] mx-auto">
     <section class="text-center">
       <h1 class="text-[60px] leading-none mt-7 mb-4">
-        The Next CSS Blog for developpers
+        CSSéducteur, la référence en CSS et design web.
       </h1>
-      <span class="text-4">Always updated and writted by CSSéducteur.</span>
+      <span class="text-4">Rédigé et imaginé par CSSéducteur.</span>
       <p class="font-extralight text-3 mt-7 mb-5">
-        CSSéducteur is a collection of CSS tutorials and examples to help you
-        learn and master CSS. Whether you're a beginner or an experienced
-        developer, you'll find something here to help you improve your CSS
-        skills.
+        CSSéducteur est un blog dédié à l'apprentissage du CSS et du design web.
+        Vous y trouverez des tutoriels, des astuces et des techniques avancées
+        pour améliorer vos compétences en design web.
       </p>
     </section>
 
     <section class="flex flex-col my-6">
       <h1 class="font-semibold text-[36px] text-center mb-4">
-        Getting started
+        Commencez par les bases
       </h1>
       <PostCards posts={basicsPosts} />
     </section>
 
     <section class="flex flex-col">
-      <h1 class="font-semibold text-[36px] text-center mb-4">Latest blogs</h1>
+      <h1 class="font-semibold text-[36px] text-center mb-4">
+        Articles récents
+      </h1>
       <PostCards posts={latestPosts} />
     </section>
   </main>

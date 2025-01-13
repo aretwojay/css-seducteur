@@ -1,64 +1,349 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><title>CSSéducteur - Discover Tailwind CSS</title><meta name="description" content="An introduction to Tailwind CSS, a utility-first CSS framework for building modern web designs."><meta name="viewport" content="width=device-width"><!-- favicon  --><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><!-- add schema.org if setted --><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","proficiencyLevel":"Beginner","articleBody":"# Discover Tailwind CSS\n\nTailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without writing CSS. It offers a highly customizable, responsive, and modern approach to styling web applications.\n\n## Key Features\n\n- **Utility-First**: Tailwind provides a wide range of utility classes for common CSS properties like margin, padding, color, and more.\n- **Responsive Design**: Easily create responsive designs with Tailwind's built-in responsive utilities.\n- **Customization**: Tailwind is highly customizable, allowing you to configure your design system and extend the framework with your own utilities, components, and plugins.\n- **Performance**: Tailwind's approach to styling can lead to smaller CSS bundles and improved performance.\n\n## Getting Started\n\nTo get started with Tailwind CSS, you can install it via npm:\n\n```bash\nnpm install tailwindcss\n```\n\nThen, create a `tailwind.config.js` file to customize your Tailwind setup:\n\n```bash\nnpx tailwindcss init\n```\n\nAdd Tailwind's directives to your CSS file:\n\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n\nFinally, build your CSS:\n\n```bash\nnpx tailwindcss build src/styles.css -o dist/styles.css\n```\n\n## Example\n\nHere's a simple example of a responsive card component using Tailwind CSS:\n\n```html\n<div class=\"max-w-sm rounded overflow-hidden shadow-lg\">\n  <img class=\"w-full\" src=\"img/card-top.jpg\" alt=\"Sunset in the mountains\" />\n  <div class=\"px-6 py-4\">\n    <div class=\"font-bold text-xl mb-2\">The Coldest Sunset</div>\n    <p class=\"text-gray-700 text-base\">\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus\n      quia, nulla! Maiores et perferendis eaque, exercitationem praesentium\n      nihil.\n    </p>\n  </div>\n  <div class=\"px-6 pt-4 pb-2\">\n    <span\n      class=\"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2\"\n      >#photography</span\n    >\n    <span\n      class=\"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2\"\n      >#travel</span\n    >\n    <span\n      class=\"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2\"\n      >#winter</span\n    >\n  </div>\n</div>\n```\n\n## Conclusion\n\nTailwind CSS is a powerful tool for building modern, responsive web designs quickly and efficiently. Its utility-first approach and extensive customization options make it a popular choice among developers.\n\nFor more information, visit the [official Tailwind CSS documentation](https://tailwindcss.com/docs).","articleSection":"Tutorials","wordCount":278,"headline":"Discover Tailwind CSS","description":"An introduction to Tailwind CSS, a utility-first CSS framework for building modern web designs.","author":{"@type":"Person","name":"R2J","image":"https://avatars.githubusercontent.com/u/81377220?v=4","url":"https://github.com/aretwojay"},"publisher":{"@type":"Organization","name":"CSSéducteur","logo":{"@type":"ImageObject","url":"https://css-seducteur-css.site/faivcon.svg"}},"url":"https://css-seducteur-css.site/blogs/tutorials/discover-tailwind","about":[{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/css","name":"CSS"},{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/tailwind","name":"Tailwind"},{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/framework","name":"Framework"}],"isPartOf":{"@type":"Blog","@id":"https://css-seducteur-css.site"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://css-seducteur-css.site/blogs/tutorials/discover-tailwind"},"keywords":"CSS, Tailwind, Framework","datePublished":"Tue Oct 01 2024 02:00:00 GMT+0200 (heure d’été d’Europe centrale)","dateModified":"Tue Oct 01 2024 02:00:00 GMT+0200 (heure d’été d’Europe centrale)"}</script><!-- sitemaps and co --><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.0.5"><meta name="robots" content="all"><!-- Open Graph tags --><meta property="og:title" content="CSSéducteur - CSS Tutorials"><meta property="og:type" content="website"><meta property="og:url" content="https://css-seducteur-css.site"><meta property="og:description" content="CSSéducteur, the next CSS blog for developers, offering tutorials, tips, and advanced techniques to enhance your web design skills."><link rel="stylesheet" href="/_astro/_tag_.CMRoY1mV.css"><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-		var script = document.createElement('script');
-		script.defer = true;
-		script.src = '/_vercel/insights/script.js';
-		var head = document.querySelector('head');
-		head.appendChild(script);
-	</script></head> <body class="m-[0px] dark:text-white">  <header class="dark:bg-color-1 shadow-sm"> <div class="flex items-center justify-between container p-2"> <a class="flex items-center gap-2 no-underline text-color-contrast" href="/"> <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">CSSéducteur</h1>
-🚀
-</a> <nav> <ul class="flex gap-4 space-x-4"> <li> <a href="/blogs/basics" class="no-underline text-color-11 transition-all hover:text-color-contrast">Basics</a> </li> <li> <a href="/blogs/tutorials" class="no-underline text-color-11 transition-all hover:text-color-contrast">CSS Tutorials</a> </li> </ul> </nav> </div> </header> <main class="p-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4"> Discover Tailwind CSS </h1> <a href="https://github.com/aretwojay" class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"> <img src="https://avatars.githubusercontent.com/u/81377220?v=4" alt="R2J" class="size-8 rounded-full"> <p>R2J</p> </a> <div class="flex gap-2 mb-6"> <a href="/blogs/css"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span></a><a href="/blogs/tailwind"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Tailwind</span></a><a href="/blogs/framework"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Framework</span></a> </div> <p class="text-sm font-light">
-Expected time to read : 2 min read </p> <p class="font-extralight mt-2 mb-5">An introduction to Tailwind CSS, a utility-first CSS framework for building modern web designs.</p> <div class="prose dark:prose-invert
-  prose-h1:font-bold prose-h1:text-xl
-  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
-  prose-headings:underline">  <h1 id="discover-tailwind-css">Discover Tailwind CSS</h1>
-<p>Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without writing CSS. It offers a highly customizable, responsive, and modern approach to styling web applications.</p>
-<h2 id="key-features">Key Features</h2>
-<ul>
-<li><strong>Utility-First</strong>: Tailwind provides a wide range of utility classes for common CSS properties like margin, padding, color, and more.</li>
-<li><strong>Responsive Design</strong>: Easily create responsive designs with Tailwind’s built-in responsive utilities.</li>
-<li><strong>Customization</strong>: Tailwind is highly customizable, allowing you to configure your design system and extend the framework with your own utilities, components, and plugins.</li>
-<li><strong>Performance</strong>: Tailwind’s approach to styling can lead to smaller CSS bundles and improved performance.</li>
-</ul>
-<h2 id="getting-started">Getting Started</h2>
-<p>To get started with Tailwind CSS, you can install it via npm:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> tailwindcss</span></span></code></pre>
-<p>Then, create a <code>tailwind.config.js</code> file to customize your Tailwind setup:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> tailwindcss</span><span style="color:#9ECBFF"> init</span></span></code></pre>
-<p>Add Tailwind’s directives to your CSS file:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">@tailwind</span><span style="color:#E1E4E8"> base;</span></span>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSSéducteur - Développer avec Tailwind CSS</title>
+    <meta
+      name="description"
+      content="Découvrez Tailwind CSS, un framework CSS utilitaire qui permet de créer des designs personnalisés sans écrire de CSS. Apprenez à personnaliser Tailwind et à créer des designs réactifs."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- add schema.org if setted -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "proficiencyLevel": "Débutant",
+        "articleBody": "# Découvrir Tailwind CSS\n\nTailwind CSS est un framework CSS basé sur les utilitaires qui fournit des classes utilitaires de bas niveau pour créer des designs personnalisés sans écrire de CSS. Il offre une approche moderne, réactive et hautement personnalisable pour styliser les applications web.\n\n---\n\n## Principales Caractéristiques\n\n- **Basé sur les utilitaires** : Tailwind propose une large gamme de classes utilitaires pour des propriétés CSS courantes comme la marge, le padding, les couleurs, etc.\n- **Design réactif** : Créez facilement des designs réactifs grâce aux utilitaires intégrés de Tailwind.\n- **Personnalisation** : Tailwind est hautement personnalisable et permet de configurer votre propre système de design, ainsi que d’étendre le framework avec vos propres utilitaires, composants et plugins.\n- **Performance** : L’approche de Tailwind en matière de styles peut réduire la taille des fichiers CSS et améliorer les performances.\n\n---\n\n## Premiers Pas\n\nPour commencer avec Tailwind CSS, installez-le via npm :\n\n```bash\nnpm install tailwindcss\n```\n\nEnsuite, créez un fichier `tailwind.config.js` pour personnaliser votre configuration Tailwind :\n\n```bash\nnpx tailwindcss init\n```\n\nAjoutez les directives de Tailwind à votre fichier CSS :\n\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n\nEnfin, générez votre CSS :\n\n```bash\nnpx tailwindcss build src/styles.css -o dist/styles.css\n```\n\n---\n\n## Exemple\n\nVoici un exemple simple d’un composant de carte réactif avec Tailwind CSS :\n\n```html\n<div class=\"max-w-sm rounded overflow-hidden shadow-lg\">\n  <img\n    class=\"w-full\"\n    src=\"img/card-top.jpg\"\n    alt=\"Coucher de soleil en montagne\"\n  />\n  <div class=\"px-6 py-4\">\n    <div class=\"font-bold text-xl mb-2\">Le coucher de soleil le plus froid</div>\n    <p class=\"text-gray-700 text-base\">\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus\n      quia, nulla ! Maiores et perferendis eaque, exercitationem praesentium\n      nihil.\n    </p>\n  </div>\n  <div class=\"px-6 pt-4 pb-2\">\n    <span\n      class=\"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2\"\n      >#photographie</span\n    >\n    <span\n      class=\"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2\"\n      >#voyage</span\n    >\n    <span\n      class=\"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2\"\n      >#hiver</span\n    >\n  </div>\n</div>\n```\n\n---\n\n## Conclusion\n\nTailwind CSS est un outil puissant pour créer rapidement des designs web modernes et réactifs. Son approche basée sur les utilitaires et ses nombreuses options de personnalisation en font un choix populaire parmi les développeurs.\n\nPour plus d'informations, consultez la [documentation officielle de Tailwind CSS](https://tailwindcss.com/docs).",
+        "articleSection": "Tutorials",
+        "wordCount": 317,
+        "headline": "Développer avec Tailwind CSS",
+        "description": "Découvrez Tailwind CSS, un framework CSS utilitaire qui permet de créer des designs personnalisés sans écrire de CSS. Apprenez à personnaliser Tailwind et à créer des designs réactifs.",
+        "author": {
+          "@type": "Person",
+          "name": "R2J",
+          "image": "https://avatars.githubusercontent.com/u/81377220?v=4",
+          "url": "https://github.com/aretwojay"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "CSSéducteur",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://css-seducteur-css.site/faivcon.svg"
+          }
+        },
+        "url": "https://css-seducteur-css.site/blogs/tutorials/discover-tailwind",
+        "about": [
+          {
+            "@type": "Thing",
+            "@id": "https://css-seducteur-css.site/blogs/css",
+            "name": "CSS"
+          },
+          {
+            "@type": "Thing",
+            "@id": "https://css-seducteur-css.site/blogs/tailwind",
+            "name": "Tailwind"
+          },
+          {
+            "@type": "Thing",
+            "@id": "https://css-seducteur-css.site/blogs/framework",
+            "name": "Framework"
+          }
+        ],
+        "isPartOf": {
+          "@type": "Blog",
+          "@id": "https://css-seducteur-css.site"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://css-seducteur-css.site/blogs/tutorials/discover-tailwind"
+        },
+        "keywords": "CSS, Tailwind, Framework",
+        "datePublished": "Tue Oct 01 2024",
+        "dateModified": "Tue Oct 01 2024"
+      }
+    </script>
+    <!-- sitemaps and co -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content="Astro v5.1.6" />
+    <meta name="robots" content="all" />
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="CSSéducteur - Tutoriels CSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://css-seducteur-css.site" />
+    <meta
+      property="og:description"
+      content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."
+    />
+    <meta
+      property="og:image"
+      content="https://css-seducteur-css.site/web-app-manifest-512x512.png"
+    />
+    <meta property="og:site_name" content="CSSéducteur" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="stylesheet" href="/_astro/_tag_.D1ucBM1H.css" />
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+      var script = document.createElement("script");
+      script.defer = true;
+      script.src = "/_vercel/insights/script.js";
+      var head = document.querySelector("head");
+      head.appendChild(script);
+    </script>
+  </head>
+  <body class="m-[0px] dark:text-white">
+    <header class="dark:bg-color-1 shadow-sm">
+      <div class="flex items-center justify-between container p-2">
+        <a
+          class="flex items-center gap-2 no-underline text-color-contrast"
+          href="/"
+        >
+          <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">
+            CSSéducteur
+          </h1>
+          🚀
+        </a>
+        <nav>
+          <ul class="flex gap-4 space-x-4">
+            <li>
+              <a
+                href="/blogs/basique"
+                class="no-underline text-color-11 transition-all hover:text-color-contrast"
+                >Les basiques</a
+              >
+            </li>
+            <li>
+              <a
+                href="/blogs/tutorials"
+                class="no-underline text-color-11 transition-all hover:text-color-contrast"
+                >Tutoriels CSS</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
+      <article>
+        <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">
+          Développer avec Tailwind CSS
+        </h1>
+        <a
+          href="https://github.com/aretwojay"
+          class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"
+        >
+          <img
+            src="https://avatars.githubusercontent.com/u/81377220?v=4"
+            alt="R2J"
+            class="size-8 rounded-full"
+          />
+          <p>R2J</p>
+        </a>
+        <div class="flex gap-2 mb-6">
+          <a href="/blogs/css"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >CSS</span
+            ></a
+          ><a href="/blogs/tailwind"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >Tailwind</span
+            ></a
+          ><a href="/blogs/framework"
+            ><span
+              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+              >Framework</span
+            ></a
+          >
+        </div>
+        <p class="text-sm font-light">Temps estimé de lecture : 2 min</p>
+        <p class="font-extralight mt-2 mb-5">
+          Découvrez Tailwind CSS, un framework CSS utilitaire qui permet de
+          créer des designs personnalisés sans écrire de CSS. Apprenez à
+          personnaliser Tailwind et à créer des designs réactifs.
+        </p>
+        <div
+          class="prose dark:prose-invert prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl prose-headings:underline"
+        >
+          <h1 id="découvrir-tailwind-css">Découvrir Tailwind CSS</h1>
+          <p>
+            Tailwind CSS est un framework CSS basé sur les utilitaires qui
+            fournit des classes utilitaires de bas niveau pour créer des designs
+            personnalisés sans écrire de CSS. Il offre une approche moderne,
+            réactive et hautement personnalisable pour styliser les applications
+            web.
+          </p>
+          <hr />
+          <h2 id="principales-caractéristiques">
+            Principales Caractéristiques
+          </h2>
+          <ul>
+            <li>
+              <strong>Basé sur les utilitaires</strong> : Tailwind propose une
+              large gamme de classes utilitaires pour des propriétés CSS
+              courantes comme la marge, le padding, les couleurs, etc.
+            </li>
+            <li>
+              <strong>Design réactif</strong> : Créez facilement des designs
+              réactifs grâce aux utilitaires intégrés de Tailwind.
+            </li>
+            <li>
+              <strong>Personnalisation</strong> : Tailwind est hautement
+              personnalisable et permet de configurer votre propre système de
+              design, ainsi que d’étendre le framework avec vos propres
+              utilitaires, composants et plugins.
+            </li>
+            <li>
+              <strong>Performance</strong> : L’approche de Tailwind en matière
+              de styles peut réduire la taille des fichiers CSS et améliorer les
+              performances.
+            </li>
+          </ul>
+          <hr />
+          <h2 id="premiers-pas">Premiers Pas</h2>
+          <p>Pour commencer avec Tailwind CSS, installez-le via npm :</p>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="bash"
+          ><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> tailwindcss</span></span></code></pre>
+          <p>
+            Ensuite, créez un fichier <code>tailwind.config.js</code> pour
+            personnaliser votre configuration Tailwind :
+          </p>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="bash"
+          ><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> tailwindcss</span><span style="color:#9ECBFF"> init</span></span></code></pre>
+          <p>Ajoutez les directives de Tailwind à votre fichier CSS :</p>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="css"
+          ><code><span class="line"><span style="color:#F97583">@tailwind</span><span style="color:#E1E4E8"> base;</span></span>
 <span class="line"><span style="color:#F97583">@tailwind</span><span style="color:#E1E4E8"> components;</span></span>
 <span class="line"><span style="color:#F97583">@tailwind</span><span style="color:#E1E4E8"> utilities;</span></span></code></pre>
-<p>Finally, build your CSS:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> tailwindcss</span><span style="color:#9ECBFF"> build</span><span style="color:#9ECBFF"> src/styles.css</span><span style="color:#79B8FF"> -o</span><span style="color:#9ECBFF"> dist/styles.css</span></span></code></pre>
-<h2 id="example">Example</h2>
-<p>Here’s a simple example of a responsive card component using Tailwind CSS:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"max-w-sm rounded overflow-hidden shadow-lg"</span><span style="color:#E1E4E8">></span></span>
-<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">img</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"w-full"</span><span style="color:#B392F0"> src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"img/card-top.jpg"</span><span style="color:#B392F0"> alt</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Sunset in the mountains"</span><span style="color:#E1E4E8"> /></span></span>
+          <p>Enfin, générez votre CSS :</p>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="bash"
+          ><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> tailwindcss</span><span style="color:#9ECBFF"> build</span><span style="color:#9ECBFF"> src/styles.css</span><span style="color:#79B8FF"> -o</span><span style="color:#9ECBFF"> dist/styles.css</span></span></code></pre>
+          <hr />
+          <h2 id="exemple">Exemple</h2>
+          <p>
+            Voici un exemple simple d’un composant de carte réactif avec
+            Tailwind CSS :
+          </p>
+          <pre
+            class="astro-code github-dark"
+            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
+            tabindex="0"
+            data-language="html"
+          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"max-w-sm rounded overflow-hidden shadow-lg"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">img</span></span>
+<span class="line"><span style="color:#B392F0">    class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"w-full"</span></span>
+<span class="line"><span style="color:#B392F0">    src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"img/card-top.jpg"</span></span>
+<span class="line"><span style="color:#B392F0">    alt</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Coucher de soleil en montagne"</span></span>
+<span class="line"><span style="color:#E1E4E8">  /></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"px-6 py-4"</span><span style="color:#E1E4E8">></span></span>
-<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"font-bold text-xl mb-2"</span><span style="color:#E1E4E8">>The Coldest Sunset&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"font-bold text-xl mb-2"</span><span style="color:#E1E4E8">>Le coucher de soleil le plus froid&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">p</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"text-gray-700 text-base"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus</span></span>
-<span class="line"><span style="color:#E1E4E8">      quia, nulla! Maiores et perferendis eaque, exercitationem praesentium</span></span>
+<span class="line"><span style="color:#E1E4E8">      quia, nulla ! Maiores et perferendis eaque, exercitationem praesentium</span></span>
 <span class="line"><span style="color:#E1E4E8">      nihil.</span></span>
 <span class="line"><span style="color:#E1E4E8">    &#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"px-6 pt-4 pb-2"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">span</span></span>
 <span class="line"><span style="color:#B392F0">      class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"</span></span>
-<span class="line"><span style="color:#E1E4E8">      >#photography&#x3C;/</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#E1E4E8">      >#photographie&#x3C;/</span><span style="color:#85E89D">span</span></span>
 <span class="line"><span style="color:#E1E4E8">    ></span></span>
 <span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">span</span></span>
 <span class="line"><span style="color:#B392F0">      class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"</span></span>
-<span class="line"><span style="color:#E1E4E8">      >#travel&#x3C;/</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#E1E4E8">      >#voyage&#x3C;/</span><span style="color:#85E89D">span</span></span>
 <span class="line"><span style="color:#E1E4E8">    ></span></span>
 <span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">span</span></span>
 <span class="line"><span style="color:#B392F0">      class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"</span></span>
-<span class="line"><span style="color:#E1E4E8">      >#winter&#x3C;/</span><span style="color:#85E89D">span</span></span>
+<span class="line"><span style="color:#E1E4E8">      >#hiver&#x3C;/</span><span style="color:#85E89D">span</span></span>
 <span class="line"><span style="color:#E1E4E8">    ></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
-<h2 id="conclusion">Conclusion</h2>
-<p>Tailwind CSS is a powerful tool for building modern, responsive web designs quickly and efficiently. Its utility-first approach and extensive customization options make it a popular choice among developers.</p>
-<p>For more information, visit the <a href="https://tailwindcss.com/docs">official Tailwind CSS documentation</a>.</p>  </div> <section class="mt-12"> <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
-Related posts
-</h2> <div class="grid gap-5"> <div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/first-steps"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Basics</span> </div> <p class="text-[#92939c] font-light"> August 21, 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> First steps </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> An introduction to the basics of CSS to control the appearance of your web pages. </p> </section> </a> </div> </div> </section> </article> </main> <footer class="text-color-contrast p-3 mt-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2024 CSSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>
+          <hr />
+          <h2 id="conclusion">Conclusion</h2>
+          <p>
+            Tailwind CSS est un outil puissant pour créer rapidement des designs
+            web modernes et réactifs. Son approche basée sur les utilitaires et
+            ses nombreuses options de personnalisation en font un choix
+            populaire parmi les développeurs.
+          </p>
+          <p>
+            Pour plus d’informations, consultez la
+            <a href="https://tailwindcss.com/docs"
+              >documentation officielle de Tailwind CSS</a
+            >.
+          </p>
+        </div>
+        <section class="mt-12">
+          <h2
+            class="text-[36px] max-md:text-3xl text-center font-semibold my-4"
+          >
+            Articles connexes
+          </h2>
+          <div class="grid gap-5">
+            <div class="h-full">
+              <a
+                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
+                href="/blogs/tutorials/first-steps"
+              >
+                <section class="p-4 md:p-5 h-full">
+                  <div class="flex overflow-auto gap-2 mb-2">
+                    <span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >CSS</span
+                    ><span
+                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
+                      >Basique</span
+                    >
+                  </div>
+                  <p class="text-[#92939c] font-light">21 août 2024</p>
+                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
+                    Premier pas avec CSS
+                  </h1>
+                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                    Découvrez les bases de CSS pour contrôler l&#39;apparence de
+                    vos pages web. Apprenez à ajouter du CSS à votre HTML, à
+                    utiliser des sélecteurs et des propriétés courantes, et à
+                    créer des mises en page simples.
+                  </p>
+                </section>
+              </a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="text-color-contrast p-3 mt-7">
+      <div class="container mx-auto text-center font-extralight text-1">
+        <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
