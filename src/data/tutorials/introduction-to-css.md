@@ -10,7 +10,7 @@ relatedPosts:
   - discover-tailwind
 ---
 
-# Introduction au CSS
+## Introduction au CSS
 
 Le CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour contrôler l’apparence et la mise en page des éléments HTML sur une page web. En apprenant le CSS, vous pouvez transformer un HTML simple en sites visuellement attrayants et interactifs.
 
@@ -18,7 +18,7 @@ Le CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour
 
 Le CSS définit comment les éléments HTML doivent être affichés sur un écran, du papier ou d'autres médias. Il sépare le contenu (HTML) de la présentation (CSS), ce qui facilite la maintenance et le style des sites web.
 
-### Exemple de HTML et CSS :
+### Exemple de HTML et CSS
 
 ```html
 <!DOCTYPE html>

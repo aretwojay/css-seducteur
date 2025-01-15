@@ -21,9 +21,9 @@ const basicsPosts = allTutorialPosts
   .slice(0, 3);
 
 // Metadata for the page
-const title = "CSSéducteur - Tutoriels CSS";
+const title = "CSSéducteur - La référence en CSS et design web";
 const description =
-  "CSSéducteur, la référence en CSS et design web, vous propose des tutoriels, astuces et techniques avancées pour améliorer vos compétences en design web.";
+  "CSSéducteur, la référence en CSS et design web, vous propose des tutoriels, astuces et techniques avancées pour améliorer vos compétences en design web. Rédigé et imaginé par CSSéducteur. CSSéducteur est un blog dédié à l'apprentissage du CSS et du design web. Vous y trouverez des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web.";
 const schema: WithContext<Blog> = {
   "@context": "https://schema.org",
   "@type": "Blog",
@@ -47,11 +47,7 @@ const schema: WithContext<Blog> = {
 };
 ---
 
-<Layout
-  title="CSSéducteur - CSS tutorials"
-  description={description}
-  schema={JSON.stringify(schema)}
->
+<Layout title={title} description={description} schema={JSON.stringify(schema)}>
   <Header />
   <main class="dark:text-white p-4 max-w-[800px] mx-auto">
     <section class="text-center">

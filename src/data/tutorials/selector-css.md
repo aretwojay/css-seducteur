@@ -10,7 +10,7 @@ relatedPosts:
   - the-power-of-css-variables
 ---
 
-# Sélecteurs Avancés en CSS : Sélectionner avec Précision
+## Sélecteurs Avancés en CSS : Sélectionner avec Précision
 
 Les **sélecteurs CSS** sont des outils puissants pour cibler des éléments spécifiques d'une page web afin de les styliser. Si vous maîtrisez les sélecteurs de base, vous pouvez maintenant explorer des sélecteurs plus avancés qui vous permettront de cibler des éléments de manière plus précise et plus flexible. Ces sélecteurs avancés peuvent rendre votre code CSS plus concis, performant et facile à maintenir.
 
@@ -22,7 +22,7 @@ Les sélecteurs combinés en CSS vous permettent de sélectionner des éléments
 
 Le **sélecteur descendant** cible un élément qui est un enfant (ou un descendant) d'un autre élément. Ce sélecteur est représenté par un espace entre les sélecteurs.
 
-#### Exemple :
+#### Exemple
 
 ```css
 div p {
@@ -36,7 +36,7 @@ Dans cet exemple, tous les éléments `<p>` à l'intérieur d'un `<div>` auront 
 
 Le **sélecteur enfant direct** cible un élément qui est un enfant direct d'un autre élément. Ce sélecteur est représenté par un `>` entre les éléments.
 
-#### Exemple :
+#### Un exemple
 
 ```css
 div > p {
@@ -50,7 +50,7 @@ Ici, seuls les éléments `<p>` directement enfants des éléments `<div>` seron
 
 Le **sélecteur frère adjacent** cible un élément qui suit immédiatement un autre élément dans le même parent. Il est représenté par le symbole `+`.
 
-#### Exemple :
+#### Encore un exemple
 
 ```css
 h1 + p {
@@ -64,7 +64,7 @@ Ce sélecteur applique un style gras (`font-weight: bold`) au premier `<p>` imm�
 
 Le **sélecteur frère général** cible tous les éléments frères d'un certain élément, qu'ils soient immédiatement adjacents ou non. Il est représenté par le symbole `~`.
 
-#### Exemple :
+#### L'exemple
 
 ```css
 h1 ~ p {
@@ -84,7 +84,7 @@ Les sélecteurs d'attributs permettent de cibler des éléments en fonction des 
 
 Ce sélecteur sélectionne les éléments qui ont un certain attribut avec une valeur exacte.
 
-#### Exemple :
+#### Pour vous donner un exemple
 
 ```css
 a[href="https://example.com"]
@@ -99,7 +99,7 @@ Ici, tous les liens `<a>` ayant un attribut `href` égal à `https://example.com
 
 Le sélecteur suivant cible tous les éléments dont l'attribut contient une certaine valeur.
 
-#### Exemple :
+#### Un petit exemple
 
 ```css
 a[href*="example"] {
@@ -113,7 +113,7 @@ Ce sélecteur applique la couleur orange à tous les liens dont l'URL dans `href
 
 Ce sélecteur sélectionne les éléments dont l'attribut commence par une certaine valeur.
 
-#### Exemple :
+#### Encore un petit exemple
 
 ```css
 a[href^="https://"]
@@ -128,7 +128,7 @@ Tous les liens `<a>` dont l'attribut `href` commence par `https://` seront styli
 
 Le sélecteur suivant cible les éléments dont l'attribut se termine par une certaine valeur.
 
-#### Exemple :
+#### Un autre exemple
 
 ```css
 a[href$=".pdf"] {
@@ -148,7 +148,7 @@ Les **pseudo-classes** sont des sélecteurs qui permettent de cibler des éléme
 
 La pseudo-classe `:hover` cible un élément lorsque l'utilisateur le survole avec sa souris.
 
-#### Exemple :
+#### L'exemple sur lequel vous pouvez vous appuyer
 
 ```css
 button:hover {
@@ -162,7 +162,7 @@ Ce code applique une couleur de fond jaune lorsque l'utilisateur survole le bout
 
 La pseudo-classe `:focus` cible un élément lorsqu'il a le focus, comme un champ de formulaire actif.
 
-#### Exemple :
+#### Un exemple pour illustrer
 
 ```css
 input:focus {
@@ -176,7 +176,7 @@ Ici, l'élément `<input>` change la couleur de sa bordure lorsqu'il est sélect
 
 La pseudo-classe `:nth-child()` permet de sélectionner un élément en fonction de sa position parmi ses frères et sœurs. Vous pouvez cibler un élément spécifique ou utiliser des formules pour une sélection plus précise.
 
-#### Exemple :
+#### Un exemple pour vous aider
 
 ```css
 ul li:nth-child(odd) {
@@ -190,7 +190,7 @@ Dans cet exemple, tous les éléments `<li>` impairs dans une liste `<ul>` auron
 
 La pseudo-classe `:not()` permet d'exclure certains éléments du style. Cela permet de styliser tous les éléments sauf ceux qui correspondent à un sélecteur donné.
 
-#### Exemple :
+#### Un exemple pour vous montrer
 
 ```css
 div:not(.highlight) {
@@ -210,7 +210,7 @@ Les **pseudo-éléments** permettent de styliser une partie spécifique d'un él
 
 Le pseudo-élément `::before` insère du contenu avant l'élément ciblé.
 
-#### Exemple :
+#### Un exemple pour vous aider sur votre CSS
 
 ```css
 h1::before {
@@ -225,7 +225,7 @@ Ce code ajoute une étoile avant chaque titre `<h1>`.
 
 Le pseudo-élément `::after` insère du contenu après l'élément ciblé.
 
-#### Exemple :
+#### Un dernier exemple pour vous
 
 ```css
 h1::after {

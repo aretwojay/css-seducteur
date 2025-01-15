@@ -9,7 +9,7 @@ relatedPosts:
   - first-steps
 ---
 
-# Découvrir Tailwind CSS
+## Découvrir Tailwind CSS
 
 Tailwind CSS est un framework CSS basé sur les utilitaires qui fournit des classes utilitaires de bas niveau pour créer des designs personnalisés sans écrire de CSS. Il offre une approche moderne, réactive et hautement personnalisable pour styliser les applications web.
 

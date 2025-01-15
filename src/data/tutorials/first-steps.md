@@ -9,7 +9,7 @@ relatedPosts:
   - introduction-to-css
 ---
 
-# Premiers Pas avec CSS
+## Premiers Pas avec CSS
 
 Bienvenue dans vos premiers pas pour apprendre CSS (Cascading Style Sheets) ! CSS est un outil puissant qui permet de contrôler l’apparence et la mise en page de vos pages web. Ce guide vous aidera à commencer avec les bases.
 
@@ -76,7 +76,7 @@ sélecteur {
 }
 ```
 
-### Exemple :
+### Exemple
 
 ```css
 h1 {
@@ -124,6 +124,7 @@ Voici quelques propriétés CSS fréquemment utilisées :
    ```
 
 6. **Bordure** : Ajoute une bordure autour d’un élément.
+
    ```css
    border: 2px solid black;
    ```

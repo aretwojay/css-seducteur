@@ -10,7 +10,7 @@ relatedPosts:
   - mastering-css-animations
 ---
 
-# Flexbox en CSS : Créer des Mises en Page Flexibles
+## Flexbox en CSS : Créer des Mises en Page Flexibles
 
 Flexbox, ou **Flexible Box Layout**, est un modèle de mise en page puissant en CSS, conçu pour aider à disposer les éléments dans un conteneur de manière fluide et flexible. Flexbox est particulièrement utile pour créer des mises en page adaptatives sans avoir à utiliser de positionnement complexe ou de marges.
 
@@ -45,7 +45,7 @@ La propriété `flex-direction` définit l'orientation principale des éléments
 - `row-reverse` : les éléments sont disposés horizontalement, mais dans l'ordre inverse.
 - `column-reverse` : les éléments sont disposés verticalement, mais dans l'ordre inverse.
 
-#### Exemple :
+#### Exemple
 
 ```css
 .container {
@@ -66,7 +66,7 @@ Elle peut prendre les valeurs suivantes :
 - `space-between` : les éléments sont répartis uniformément avec le premier et le dernier élément alignés aux bords du conteneur.
 - `space-around` : les éléments sont espacés uniformément avec un espace égal autour de chaque élément.
 
-#### Exemple :
+#### Un xemple
 
 ```css
 .container {
@@ -87,7 +87,7 @@ Les valeurs possibles sont :
 - `baseline` : les éléments sont alignés selon leur ligne de base.
 - `stretch` (valeur par défaut) : les éléments prennent toute la hauteur du conteneur.
 
-#### Exemple :
+#### Encore un exemple
 
 ```css
 .container {
@@ -108,7 +108,7 @@ La propriété `flex-wrap` détermine si les éléments doivent se répartir sur
 - `wrap` : les éléments sont répartis sur plusieurs lignes.
 - `wrap-reverse` : les éléments sont répartis sur plusieurs lignes dans l'ordre inverse.
 
-#### Exemple :
+#### Un autre exemple
 
 ```css
 .container {
@@ -129,7 +129,7 @@ Les valeurs sont les mêmes que celles de `align-items` :
 - `baseline`
 - `stretch`
 
-#### Exemple :
+#### Voici un exemple
 
 ```css
 .item {
@@ -145,7 +145,7 @@ Ces trois propriétés permettent de contrôler la taille des éléments flex da
 - **`flex-shrink`** : définit la capacité d'un élément à rétrécir si nécessaire. La valeur par défaut est `1` (peut rétrécir).
 - **`flex-basis`** : définit la taille initiale d'un élément avant qu'il ne soit distribué ou réduit. La valeur par défaut est `auto`.
 
-#### Exemple :
+#### Pour finir, un exemple
 
 ```css
 .item {

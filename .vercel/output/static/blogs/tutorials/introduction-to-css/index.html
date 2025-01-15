@@ -1,203 +1,21 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CSSéducteur - Introduction au CSS</title>
-    <meta
-      name="description"
-      content="Apprenez les bases du CSS pour styliser vos pages web et créer des designs attrayants. Découvrez les sélecteurs, les propriétés courantes et les techniques responsives."
-    />
-    <meta name="viewport" content="width=device-width" />
-    <!-- favicon  -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <!-- add schema.org if setted -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "TechArticle",
-        "proficiencyLevel": "Débutant",
-        "articleBody": "# Introduction au CSS\n\nLe CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour contrôler l’apparence et la mise en page des éléments HTML sur une page web. En apprenant le CSS, vous pouvez transformer un HTML simple en sites visuellement attrayants et interactifs.\n\n## Qu'est-ce que le CSS ?\n\nLe CSS définit comment les éléments HTML doivent être affichés sur un écran, du papier ou d'autres médias. Il sépare le contenu (HTML) de la présentation (CSS), ce qui facilite la maintenance et le style des sites web.\n\n### Exemple de HTML et CSS :\n\n```html\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Exemple de CSS</title>\n    <style>\n      body {\n        background-color: #f4f4f4;\n        font-family: Arial, sans-serif;\n        color: #333;\n      }\n      h1 {\n        color: #007bff;\n        text-align: center;\n      }\n      p {\n        font-size: 16px;\n        line-height: 1.5;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Bienvenue au CSS</h1>\n    <p>\n      Ceci est un exemple simple d'utilisation du CSS pour styliser une page\n      web.\n    </p>\n  </body>\n</html>\n```\n\nDans cet exemple :\n\n- La balise `body` est stylée avec un fond gris clair, une police personnalisée et une couleur de texte.\n- La balise `h1` a une couleur bleue et un texte centré.\n- La balise `p` a une taille de police et un espacement entre les lignes ajustés.\n\n---\n\n## Les Types de CSS\n\nIl existe trois principales manières d’appliquer du CSS au HTML :\n\n1. **CSS Inline** : Style appliqué directement sur un élément HTML avec l’attribut `style`.\n\n   ```html\n   <p style=\"color: red;\">Ce texte est rouge.</p>\n   ```\n\n2. **CSS Interne** : Style écrit dans une balise `<style>` dans la section `<head>` du HTML.\n\n   ```html\n   <style>\n     p {\n       color: blue;\n     }\n   </style>\n   ```\n\n3. **CSS Externe** : Style écrit dans un fichier `.css` séparé et lié au HTML avec la balise `<link>`.\n\n   ```html\n   <link rel=\"stylesheet\" href=\"styles.css\" />\n   ```\n\n   **styles.css** :\n\n   ```css\n   p {\n     color: green;\n   }\n   ```\n\n---\n\n## Sélecteurs CSS\n\nLes sélecteurs définissent les éléments auxquels une règle CSS s’applique. Voici quelques sélecteurs courants :\n\n1. **Sélecteur de Type** :\n   Cible tous les éléments d’un type spécifique.\n\n   ```css\n   p {\n     color: purple;\n   }\n   ```\n\n2. **Sélecteur de Classe** :\n   Cible les éléments avec un attribut `class` spécifique.\n\n   ```css\n   .surligner {\n     background-color: yellow;\n   }\n   ```\n\n   ```html\n   <p class=\"surligner\">Ce texte a un fond jaune.</p>\n   ```\n\n3. **Sélecteur d’ID** :\n   Cible un seul élément avec un `id` unique.\n\n   ```css\n   #entete {\n     font-size: 24px;\n   }\n   ```\n\n   ```html\n   <h1 id=\"entete\">Entête Unique</h1>\n   ```\n\n4. **Sélecteur Universel** :\n   Cible tous les éléments.\n\n   ```css\n   * {\n     margin: 0;\n     padding: 0;\n   }\n   ```\n\n5. **Sélecteur Groupé** :\n   Applique le même style à plusieurs éléments.\n\n   ```css\n   h1,\n   h2,\n   p {\n     color: darkblue;\n   }\n   ```\n\n---\n\n## Propriétés CSS Courantes\n\n### 1. **Style du Texte**\n\n- `color` : Change la couleur du texte.\n- `font-size` : Ajuste la taille du texte.\n- `font-family` : Spécifie la police à utiliser.\n\n```css\np {\n  color: #555;\n  font-size: 18px;\n  font-family: \"Helvetica\", sans-serif;\n}\n```\n\n### 2. **Modèle de Boîte (Box Model)**\n\nLe modèle de boîte définit la structure des éléments, notamment :\n\n- **Margin** : Espace à l’extérieur de l’élément.\n- **Border** : Contour de l’élément.\n- **Padding** : Espace à l’intérieur de l’élément, autour du contenu.\n\n```css\ndiv {\n  margin: 20px;\n  padding: 10px;\n  border: 2px solid black;\n}\n```\n\n### 3. **Fond**\n\n- `background-color` : Définit la couleur d’arrière-plan.\n- `background-image` : Ajoute une image d’arrière-plan.\n\n```css\nbody {\n  background-color: #f0f0f0;\n  background-image: url(\"fond.jpg\");\n}\n```\n\n### 4. **Alignement**\n\n- `text-align` : Aligne le texte horizontalement (`left`, `center`, `right`).\n- `vertical-align` : Aligne les éléments en ligne verticalement.\n\n```css\nh1 {\n  text-align: center;\n}\n```\n\n---\n\n## Conception Responsive avec CSS\n\nLe design responsive garantit que votre site est agréable à utiliser sur tous les appareils. Voici quelques techniques :\n\n1. **Mises en Page Flexibles** :\n   Utilisez des unités relatives comme les pourcentages ou `em` au lieu des unités fixes comme `px`.\n\n2. **Media Queries** :\n   Appliquez des styles en fonction de la taille de l’écran.\n\n   ```css\n   @media (max-width: 768px) {\n     body {\n       font-size: 14px;\n     }\n   }\n   ```\n\n3. **Flexbox** :\n   Simplifiez les mises en page avec Flexbox.\n\n   ```css\n   .container {\n     display: flex;\n     justify-content: space-around;\n   }\n   ```\n\n---\n\n## Conclusion\n\nLe CSS est une technologie fondamentale pour créer des pages web belles et fonctionnelles. En maîtrisant les sélecteurs de base, les propriétés et les techniques responsives, vous pouvez donner vie à vos conceptions et offrir des expériences conviviales. Continuez à expérimenter et à développer vos compétences pour exploiter tout le potentiel du CSS !",
-        "articleSection": "Tutorials",
-        "wordCount": 609,
-        "headline": "Introduction au CSS",
-        "description": "Apprenez les bases du CSS pour styliser vos pages web et créer des designs attrayants. Découvrez les sélecteurs, les propriétés courantes et les techniques responsives.",
-        "author": {
-          "@type": "Person",
-          "name": "R2J",
-          "image": "https://avatars.githubusercontent.com/u/81377220?v=4",
-          "url": "https://github.com/aretwojay"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "CSSéducteur",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://css-seducteur-css.site/faivcon.svg"
-          }
-        },
-        "url": "https://css-seducteur-css.site/blogs/tutorials/introduction-to-css",
-        "about": [
-          {
-            "@type": "Thing",
-            "@id": "https://css-seducteur-css.site/blogs/css",
-            "name": "CSS"
-          },
-          {
-            "@type": "Thing",
-            "@id": "https://css-seducteur-css.site/blogs/basique",
-            "name": "Basique"
-          },
-          {
-            "@type": "Thing",
-            "@id": "https://css-seducteur-css.site/blogs/développement web",
-            "name": "Développement Web"
-          }
-        ],
-        "isPartOf": {
-          "@type": "Blog",
-          "@id": "https://css-seducteur-css.site"
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://css-seducteur-css.site/blogs/tutorials/introduction-to-css"
-        },
-        "keywords": "CSS, Basique, Développement Web",
-        "datePublished": "Tue Dec 10 2024",
-        "dateModified": "Tue Dec 10 2024"
-      }
-    </script>
-    <!-- sitemaps and co -->
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="generator" content="Astro v5.1.6" />
-    <meta name="robots" content="all" />
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="CSSéducteur - Tutoriels CSS" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://css-seducteur-css.site" />
-    <meta
-      property="og:description"
-      content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."
-    />
-    <meta
-      property="og:image"
-      content="https://css-seducteur-css.site/web-app-manifest-512x512.png"
-    />
-    <meta property="og:site_name" content="CSSéducteur" />
-    <meta property="og:locale" content="fr_FR" />
-    <link rel="stylesheet" href="/_astro/_tag_.D1ucBM1H.css" />
-    <script>
-      window.va =
-        window.va ||
-        function () {
-          (window.vaq = window.vaq || []).push(arguments);
-        };
-      var script = document.createElement("script");
-      script.defer = true;
-      script.src = "/_vercel/insights/script.js";
-      var head = document.querySelector("head");
-      head.appendChild(script);
-    </script>
-  </head>
-  <body class="m-[0px] dark:text-white">
-    <header class="dark:bg-color-1 shadow-sm">
-      <div class="flex items-center justify-between container p-2">
-        <a
-          class="flex items-center gap-2 no-underline text-color-contrast"
-          href="/"
-        >
-          <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">
-            CSSéducteur
-          </h1>
-          🚀
-        </a>
-        <nav>
-          <ul class="flex gap-4 space-x-4">
-            <li>
-              <a
-                href="/blogs/basique"
-                class="no-underline text-color-11 transition-all hover:text-color-contrast"
-                >Les basiques</a
-              >
-            </li>
-            <li>
-              <a
-                href="/blogs/tutorials"
-                class="no-underline text-color-11 transition-all hover:text-color-contrast"
-                >Tutoriels CSS</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
-      <article>
-        <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">
-          Introduction au CSS
-        </h1>
-        <a
-          href="https://github.com/aretwojay"
-          class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"
-        >
-          <img
-            src="https://avatars.githubusercontent.com/u/81377220?v=4"
-            alt="R2J"
-            class="size-8 rounded-full"
-          />
-          <p>R2J</p>
-        </a>
-        <div class="flex gap-2 mb-6">
-          <a href="/blogs/css"
-            ><span
-              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-              >CSS</span
-            ></a
-          ><a href="/blogs/basique"
-            ><span
-              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-              >Basique</span
-            ></a
-          ><a href="/blogs/développement web"
-            ><span
-              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-              >Développement Web</span
-            ></a
-          >
-        </div>
-        <p class="text-sm font-light">Temps estimé de lecture : 4 min</p>
-        <p class="font-extralight mt-2 mb-5">
-          Apprenez les bases du CSS pour styliser vos pages web et créer des
-          designs attrayants. Découvrez les sélecteurs, les propriétés courantes
-          et les techniques responsives.
-        </p>
-        <div
-          class="prose dark:prose-invert prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl prose-headings:underline"
-        >
-          <h1 id="introduction-au-css">Introduction au CSS</h1>
-          <p>
-            Le CSS (Cascading Style Sheets) est un langage de feuille de style
-            utilisé pour contrôler l’apparence et la mise en page des éléments
-            HTML sur une page web. En apprenant le CSS, vous pouvez transformer
-            un HTML simple en sites visuellement attrayants et interactifs.
-          </p>
-          <h2 id="quest-ce-que-le-css">Qu’est-ce que le CSS ?</h2>
-          <p>
-            Le CSS définit comment les éléments HTML doivent être affichés sur
-            un écran, du papier ou d’autres médias. Il sépare le contenu (HTML)
-            de la présentation (CSS), ce qui facilite la maintenance et le style
-            des sites web.
-          </p>
-          <h3 id="exemple-de-html-et-css">Exemple de HTML et CSS :</h3>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;!</span><span style="color:#85E89D">DOCTYPE</span><span style="color:#B392F0"> html</span><span style="color:#E1E4E8">></span></span>
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><title>CSSéducteur - Introduction au CSS</title><meta name="description" content="Apprenez les bases du CSS pour styliser vos pages web et créer des designs attrayants. Découvrez les sélecteurs, les propriétés courantes et les techniques responsives."><meta name="viewport" content="width=device-width"><!-- favicon  --><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><!-- add schema.org if setted --><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","proficiencyLevel":"Débutant","articleBody":"## Introduction au CSS\n\nLe CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour contrôler l’apparence et la mise en page des éléments HTML sur une page web. En apprenant le CSS, vous pouvez transformer un HTML simple en sites visuellement attrayants et interactifs.\n\n## Qu'est-ce que le CSS ?\n\nLe CSS définit comment les éléments HTML doivent être affichés sur un écran, du papier ou d'autres médias. Il sépare le contenu (HTML) de la présentation (CSS), ce qui facilite la maintenance et le style des sites web.\n\n### Exemple de HTML et CSS\n\n```html\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Exemple de CSS</title>\n    <style>\n      body {\n        background-color: #f4f4f4;\n        font-family: Arial, sans-serif;\n        color: #333;\n      }\n      h1 {\n        color: #007bff;\n        text-align: center;\n      }\n      p {\n        font-size: 16px;\n        line-height: 1.5;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Bienvenue au CSS</h1>\n    <p>\n      Ceci est un exemple simple d'utilisation du CSS pour styliser une page\n      web.\n    </p>\n  </body>\n</html>\n```\n\nDans cet exemple :\n\n- La balise `body` est stylée avec un fond gris clair, une police personnalisée et une couleur de texte.\n- La balise `h1` a une couleur bleue et un texte centré.\n- La balise `p` a une taille de police et un espacement entre les lignes ajustés.\n\n---\n\n## Les Types de CSS\n\nIl existe trois principales manières d’appliquer du CSS au HTML :\n\n1. **CSS Inline** : Style appliqué directement sur un élément HTML avec l’attribut `style`.\n\n   ```html\n   <p style=\"color: red;\">Ce texte est rouge.</p>\n   ```\n\n2. **CSS Interne** : Style écrit dans une balise `<style>` dans la section `<head>` du HTML.\n\n   ```html\n   <style>\n     p {\n       color: blue;\n     }\n   </style>\n   ```\n\n3. **CSS Externe** : Style écrit dans un fichier `.css` séparé et lié au HTML avec la balise `<link>`.\n\n   ```html\n   <link rel=\"stylesheet\" href=\"styles.css\" />\n   ```\n\n   **styles.css** :\n\n   ```css\n   p {\n     color: green;\n   }\n   ```\n\n---\n\n## Sélecteurs CSS\n\nLes sélecteurs définissent les éléments auxquels une règle CSS s’applique. Voici quelques sélecteurs courants :\n\n1. **Sélecteur de Type** :\n   Cible tous les éléments d’un type spécifique.\n\n   ```css\n   p {\n     color: purple;\n   }\n   ```\n\n2. **Sélecteur de Classe** :\n   Cible les éléments avec un attribut `class` spécifique.\n\n   ```css\n   .surligner {\n     background-color: yellow;\n   }\n   ```\n\n   ```html\n   <p class=\"surligner\">Ce texte a un fond jaune.</p>\n   ```\n\n3. **Sélecteur d’ID** :\n   Cible un seul élément avec un `id` unique.\n\n   ```css\n   #entete {\n     font-size: 24px;\n   }\n   ```\n\n   ```html\n   <h1 id=\"entete\">Entête Unique</h1>\n   ```\n\n4. **Sélecteur Universel** :\n   Cible tous les éléments.\n\n   ```css\n   * {\n     margin: 0;\n     padding: 0;\n   }\n   ```\n\n5. **Sélecteur Groupé** :\n   Applique le même style à plusieurs éléments.\n\n   ```css\n   h1,\n   h2,\n   p {\n     color: darkblue;\n   }\n   ```\n\n---\n\n## Propriétés CSS Courantes\n\n### 1. **Style du Texte**\n\n- `color` : Change la couleur du texte.\n- `font-size` : Ajuste la taille du texte.\n- `font-family` : Spécifie la police à utiliser.\n\n```css\np {\n  color: #555;\n  font-size: 18px;\n  font-family: \"Helvetica\", sans-serif;\n}\n```\n\n### 2. **Modèle de Boîte (Box Model)**\n\nLe modèle de boîte définit la structure des éléments, notamment :\n\n- **Margin** : Espace à l’extérieur de l’élément.\n- **Border** : Contour de l’élément.\n- **Padding** : Espace à l’intérieur de l’élément, autour du contenu.\n\n```css\ndiv {\n  margin: 20px;\n  padding: 10px;\n  border: 2px solid black;\n}\n```\n\n### 3. **Fond**\n\n- `background-color` : Définit la couleur d’arrière-plan.\n- `background-image` : Ajoute une image d’arrière-plan.\n\n```css\nbody {\n  background-color: #f0f0f0;\n  background-image: url(\"fond.jpg\");\n}\n```\n\n### 4. **Alignement**\n\n- `text-align` : Aligne le texte horizontalement (`left`, `center`, `right`).\n- `vertical-align` : Aligne les éléments en ligne verticalement.\n\n```css\nh1 {\n  text-align: center;\n}\n```\n\n---\n\n## Conception Responsive avec CSS\n\nLe design responsive garantit que votre site est agréable à utiliser sur tous les appareils. Voici quelques techniques :\n\n1. **Mises en Page Flexibles** :\n   Utilisez des unités relatives comme les pourcentages ou `em` au lieu des unités fixes comme `px`.\n\n2. **Media Queries** :\n   Appliquez des styles en fonction de la taille de l’écran.\n\n   ```css\n   @media (max-width: 768px) {\n     body {\n       font-size: 14px;\n     }\n   }\n   ```\n\n3. **Flexbox** :\n   Simplifiez les mises en page avec Flexbox.\n\n   ```css\n   .container {\n     display: flex;\n     justify-content: space-around;\n   }\n   ```\n\n---\n\n## Conclusion\n\nLe CSS est une technologie fondamentale pour créer des pages web belles et fonctionnelles. En maîtrisant les sélecteurs de base, les propriétés et les techniques responsives, vous pouvez donner vie à vos conceptions et offrir des expériences conviviales. Continuez à expérimenter et à développer vos compétences pour exploiter tout le potentiel du CSS !","articleSection":"Tutorials","wordCount":608,"headline":"Introduction au CSS","description":"Apprenez les bases du CSS pour styliser vos pages web et créer des designs attrayants. Découvrez les sélecteurs, les propriétés courantes et les techniques responsives.","author":{"@type":"Person","name":"R2J","image":"https://avatars.githubusercontent.com/u/81377220?v=4","url":"https://github.com/aretwojay"},"publisher":{"@type":"Organization","name":"CSSéducteur","logo":{"@type":"ImageObject","url":"https://css-seducteur-css.site/faivcon.svg"}},"url":"https://css-seducteur-css.site/blogs/tutorials/introduction-to-css","about":[{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/css","name":"CSS"},{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/basique","name":"Basique"},{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/développement web","name":"Développement Web"}],"isPartOf":{"@type":"Blog","@id":"https://css-seducteur-css.site"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://css-seducteur-css.site/blogs/tutorials/introduction-to-css"},"keywords":"CSS, Basique, Développement Web","datePublished":"Tue Dec 10 2024","dateModified":"Tue Dec 10 2024"}</script><!-- sitemaps and co --><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.1.6"><meta name="robots" content="all"><!-- Open Graph tags --><meta property="og:title" content="CSSéducteur - Tutoriels CSS"><meta property="og:type" content="website"><meta property="og:url" content="https://css-seducteur-css.site"><meta property="og:description" content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."><meta property="og:image" content="https://css-seducteur-css.site/web-app-manifest-512x512.png"><meta property="og:site_name" content="CSSéducteur"><meta property="og:locale" content="fr_FR"><link rel="stylesheet" href="/_astro/_tag_.D1ucBM1H.css"><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		var script = document.createElement('script');
+		script.defer = true;
+		script.src = '/_vercel/insights/script.js';
+		var head = document.querySelector('head');
+		head.appendChild(script);
+	</script></head> <body class="m-[0px] dark:text-white">  <header class="dark:bg-color-1 shadow-sm"> <div class="flex items-center justify-between container p-2"> <a class="flex items-center gap-2 no-underline text-color-contrast" href="/"> <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">CSSéducteur</h1>
+🚀
+</a> <nav> <ul class="flex gap-4 space-x-4"> <li> <a href="/blogs/basique" class="no-underline text-color-11 transition-all hover:text-color-contrast">Les basiques</a> </li> <li> <a href="/blogs/tutorials" class="no-underline text-color-11 transition-all hover:text-color-contrast">Tutoriels CSS</a> </li> </ul> </nav> </div> </header> <main class="p-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4"> Introduction au CSS </h1> <a href="https://github.com/aretwojay" class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"> <img src="https://avatars.githubusercontent.com/u/81377220?v=4" alt="R2J" class="size-8 rounded-full"> <p>R2J</p> </a> <div class="flex gap-2 mb-6"> <a href="/blogs/css"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span></a><a href="/blogs/basique"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Basique</span></a><a href="/blogs/développement web"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Développement Web</span></a> </div> <p class="text-sm font-light">
+Temps estimé de lecture : 4 min  </p> <p class="font-extralight mt-2 mb-5">Apprenez les bases du CSS pour styliser vos pages web et créer des designs attrayants. Découvrez les sélecteurs, les propriétés courantes et les techniques responsives.</p> <div class="prose dark:prose-invert
+  prose-h1:font-bold prose-h1:text-xl
+  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
+  prose-headings:underline">  <h2 id="introduction-au-css">Introduction au CSS</h2>
+<p>Le CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour contrôler l’apparence et la mise en page des éléments HTML sur une page web. En apprenant le CSS, vous pouvez transformer un HTML simple en sites visuellement attrayants et interactifs.</p>
+<h2 id="quest-ce-que-le-css">Qu’est-ce que le CSS ?</h2>
+<p>Le CSS définit comment les éléments HTML doivent être affichés sur un écran, du papier ou d’autres médias. Il sépare le contenu (HTML) de la présentation (CSS), ce qui facilite la maintenance et le style des sites web.</p>
+<h3 id="exemple-de-html-et-css">Exemple de HTML et CSS</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;!</span><span style="color:#85E89D">DOCTYPE</span><span style="color:#B392F0"> html</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">html</span><span style="color:#B392F0"> lang</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"fr"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">head</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">meta</span><span style="color:#B392F0"> charset</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"UTF-8"</span><span style="color:#E1E4E8"> /></span></span>
@@ -227,436 +45,152 @@
 <span class="line"><span style="color:#E1E4E8">    &#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">body</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">html</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <p>Dans cet exemple :</p>
-          <ul>
-            <li>
-              La balise <code>body</code> est stylée avec un fond gris clair,
-              une police personnalisée et une couleur de texte.
-            </li>
-            <li>
-              La balise <code>h1</code> a une couleur bleue et un texte centré.
-            </li>
-            <li>
-              La balise <code>p</code> a une taille de police et un espacement
-              entre les lignes ajustés.
-            </li>
-          </ul>
-          <hr />
-          <h2 id="les-types-de-css">Les Types de CSS</h2>
-          <p>
-            Il existe trois principales manières d’appliquer du CSS au HTML :
-          </p>
-          <ol>
-            <li>
-              <p>
-                <strong>CSS Inline</strong> : Style appliqué directement sur un
-                élément HTML avec l’attribut <code>style</code>.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="html"
-              ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">p</span><span style="color:#B392F0"> style</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"color: red;"</span><span style="color:#E1E4E8">>Ce texte est rouge.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span></code></pre>
-            </li>
-            <li>
-              <p>
-                <strong>CSS Interne</strong> : Style écrit dans une balise
-                <code>&#x3C;style></code> dans la section
-                <code>&#x3C;head></code> du HTML.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="html"
-              ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">style</span><span style="color:#E1E4E8">></span></span>
+<p>Dans cet exemple :</p>
+<ul>
+<li>La balise <code>body</code> est stylée avec un fond gris clair, une police personnalisée et une couleur de texte.</li>
+<li>La balise <code>h1</code> a une couleur bleue et un texte centré.</li>
+<li>La balise <code>p</code> a une taille de police et un espacement entre les lignes ajustés.</li>
+</ul>
+<hr>
+<h2 id="les-types-de-css">Les Types de CSS</h2>
+<p>Il existe trois principales manières d’appliquer du CSS au HTML :</p>
+<ol>
+<li>
+<p><strong>CSS Inline</strong> : Style appliqué directement sur un élément HTML avec l’attribut <code>style</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">p</span><span style="color:#B392F0"> style</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"color: red;"</span><span style="color:#E1E4E8">>Ce texte est rouge.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span></code></pre>
+</li>
+<li>
+<p><strong>CSS Interne</strong> : Style écrit dans une balise <code>&#x3C;style></code> dans la section <code>&#x3C;head></code> du HTML.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">style</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#85E89D">  p</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">    color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">blue</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">style</span><span style="color:#E1E4E8">></span></span></code></pre>
-            </li>
-            <li>
-              <p>
-                <strong>CSS Externe</strong> : Style écrit dans un fichier
-                <code>.css</code> séparé et lié au HTML avec la balise
-                <code>&#x3C;link></code>.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="html"
-              ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">link</span><span style="color:#B392F0"> rel</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"stylesheet"</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"styles.css"</span><span style="color:#E1E4E8"> /></span></span></code></pre>
-              <p><strong>styles.css</strong> :</p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="css"
-              ><code><span class="line"><span style="color:#85E89D">p</span><span style="color:#E1E4E8"> {</span></span>
+</li>
+<li>
+<p><strong>CSS Externe</strong> : Style écrit dans un fichier <code>.css</code> séparé et lié au HTML avec la balise <code>&#x3C;link></code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">link</span><span style="color:#B392F0"> rel</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"stylesheet"</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"styles.css"</span><span style="color:#E1E4E8"> /></span></span></code></pre>
+<p><strong>styles.css</strong> :</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">p</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">green</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-            </li>
-          </ol>
-          <hr />
-          <h2 id="sélecteurs-css">Sélecteurs CSS</h2>
-          <p>
-            Les sélecteurs définissent les éléments auxquels une règle CSS
-            s’applique. Voici quelques sélecteurs courants :
-          </p>
-          <ol>
-            <li>
-              <p>
-                <strong>Sélecteur de Type</strong> : Cible tous les éléments
-                d’un type spécifique.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="css"
-              ><code><span class="line"><span style="color:#85E89D">p</span><span style="color:#E1E4E8"> {</span></span>
+</li>
+</ol>
+<hr>
+<h2 id="sélecteurs-css">Sélecteurs CSS</h2>
+<p>Les sélecteurs définissent les éléments auxquels une règle CSS s’applique. Voici quelques sélecteurs courants :</p>
+<ol>
+<li>
+<p><strong>Sélecteur de Type</strong> :
+Cible tous les éléments d’un type spécifique.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">p</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">purple</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-            </li>
-            <li>
-              <p>
-                <strong>Sélecteur de Classe</strong> : Cible les éléments avec
-                un attribut <code>class</code> spécifique.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="css"
-              ><code><span class="line"><span style="color:#B392F0">.surligner</span><span style="color:#E1E4E8"> {</span></span>
+</li>
+<li>
+<p><strong>Sélecteur de Classe</strong> :
+Cible les éléments avec un attribut <code>class</code> spécifique.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.surligner</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">yellow</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="html"
-              ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">p</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"surligner"</span><span style="color:#E1E4E8">>Ce texte a un fond jaune.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span></code></pre>
-            </li>
-            <li>
-              <p>
-                <strong>Sélecteur d’ID</strong> : Cible un seul élément avec un
-                <code>id</code> unique.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="css"
-              ><code><span class="line"><span style="color:#B392F0">#entete</span><span style="color:#E1E4E8"> {</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">p</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"surligner"</span><span style="color:#E1E4E8">>Ce texte a un fond jaune.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span></code></pre>
+</li>
+<li>
+<p><strong>Sélecteur d’ID</strong> :
+Cible un seul élément avec un <code>id</code> unique.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">#entete</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">24</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="html"
-              ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#B392F0"> id</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"entete"</span><span style="color:#E1E4E8">>Entête Unique&#x3C;/</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">></span></span></code></pre>
-            </li>
-            <li>
-              <p>
-                <strong>Sélecteur Universel</strong> : Cible tous les éléments.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="css"
-              ><code><span class="line"><span style="color:#85E89D">*</span><span style="color:#E1E4E8"> {</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#B392F0"> id</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"entete"</span><span style="color:#E1E4E8">>Entête Unique&#x3C;/</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">></span></span></code></pre>
+</li>
+<li>
+<p><strong>Sélecteur Universel</strong> :
+Cible tous les éléments.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">*</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  margin</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-            </li>
-            <li>
-              <p>
-                <strong>Sélecteur Groupé</strong> : Applique le même style à
-                plusieurs éléments.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="css"
-              ><code><span class="line"><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">,</span></span>
+</li>
+<li>
+<p><strong>Sélecteur Groupé</strong> :
+Applique le même style à plusieurs éléments.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#85E89D">h2</span><span style="color:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#85E89D">p</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">darkblue</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-            </li>
-          </ol>
-          <hr />
-          <h2 id="propriétés-css-courantes">Propriétés CSS Courantes</h2>
-          <h3 id="1-style-du-texte">1. <strong>Style du Texte</strong></h3>
-          <ul>
-            <li><code>color</code> : Change la couleur du texte.</li>
-            <li><code>font-size</code> : Ajuste la taille du texte.</li>
-            <li><code>font-family</code> : Spécifie la police à utiliser.</li>
-          </ul>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="css"
-          ><code><span class="line"><span style="color:#85E89D">p</span><span style="color:#E1E4E8"> {</span></span>
+</li>
+</ol>
+<hr>
+<h2 id="propriétés-css-courantes">Propriétés CSS Courantes</h2>
+<h3 id="1-style-du-texte">1. <strong>Style du Texte</strong></h3>
+<ul>
+<li><code>color</code> : Change la couleur du texte.</li>
+<li><code>font-size</code> : Ajuste la taille du texte.</li>
+<li><code>font-family</code> : Spécifie la police à utiliser.</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">p</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#555</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">18</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  font-family</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Helvetica"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">sans-serif</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-          <h3 id="2-modèle-de-boîte-box-model">
-            2. <strong>Modèle de Boîte (Box Model)</strong>
-          </h3>
-          <p>
-            Le modèle de boîte définit la structure des éléments, notamment :
-          </p>
-          <ul>
-            <li>
-              <strong>Margin</strong> : Espace à l’extérieur de l’élément.
-            </li>
-            <li><strong>Border</strong> : Contour de l’élément.</li>
-            <li>
-              <strong>Padding</strong> : Espace à l’intérieur de l’élément,
-              autour du contenu.
-            </li>
-          </ul>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="css"
-          ><code><span class="line"><span style="color:#85E89D">div</span><span style="color:#E1E4E8"> {</span></span>
+<h3 id="2-modèle-de-boîte-box-model">2. <strong>Modèle de Boîte (Box Model)</strong></h3>
+<p>Le modèle de boîte définit la structure des éléments, notamment :</p>
+<ul>
+<li><strong>Margin</strong> : Espace à l’extérieur de l’élément.</li>
+<li><strong>Border</strong> : Contour de l’élément.</li>
+<li><strong>Padding</strong> : Espace à l’intérieur de l’élément, autour du contenu.</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">div</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  margin</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  border</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#F97583">px</span><span style="color:#79B8FF"> solid</span><span style="color:#79B8FF"> black</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-          <h3 id="3-fond">3. <strong>Fond</strong></h3>
-          <ul>
-            <li>
-              <code>background-color</code> : Définit la couleur d’arrière-plan.
-            </li>
-            <li>
-              <code>background-image</code> : Ajoute une image d’arrière-plan.
-            </li>
-          </ul>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="css"
-          ><code><span class="line"><span style="color:#85E89D">body</span><span style="color:#E1E4E8"> {</span></span>
+<h3 id="3-fond">3. <strong>Fond</strong></h3>
+<ul>
+<li><code>background-color</code> : Définit la couleur d’arrière-plan.</li>
+<li><code>background-image</code> : Ajoute une image d’arrière-plan.</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">body</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  background-color</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">#f0f0f0</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  background-image</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">url</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"fond.jpg"</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-          <h3 id="4-alignement">4. <strong>Alignement</strong></h3>
-          <ul>
-            <li>
-              <code>text-align</code> : Aligne le texte horizontalement
-              (<code>left</code>, <code>center</code>, <code>right</code>).
-            </li>
-            <li>
-              <code>vertical-align</code> : Aligne les éléments en ligne
-              verticalement.
-            </li>
-          </ul>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="css"
-          ><code><span class="line"><span style="color:#85E89D">h1</span><span style="color:#E1E4E8"> {</span></span>
+<h3 id="4-alignement">4. <strong>Alignement</strong></h3>
+<ul>
+<li><code>text-align</code> : Aligne le texte horizontalement (<code>left</code>, <code>center</code>, <code>right</code>).</li>
+<li><code>vertical-align</code> : Aligne les éléments en ligne verticalement.</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#85E89D">h1</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  text-align</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">center</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-          <hr />
-          <h2 id="conception-responsive-avec-css">
-            Conception Responsive avec CSS
-          </h2>
-          <p>
-            Le design responsive garantit que votre site est agréable à utiliser
-            sur tous les appareils. Voici quelques techniques :
-          </p>
-          <ol>
-            <li>
-              <p>
-                <strong>Mises en Page Flexibles</strong> : Utilisez des unités
-                relatives comme les pourcentages ou <code>em</code> au lieu des
-                unités fixes comme <code>px</code>.
-              </p>
-            </li>
-            <li>
-              <p>
-                <strong>Media Queries</strong> : Appliquez des styles en
-                fonction de la taille de l’écran.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="css"
-              ><code><span class="line"><span style="color:#F97583">@media</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">max-width</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">768</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">) {</span></span>
+<hr>
+<h2 id="conception-responsive-avec-css">Conception Responsive avec CSS</h2>
+<p>Le design responsive garantit que votre site est agréable à utiliser sur tous les appareils. Voici quelques techniques :</p>
+<ol>
+<li>
+<p><strong>Mises en Page Flexibles</strong> :
+Utilisez des unités relatives comme les pourcentages ou <code>em</code> au lieu des unités fixes comme <code>px</code>.</p>
+</li>
+<li>
+<p><strong>Media Queries</strong> :
+Appliquez des styles en fonction de la taille de l’écran.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">@media</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">max-width</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">768</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">) {</span></span>
 <span class="line"><span style="color:#85E89D">  body</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">    font-size</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">14</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-            </li>
-            <li>
-              <p>
-                <strong>Flexbox</strong> : Simplifiez les mises en page avec
-                Flexbox.
-              </p>
-              <pre
-                class="astro-code github-dark"
-                style="
-                  background-color: #24292e;
-                  color: #e1e4e8;
-                  overflow-x: auto;
-                "
-                tabindex="0"
-                data-language="css"
-              ><code><span class="line"><span style="color:#B392F0">.container</span><span style="color:#E1E4E8"> {</span></span>
+</li>
+<li>
+<p><strong>Flexbox</strong> :
+Simplifiez les mises en page avec Flexbox.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.container</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  justify-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">space-around</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-            </li>
-          </ol>
-          <hr />
-          <h2 id="conclusion">Conclusion</h2>
-          <p>
-            Le CSS est une technologie fondamentale pour créer des pages web
-            belles et fonctionnelles. En maîtrisant les sélecteurs de base, les
-            propriétés et les techniques responsives, vous pouvez donner vie à
-            vos conceptions et offrir des expériences conviviales. Continuez à
-            expérimenter et à développer vos compétences pour exploiter tout le
-            potentiel du CSS !
-          </p>
-        </div>
-        <section class="mt-12">
-          <h2
-            class="text-[36px] max-md:text-3xl text-center font-semibold my-4"
-          >
-            Articles connexes
-          </h2>
-          <div class="grid gap-5">
-            <div class="h-full">
-              <a
-                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
-                href="/blogs/tutorials/first-steps"
-              >
-                <section class="p-4 md:p-5 h-full">
-                  <div class="flex overflow-auto gap-2 mb-2">
-                    <span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >CSS</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Basique</span
-                    >
-                  </div>
-                  <p class="text-[#92939c] font-light">21 août 2024</p>
-                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
-                    Premier pas avec CSS
-                  </h1>
-                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
-                    Découvrez les bases de CSS pour contrôler l&#39;apparence de
-                    vos pages web. Apprenez à ajouter du CSS à votre HTML, à
-                    utiliser des sélecteurs et des propriétés courantes, et à
-                    créer des mises en page simples.
-                  </p>
-                </section>
-              </a>
-            </div>
-            <div class="h-full">
-              <a
-                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
-                href="/blogs/tutorials/discover-tailwind"
-              >
-                <section class="p-4 md:p-5 h-full">
-                  <div class="flex overflow-auto gap-2 mb-2">
-                    <span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >CSS</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Tailwind</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Framework</span
-                    >
-                  </div>
-                  <p class="text-[#92939c] font-light">1 octobre 2024</p>
-                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
-                    Développer avec Tailwind CSS
-                  </h1>
-                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
-                    Découvrez Tailwind CSS, un framework CSS utilitaire qui
-                    permet de créer des designs personnalisés sans écrire de
-                    CSS. Apprenez à personnaliser Tailwind et à créer des
-                    designs réactifs.
-                  </p>
-                </section>
-              </a>
-            </div>
-          </div>
-        </section>
-      </article>
-    </main>
-    <footer class="text-color-contrast p-3 mt-7">
-      <div class="container mx-auto text-center font-extralight text-1">
-        <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p>
-      </div>
-    </footer>
-  </body>
-</html>
+</li>
+</ol>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>Le CSS est une technologie fondamentale pour créer des pages web belles et fonctionnelles. En maîtrisant les sélecteurs de base, les propriétés et les techniques responsives, vous pouvez donner vie à vos conceptions et offrir des expériences conviviales. Continuez à expérimenter et à développer vos compétences pour exploiter tout le potentiel du CSS !</p>  </div> <section class="mt-12"> <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
+Articles connexes
+</h2> <div class="grid gap-5"> <div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/first-steps"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Basique</span> </div> <p class="text-[#92939c] font-light"> 21 août 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Premier pas avec CSS </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Découvrez les bases de CSS pour contrôler l&#39;apparence de vos pages web. Apprenez à ajouter du CSS à votre HTML, à utiliser des sélecteurs et des propriétés courantes, et à créer des mises en page simples. </p> </section> </a> </div><div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/discover-tailwind"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Tailwind</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Framework</span> </div> <p class="text-[#92939c] font-light"> 1 octobre 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Développer avec Tailwind CSS </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Découvrez Tailwind CSS, un framework CSS utilitaire qui permet de créer des designs personnalisés sans écrire de CSS. Apprenez à personnaliser Tailwind et à créer des designs réactifs. </p> </section> </a> </div> </div> </section> </article> </main> <footer class="text-color-contrast p-3 mt-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>

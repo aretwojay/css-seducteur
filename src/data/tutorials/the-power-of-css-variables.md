@@ -10,7 +10,7 @@ relatedPosts:
   - discover-tailwind
 ---
 
-# La Puissance des Variables CSS
+## La Puissance des Variables CSS
 
 Les variables CSS, également appelées propriétés personnalisées, révolutionnent le développement web. Elles permettent de stocker des valeurs réutilisables dans vos feuilles de style, rendant votre CSS plus dynamique, facile à maintenir et efficace.
 

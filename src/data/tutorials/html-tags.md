@@ -10,7 +10,7 @@ relatedPosts:
   - first-steps
 ---
 
-# Comprendre et Utiliser les Balises HTML
+## Comprendre et Utiliser les Balises HTML
 
 HTML (HyperText Markup Language) est la structure de base de toute page web. Les balises HTML sont utilisées pour structurer et organiser le contenu d'une page, définissant ainsi la structure d'un site. Dans ce guide, nous allons explorer les principales balises HTML et leur utilisation dans la création d'une page web.
 
@@ -78,7 +78,7 @@ La balise `<body>` contient le contenu visible de la page web. C'est ici que vou
 
 Les balises de contenu sont celles qui servent à structurer et afficher les éléments de la page web.
 
-### La Balise `<h1>`, `<h2>`, `<h3>`, etc.
+### La Balise `<h1>`, `<h2>`, `<h3>`, etc
 
 Les balises `<h1>`, `<h2>`, `<h3>`, etc., sont utilisées pour définir les titres de la page. `<h1>` est le titre principal (le plus important) et les autres balises `<h2>`, `<h3>`, etc., sont des sous-titres de niveaux inférieurs.
 

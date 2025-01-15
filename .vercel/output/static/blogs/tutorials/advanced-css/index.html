@@ -1,195 +1,22 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CSSéducteur - Les techniques CSS avancées</title>
-    <meta
-      name="description"
-      content="Explorez des techniques CSS avancées pour créer des mises en page complexes et des animations dynamiques sur vos pages web."
-    />
-    <meta name="viewport" content="width=device-width" />
-    <!-- favicon  -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <!-- add schema.org if setted -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "TechArticle",
-        "proficiencyLevel": "Intermédiaire",
-        "articleBody": "# Techniques Avancées en CSS\n\nUne fois que vous maîtrisez les bases du CSS, il est temps d'explorer des techniques avancées qui vous permettront d'améliorer vos compétences en conception web. Ce guide couvre divers sujets pour vous aider à créer des pages web plus sophistiquées et dynamiques.\n\n---\n\n## **Mise en Page avec CSS Grid**\n\nCSS Grid est un outil puissant pour créer des mises en page complexes et réactives. Il vous permet de définir des lignes et des colonnes et de positionner les éléments précisément dans une grille.\n\n### Exemple :\n\n```css\n.container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 10px;\n}\n\n.item {\n  background-color: lightblue;\n  padding: 20px;\n  text-align: center;\n}\n```\n\n```html\n<div class=\"container\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>\n```\n\n---\n\n## **CSS Flexbox**\n\nCSS Flexbox est un modèle de mise en page qui vous permet de créer des dispositions flexibles et efficaces. Il offre un moyen simple d'aligner et de distribuer l'espace entre les éléments dans un conteneur.\n\n### Exemple :\n\n```css\n.container {\n  display: flex;\n  justify-content: space-between;\n}\n\n.item {\n  background-color: lightblue;\n  padding: 20px;\n  text-align: center;\n}\n```\n\n```html\n<div class=\"container\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>\n```\n\n---\n\n## **Animations CSS**\n\nLes animations CSS vous permettent de créer des animations sur vos pages web sans utiliser de JavaScript. Vous pouvez animer des propriétés d’un élément, comme sa taille, sa couleur ou sa position.\n\n### Exemple :\n\n```css\n@keyframes slidein {\n  from {\n    margin-left: 100%;\n    width: 300%;\n  }\n\n  to {\n    margin-left: 0%;\n    width: 100%;\n  }\n}\n\n.item {\n  animation: slidein 3s infinite;\n}\n```\n\n```html\n<div class=\"item\">Contenu Animé</div>\n```\n\n---\n\n## **Conclusion**\n\nCes techniques avancées en CSS vous aideront à créer des pages web plus dynamiques et attrayantes. Expérimentez ces concepts et combinez-les pour concevoir des designs uniques et engageants. Bonne création ! 🎨",
-        "articleSection": "Tutorials",
-        "wordCount": 258,
-        "headline": "Les techniques CSS avancées",
-        "description": "Explorez des techniques CSS avancées pour créer des mises en page complexes et des animations dynamiques sur vos pages web.",
-        "author": {
-          "@type": "Person",
-          "name": "R2J",
-          "image": "https://avatars.githubusercontent.com/u/81377220?v=4",
-          "url": "https://github.com/aretwojay"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "CSSéducteur",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://css-seducteur-css.site/faivcon.svg"
-          }
-        },
-        "url": "https://css-seducteur-css.site/blogs/tutorials/advanced-css",
-        "about": [
-          {
-            "@type": "Thing",
-            "@id": "https://css-seducteur-css.site/blogs/css",
-            "name": "CSS"
-          },
-          {
-            "@type": "Thing",
-            "@id": "https://css-seducteur-css.site/blogs/techniques",
-            "name": "Techniques"
-          }
-        ],
-        "isPartOf": {
-          "@type": "Blog",
-          "@id": "https://css-seducteur-css.site"
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://css-seducteur-css.site/blogs/tutorials/advanced-css"
-        },
-        "keywords": "CSS, Techniques",
-        "datePublished": "Sun Sep 15 2024",
-        "dateModified": "Sun Sep 15 2024"
-      }
-    </script>
-    <!-- sitemaps and co -->
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="generator" content="Astro v5.1.6" />
-    <meta name="robots" content="all" />
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="CSSéducteur - Tutoriels CSS" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://css-seducteur-css.site" />
-    <meta
-      property="og:description"
-      content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."
-    />
-    <meta
-      property="og:image"
-      content="https://css-seducteur-css.site/web-app-manifest-512x512.png"
-    />
-    <meta property="og:site_name" content="CSSéducteur" />
-    <meta property="og:locale" content="fr_FR" />
-    <link rel="stylesheet" href="/_astro/_tag_.D1ucBM1H.css" />
-    <script>
-      window.va =
-        window.va ||
-        function () {
-          (window.vaq = window.vaq || []).push(arguments);
-        };
-      var script = document.createElement("script");
-      script.defer = true;
-      script.src = "/_vercel/insights/script.js";
-      var head = document.querySelector("head");
-      head.appendChild(script);
-    </script>
-  </head>
-  <body class="m-[0px] dark:text-white">
-    <header class="dark:bg-color-1 shadow-sm">
-      <div class="flex items-center justify-between container p-2">
-        <a
-          class="flex items-center gap-2 no-underline text-color-contrast"
-          href="/"
-        >
-          <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">
-            CSSéducteur
-          </h1>
-          🚀
-        </a>
-        <nav>
-          <ul class="flex gap-4 space-x-4">
-            <li>
-              <a
-                href="/blogs/basique"
-                class="no-underline text-color-11 transition-all hover:text-color-contrast"
-                >Les basiques</a
-              >
-            </li>
-            <li>
-              <a
-                href="/blogs/tutorials"
-                class="no-underline text-color-11 transition-all hover:text-color-contrast"
-                >Tutoriels CSS</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
-      <article>
-        <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">
-          Les techniques CSS avancées
-        </h1>
-        <a
-          href="https://github.com/aretwojay"
-          class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"
-        >
-          <img
-            src="https://avatars.githubusercontent.com/u/81377220?v=4"
-            alt="R2J"
-            class="size-8 rounded-full"
-          />
-          <p>R2J</p>
-        </a>
-        <div class="flex gap-2 mb-6">
-          <a href="/blogs/css"
-            ><span
-              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-              >CSS</span
-            ></a
-          ><a href="/blogs/techniques"
-            ><span
-              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-              >Techniques</span
-            ></a
-          >
-        </div>
-        <p class="text-sm font-light">Temps estimé de lecture : 2 min</p>
-        <p class="font-extralight mt-2 mb-5">
-          Explorez des techniques CSS avancées pour créer des mises en page
-          complexes et des animations dynamiques sur vos pages web.
-        </p>
-        <div
-          class="prose dark:prose-invert prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl prose-headings:underline"
-        >
-          <h1 id="techniques-avancées-en-css">Techniques Avancées en CSS</h1>
-          <p>
-            Une fois que vous maîtrisez les bases du CSS, il est temps
-            d’explorer des techniques avancées qui vous permettront d’améliorer
-            vos compétences en conception web. Ce guide couvre divers sujets
-            pour vous aider à créer des pages web plus sophistiquées et
-            dynamiques.
-          </p>
-          <hr />
-          <h2 id="mise-en-page-avec-css-grid">
-            <strong>Mise en Page avec CSS Grid</strong>
-          </h2>
-          <p>
-            CSS Grid est un outil puissant pour créer des mises en page
-            complexes et réactives. Il vous permet de définir des lignes et des
-            colonnes et de positionner les éléments précisément dans une grille.
-          </p>
-          <h3 id="exemple">Exemple :</h3>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="css"
-          ><code><span class="line"><span style="color:#B392F0">.container</span><span style="color:#E1E4E8"> {</span></span>
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><title>CSSéducteur - Les techniques CSS avancées</title><meta name="description" content="Explorez des techniques CSS avancées pour créer des mises en page complexes et des animations dynamiques sur vos pages web."><meta name="viewport" content="width=device-width"><!-- favicon  --><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><!-- add schema.org if setted --><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","proficiencyLevel":"Intermédiaire","articleBody":"## Techniques Avancées en CSS\n\nUne fois que vous maîtrisez les bases du CSS, il est temps d'explorer des techniques avancées qui vous permettront d'améliorer vos compétences en conception web. Ce guide couvre divers sujets pour vous aider à créer des pages web plus sophistiquées et dynamiques.\n\n---\n\n## **Mise en Page avec CSS Grid**\n\nCSS Grid est un outil puissant pour créer des mises en page complexes et réactives. Il vous permet de définir des lignes et des colonnes et de positionner les éléments précisément dans une grille.\n\n### Un exemple\n\n```css\n.container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 10px;\n}\n\n.item {\n  background-color: lightblue;\n  padding: 20px;\n  text-align: center;\n}\n```\n\n```html\n<div class=\"container\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>\n```\n\n---\n\n## **CSS Flexbox**\n\nCSS Flexbox est un modèle de mise en page qui vous permet de créer des dispositions flexibles et efficaces. Il offre un moyen simple d'aligner et de distribuer l'espace entre les éléments dans un conteneur.\n\n### Voici un exemple\n\n```css\n.container {\n  display: flex;\n  justify-content: space-between;\n}\n\n.item {\n  background-color: lightblue;\n  padding: 20px;\n  text-align: center;\n}\n```\n\n```html\n<div class=\"container\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>\n```\n\n---\n\n## **Animations CSS**\n\nLes animations CSS vous permettent de créer des animations sur vos pages web sans utiliser de JavaScript. Vous pouvez animer des propriétés d’un élément, comme sa taille, sa couleur ou sa position.\n\n### Exemple\n\n```css\n@keyframes slidein {\n  from {\n    margin-left: 100%;\n    width: 300%;\n  }\n\n  to {\n    margin-left: 0%;\n    width: 100%;\n  }\n}\n\n.item {\n  animation: slidein 3s infinite;\n}\n```\n\n```html\n<div class=\"item\">Contenu Animé</div>\n```\n\n---\n\n## **Conclusion**\n\nCes techniques avancées en CSS vous aideront à créer des pages web plus dynamiques et attrayantes. Expérimentez ces concepts et combinez-les pour concevoir des designs uniques et engageants. Bonne création ! 🎨","articleSection":"Tutorials","wordCount":258,"headline":"Les techniques CSS avancées","description":"Explorez des techniques CSS avancées pour créer des mises en page complexes et des animations dynamiques sur vos pages web.","author":{"@type":"Person","name":"R2J","image":"https://avatars.githubusercontent.com/u/81377220?v=4","url":"https://github.com/aretwojay"},"publisher":{"@type":"Organization","name":"CSSéducteur","logo":{"@type":"ImageObject","url":"https://css-seducteur-css.site/faivcon.svg"}},"url":"https://css-seducteur-css.site/blogs/tutorials/advanced-css","about":[{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/css","name":"CSS"},{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/techniques","name":"Techniques"}],"isPartOf":{"@type":"Blog","@id":"https://css-seducteur-css.site"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://css-seducteur-css.site/blogs/tutorials/advanced-css"},"keywords":"CSS, Techniques","datePublished":"Sun Sep 15 2024","dateModified":"Sun Sep 15 2024"}</script><!-- sitemaps and co --><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.1.6"><meta name="robots" content="all"><!-- Open Graph tags --><meta property="og:title" content="CSSéducteur - Tutoriels CSS"><meta property="og:type" content="website"><meta property="og:url" content="https://css-seducteur-css.site"><meta property="og:description" content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."><meta property="og:image" content="https://css-seducteur-css.site/web-app-manifest-512x512.png"><meta property="og:site_name" content="CSSéducteur"><meta property="og:locale" content="fr_FR"><link rel="stylesheet" href="/_astro/_tag_.D1ucBM1H.css"><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		var script = document.createElement('script');
+		script.defer = true;
+		script.src = '/_vercel/insights/script.js';
+		var head = document.querySelector('head');
+		head.appendChild(script);
+	</script></head> <body class="m-[0px] dark:text-white">  <header class="dark:bg-color-1 shadow-sm"> <div class="flex items-center justify-between container p-2"> <a class="flex items-center gap-2 no-underline text-color-contrast" href="/"> <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">CSSéducteur</h1>
+🚀
+</a> <nav> <ul class="flex gap-4 space-x-4"> <li> <a href="/blogs/basique" class="no-underline text-color-11 transition-all hover:text-color-contrast">Les basiques</a> </li> <li> <a href="/blogs/tutorials" class="no-underline text-color-11 transition-all hover:text-color-contrast">Tutoriels CSS</a> </li> </ul> </nav> </div> </header> <main class="p-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4"> Les techniques CSS avancées </h1> <a href="https://github.com/aretwojay" class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"> <img src="https://avatars.githubusercontent.com/u/81377220?v=4" alt="R2J" class="size-8 rounded-full"> <p>R2J</p> </a> <div class="flex gap-2 mb-6"> <a href="/blogs/css"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span></a><a href="/blogs/techniques"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Techniques</span></a> </div> <p class="text-sm font-light">
+Temps estimé de lecture : 2 min  </p> <p class="font-extralight mt-2 mb-5">Explorez des techniques CSS avancées pour créer des mises en page complexes et des animations dynamiques sur vos pages web.</p> <div class="prose dark:prose-invert
+  prose-h1:font-bold prose-h1:text-xl
+  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
+  prose-headings:underline">  <h2 id="techniques-avancées-en-css">Techniques Avancées en CSS</h2>
+<p>Une fois que vous maîtrisez les bases du CSS, il est temps d’explorer des techniques avancées qui vous permettront d’améliorer vos compétences en conception web. Ce guide couvre divers sujets pour vous aider à créer des pages web plus sophistiquées et dynamiques.</p>
+<hr>
+<h2 id="mise-en-page-avec-css-grid"><strong>Mise en Page avec CSS Grid</strong></h2>
+<p>CSS Grid est un outil puissant pour créer des mises en page complexes et réactives. Il vous permet de définir des lignes et des colonnes et de positionner les éléments précisément dans une grille.</p>
+<h3 id="un-exemple">Un exemple</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.container</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">grid</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  grid-template-columns</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">repeat</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#F97583">fr</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#79B8FF">  grid-gap</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
@@ -200,31 +27,16 @@
 <span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  text-align</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">center</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"container"</span><span style="color:#E1E4E8">></span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"container"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"item"</span><span style="color:#E1E4E8">>1&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"item"</span><span style="color:#E1E4E8">>2&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"item"</span><span style="color:#E1E4E8">>3&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <hr />
-          <h2 id="css-flexbox"><strong>CSS Flexbox</strong></h2>
-          <p>
-            CSS Flexbox est un modèle de mise en page qui vous permet de créer
-            des dispositions flexibles et efficaces. Il offre un moyen simple
-            d’aligner et de distribuer l’espace entre les éléments dans un
-            conteneur.
-          </p>
-          <h3 id="exemple--1">Exemple :</h3>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="css"
-          ><code><span class="line"><span style="color:#B392F0">.container</span><span style="color:#E1E4E8"> {</span></span>
+<hr>
+<h2 id="css-flexbox"><strong>CSS Flexbox</strong></h2>
+<p>CSS Flexbox est un modèle de mise en page qui vous permet de créer des dispositions flexibles et efficaces. Il offre un moyen simple d’aligner et de distribuer l’espace entre les éléments dans un conteneur.</p>
+<h3 id="voici-un-exemple">Voici un exemple</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#B392F0">.container</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  display</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">flex</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  justify-content</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">space-between</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
@@ -234,30 +46,16 @@
 <span class="line"><span style="color:#79B8FF">  padding</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#F97583">px</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">  text-align</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">center</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"container"</span><span style="color:#E1E4E8">></span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"container"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"item"</span><span style="color:#E1E4E8">>1&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"item"</span><span style="color:#E1E4E8">>2&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"item"</span><span style="color:#E1E4E8">>3&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <hr />
-          <h2 id="animations-css"><strong>Animations CSS</strong></h2>
-          <p>
-            Les animations CSS vous permettent de créer des animations sur vos
-            pages web sans utiliser de JavaScript. Vous pouvez animer des
-            propriétés d’un élément, comme sa taille, sa couleur ou sa position.
-          </p>
-          <h3 id="exemple--2">Exemple :</h3>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="css"
-          ><code><span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> slidein</span><span style="color:#E1E4E8"> {</span></span>
+<hr>
+<h2 id="animations-css"><strong>Animations CSS</strong></h2>
+<p>Les animations CSS vous permettent de créer des animations sur vos pages web sans utiliser de JavaScript. Vous pouvez animer des propriétés d’un élément, comme sa taille, sa couleur ou sa position.</p>
+<h3 id="exemple">Exemple</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F97583">@keyframes</span><span style="color:#FFAB70"> slidein</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#B392F0">  from</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">    margin-left</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#79B8FF">    width</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">300</span><span style="color:#F97583">%</span><span style="color:#E1E4E8">;</span></span>
@@ -272,99 +70,9 @@
 <span class="line"><span style="color:#B392F0">.item</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#79B8FF">  animation</span><span style="color:#E1E4E8">: slidein </span><span style="color:#79B8FF">3</span><span style="color:#F97583">s</span><span style="color:#79B8FF"> infinite</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"item"</span><span style="color:#E1E4E8">>Contenu Animé&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <hr />
-          <h2 id="conclusion"><strong>Conclusion</strong></h2>
-          <p>
-            Ces techniques avancées en CSS vous aideront à créer des pages web
-            plus dynamiques et attrayantes. Expérimentez ces concepts et
-            combinez-les pour concevoir des designs uniques et engageants. Bonne
-            création ! 🎨
-          </p>
-        </div>
-        <section class="mt-12">
-          <h2
-            class="text-[36px] max-md:text-3xl text-center font-semibold my-4"
-          >
-            Articles connexes
-          </h2>
-          <div class="grid gap-5">
-            <div class="h-full">
-              <a
-                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
-                href="/blogs/tutorials/mastering-css-animations"
-              >
-                <section class="p-4 md:p-5 h-full">
-                  <div class="flex overflow-auto gap-2 mb-2">
-                    <span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >CSS</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Animations</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Web Design</span
-                    >
-                  </div>
-                  <p class="text-[#92939c] font-light">11 décembre 2024</p>
-                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
-                    Maitriser les animations CSS
-                  </h1>
-                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
-                    Découvrez des techniques avancées d&#39;animation CSS pour
-                    créer des animations visuellement attrayantes et
-                    performantes. Apprenez à utiliser les keyframes, les
-                    transitions, et les meilleures pratiques pour optimiser les
-                    performances.
-                  </p>
-                </section>
-              </a>
-            </div>
-            <div class="h-full">
-              <a
-                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
-                href="/blogs/tutorials/the-power-of-css-variables"
-              >
-                <section class="p-4 md:p-5 h-full">
-                  <div class="flex overflow-auto gap-2 mb-2">
-                    <span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >CSS</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Variables</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Web Design</span
-                    >
-                  </div>
-                  <p class="text-[#92939c] font-light">11 février 2024</p>
-                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
-                    Le pouvoir des variables CSS
-                  </h1>
-                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
-                    Découvrez comment les variables CSS peuvent rendre votre
-                    code CSS plus dynamique, maintenable et efficace. Apprenez à
-                    déclarer, utiliser et personnaliser des variables CSS pour
-                    améliorer vos feuilles de style.
-                  </p>
-                </section>
-              </a>
-            </div>
-          </div>
-        </section>
-      </article>
-    </main>
-    <footer class="text-color-contrast p-3 mt-7">
-      <div class="container mx-auto text-center font-extralight text-1">
-        <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p>
-      </div>
-    </footer>
-  </body>
-</html>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">div</span><span style="color:#B392F0"> class</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"item"</span><span style="color:#E1E4E8">>Contenu Animé&#x3C;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">></span></span></code></pre>
+<hr>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>Ces techniques avancées en CSS vous aideront à créer des pages web plus dynamiques et attrayantes. Expérimentez ces concepts et combinez-les pour concevoir des designs uniques et engageants. Bonne création ! 🎨</p>  </div> <section class="mt-12"> <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
+Articles connexes
+</h2> <div class="grid gap-5"> <div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/mastering-css-animations"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Animations</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Web Design</span> </div> <p class="text-[#92939c] font-light"> 11 décembre 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Maitriser les animations CSS </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Découvrez des techniques avancées d&#39;animation CSS pour créer des animations visuellement attrayantes et performantes. Apprenez à utiliser les keyframes, les transitions, et les meilleures pratiques pour optimiser les performances. </p> </section> </a> </div><div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/the-power-of-css-variables"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Variables</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Web Design</span> </div> <p class="text-[#92939c] font-light"> 11 février 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Le pouvoir des variables CSS </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Découvrez comment les variables CSS peuvent rendre votre code CSS plus dynamique, maintenable et efficace. Apprenez à déclarer, utiliser et personnaliser des variables CSS pour améliorer vos feuilles de style. </p> </section> </a> </div> </div> </section> </article> </main> <footer class="text-color-contrast p-3 mt-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>

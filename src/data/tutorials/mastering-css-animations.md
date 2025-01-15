@@ -8,7 +8,7 @@ author: r2j
 relatedPosts: ["the-power-of-css-variables"]
 ---
 
-# Maîtriser les Animations CSS
+## Maîtriser les Animations CSS
 
 Les animations peuvent ajouter une couche de raffinement et d’interactivité à vos conceptions web. Avec CSS, vous pouvez créer des animations qui améliorent l’expérience utilisateur sans avoir recours à JavaScript. Ce guide explore des techniques avancées d’animation pour vous aider à concevoir des animations visuellement attractives et performantes.
 
@@ -16,7 +16,7 @@ Les animations peuvent ajouter une couche de raffinement et d’interactivité �
 
 La règle `@keyframes` est le cœur des animations CSS. Elle permet de définir les étapes d’une animation.
 
-### Exemple :
+### Exemple
 
 ```css
 @keyframes glisser {
@@ -45,7 +45,7 @@ Dans cet exemple, l’élément `.element` glisse depuis la gauche et devient en
 
 Les animations CSS sont contrôlées à l’aide de propriétés comme `animation-duration`, `animation-timing-function` et `animation-delay`.
 
-### Exemple :
+### Encore un exemple
 
 ```css
 .rebond {
@@ -69,7 +69,7 @@ Cela crée un effet de "rebondissement" qui se répète indéfiniment.
 
 Les transitions sont utilisées pour animer les changements de propriétés lorsqu’un état d’un élément change, par exemple au survol.
 
-### Exemple :
+### Un exemple
 
 ```css
 .bouton {
@@ -95,7 +95,7 @@ Le bouton change sa couleur d’arrière-plan et s’agrandit légèrement lorsq
 
 Les transitions et animations peuvent être combinées pour créer des effets plus sophistiqués.
 
-### Exemple :
+### Voici un exemple
 
 ```css
 .carte {
@@ -128,7 +128,7 @@ Des animations mal optimisées peuvent entraîner des problèmes de performance,
 
 Le CSS peut également animer des SVGs pour des effets élaborés.
 
-### Exemple :
+### Par exemple
 
 ```css
 path {
@@ -161,7 +161,7 @@ Le chemin semble être "dessiné" lorsque l’animation se joue.
 
 Assurez-vous que vos animations sont accessibles et ne causent pas d’inconfort aux utilisateurs sensibles au mouvement. Respectez la media query `prefers-reduced-motion`.
 
-### Exemple :
+### Pour finir, un exemple
 
 ```css
 @media (prefers-reduced-motion: reduce) {

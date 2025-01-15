@@ -10,7 +10,7 @@ relatedPosts:
   - the-power-of-css-variables
 ---
 
-# Techniques Avancées en CSS
+## Techniques Avancées en CSS
 
 Une fois que vous maîtrisez les bases du CSS, il est temps d'explorer des techniques avancées qui vous permettront d'améliorer vos compétences en conception web. Ce guide couvre divers sujets pour vous aider à créer des pages web plus sophistiquées et dynamiques.
 
@@ -20,7 +20,7 @@ Une fois que vous maîtrisez les bases du CSS, il est temps d'explorer des techn
 
 CSS Grid est un outil puissant pour créer des mises en page complexes et réactives. Il vous permet de définir des lignes et des colonnes et de positionner les éléments précisément dans une grille.
 
-### Exemple :
+### Un exemple
 
 ```css
 .container {
@@ -50,7 +50,7 @@ CSS Grid est un outil puissant pour créer des mises en page complexes et réact
 
 CSS Flexbox est un modèle de mise en page qui vous permet de créer des dispositions flexibles et efficaces. Il offre un moyen simple d'aligner et de distribuer l'espace entre les éléments dans un conteneur.
 
-### Exemple :
+### Voici un exemple
 
 ```css
 .container {
@@ -79,7 +79,7 @@ CSS Flexbox est un modèle de mise en page qui vous permet de créer des disposi
 
 Les animations CSS vous permettent de créer des animations sur vos pages web sans utiliser de JavaScript. Vous pouvez animer des propriétés d’un élément, comme sa taille, sa couleur ou sa position.
 
-### Exemple :
+### Exemple
 
 ```css
 @keyframes slidein {

@@ -10,7 +10,7 @@ relatedPosts:
   - the-power-of-css-variables
 ---
 
-# Comprendre les Attributs HTML et Leur Utilisation
+## Comprendre les Attributs HTML et Leur Utilisation
 
 Les attributs HTML sont des informations supplémentaires que l'on ajoute aux balises HTML pour les personnaliser ou pour leur fournir des instructions spécifiques. Ces attributs peuvent modifier le comportement des balises ou ajouter des informations essentielles. Dans ce guide, nous allons explorer les principaux attributs HTML et leur utilisation.
 

@@ -1,525 +1,112 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CSSéducteur - Comprendre et Utiliser les Balises HTML</title>
-    <meta
-      name="description"
-      content="Découvrez les balises HTML de base et leur utilisation pour structurer le contenu d'une page web. Apprenez à créer des titres, des paragraphes, des liens, des images et des formulaires en HTML."
-    />
-    <meta name="viewport" content="width=device-width" />
-    <!-- favicon  -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <!-- add schema.org if setted -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "TechArticle",
-        "proficiencyLevel": "Débutant",
-        "articleBody": "# Comprendre et Utiliser les Balises HTML\n\nHTML (HyperText Markup Language) est la structure de base de toute page web. Les balises HTML sont utilisées pour structurer et organiser le contenu d'une page, définissant ainsi la structure d'un site. Dans ce guide, nous allons explorer les principales balises HTML et leur utilisation dans la création d'une page web.\n\n## 1. Introduction aux Balises HTML\n\nLes balises HTML sont des éléments qui entourent le contenu d'une page web pour indiquer au navigateur comment ce contenu doit être affiché. Chaque balise a un rôle spécifique, par exemple pour les titres, les paragraphes, les liens, les images, etc. La plupart des balises HTML sont entourées de `<` et `>`, et certaines nécessitent une balise de fermeture (comme `</p>`).\n\n### Structure d'une Balise HTML\n\nUne balise HTML de base se compose de trois parties :\n\n1. **Balise d'ouverture** : Elle indique le début de l'élément.\n2. **Contenu** : Le texte ou d'autres éléments imbriqués à l'intérieur de la balise.\n3. **Balise de fermeture** : Elle marque la fin de l'élément.\n\nExemple :\n\n```html\n<p>Ceci est un paragraphe.</p>\n```\n\n---\n\n## 2. Les Balises Structurelles de Base\n\nCertaines balises HTML sont utilisées pour créer la structure de base d'une page web. Voici les plus courantes :\n\n### La Balise `<html>`\n\nLa balise `<html>` est la racine de tout document HTML. Elle contient tous les autres éléments HTML sur la page.\n\n```html\n<html>\n  <!-- Tout le contenu de la page HTML va ici -->\n</html>\n```\n\n### La Balise `<head>`\n\nLa balise `<head>` contient des informations de métadonnées sur la page, comme le titre, les liens vers les fichiers CSS, les scripts JavaScript et d'autres informations non visibles directement sur la page.\n\n```html\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Mon site web</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n```\n\n### La Balise `<body>`\n\nLa balise `<body>` contient le contenu visible de la page web. C'est ici que vous placez des éléments comme des paragraphes, des titres, des images, etc.\n\n```html\n<body>\n  <h1>Bienvenue sur mon site web</h1>\n  <p>Ceci est un paragraphe d'exemple.</p>\n</body>\n```\n\n---\n\n## 3. Les Balises de Contenu\n\nLes balises de contenu sont celles qui servent à structurer et afficher les éléments de la page web.\n\n### La Balise `<h1>`, `<h2>`, `<h3>`, etc.\n\nLes balises `<h1>`, `<h2>`, `<h3>`, etc., sont utilisées pour définir les titres de la page. `<h1>` est le titre principal (le plus important) et les autres balises `<h2>`, `<h3>`, etc., sont des sous-titres de niveaux inférieurs.\n\n```html\n<h1>Titre principal de la page</h1>\n<h2>Sous-titre de niveau 2</h2>\n<h3>Sous-titre de niveau 3</h3>\n```\n\n### La Balise `<p>`\n\nLa balise `<p>` est utilisée pour définir un paragraphe de texte.\n\n```html\n<p>\n  Ceci est un paragraphe. Il peut contenir plusieurs phrases ou même des\n  éléments imbriqués.\n</p>\n```\n\n### La Balise `<a>`\n\nLa balise `<a>` est utilisée pour créer des liens hypertextes. Elle permet de lier une page à une autre ou de rediriger vers un autre site web.\n\n```html\n<a href=\"https://www.example.com\">Cliquez ici pour visiter mon site</a>\n```\n\n---\n\n## 4. Les Balises Multimédia\n\nHTML permet également d'ajouter des éléments multimédia à vos pages, comme des images, des vidéos ou de l'audio.\n\n### La Balise `<img>`\n\nLa balise `<img>` est utilisée pour afficher une image sur la page. Elle nécessite l'attribut `src` pour spécifier l'URL de l'image et `alt` pour fournir un texte alternatif.\n\n```html\n<img src=\"image.jpg\" alt=\"Description de l'image\" />\n```\n\n### La Balise `<video>`\n\nLa balise `<video>` permet d'intégrer des vidéos dans une page web. Vous pouvez spécifier plusieurs sources pour garantir la compatibilité entre différents navigateurs.\n\n```html\n<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\" />\n  <source src=\"video.ogg\" type=\"video/ogg\" />\n  Votre navigateur ne supporte pas la balise vidéo.\n</video>\n```\n\n### La Balise `<audio>`\n\nSimilaire à la balise `<video>`, la balise `<audio>` permet d'intégrer des fichiers audio dans une page web.\n\n```html\n<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mp3\" />\n  Votre navigateur ne supporte pas la balise audio.\n</audio>\n```\n\n---\n\n## 5. Les Balises de Formulaire\n\nLes balises de formulaire HTML permettent de collecter des informations auprès des utilisateurs. Voici les balises les plus courantes.\n\n### La Balise `<form>`\n\nLa balise `<form>` encapsule tous les éléments d'un formulaire. Elle inclut également des attributs comme `action` (l'URL où les données sont envoyées) et `method` (la méthode HTTP, généralement `GET` ou `POST`).\n\n```html\n<form action=\"/submit\" method=\"POST\">\n  <!-- Les autres éléments de formulaire vont ici -->\n</form>\n```\n\n### La Balise `<input>`\n\nLa balise `<input>` est utilisée pour créer des champs de saisie dans un formulaire. Elle peut être utilisée pour plusieurs types de champs, comme des textes, des cases à cocher, des boutons, etc.\n\n```html\n<input type=\"text\" name=\"username\" placeholder=\"Entrez votre nom\" />\n<input\n  type=\"password\"\n  name=\"password\"\n  placeholder=\"Entrez votre mot de passe\"\n/>\n<input type=\"submit\" value=\"Envoyer\" />\n```\n\n### La Balise `<select>`\n\nLa balise `<select>` crée un menu déroulant permettant à l'utilisateur de choisir parmi plusieurs options.\n\n```html\n<select name=\"fruits\">\n  <option value=\"apple\">Pomme</option>\n  <option value=\"banana\">Banane</option>\n  <option value=\"cherry\">Cerise</option>\n</select>\n```\n\n---\n\n## Conclusion\n\nLes balises HTML sont les éléments de base pour construire la structure d'une page web. En comprenant bien leur rôle et en utilisant la bonne balise pour chaque situation, vous pouvez créer des pages web bien structurées et accessibles. N'hésitez pas à explorer plus de balises HTML pour enrichir vos projets web. Continuez à pratiquer et à expérimenter pour devenir un expert du HTML !",
-        "articleSection": "Tutorials",
-        "wordCount": 778,
-        "headline": "Comprendre et Utiliser les Balises HTML",
-        "description": "Découvrez les balises HTML de base et leur utilisation pour structurer le contenu d'une page web. Apprenez à créer des titres, des paragraphes, des liens, des images et des formulaires en HTML.",
-        "author": {
-          "@type": "Person",
-          "name": "R2J",
-          "image": "https://avatars.githubusercontent.com/u/81377220?v=4",
-          "url": "https://github.com/aretwojay"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "CSSéducteur",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://css-seducteur-css.site/faivcon.svg"
-          }
-        },
-        "url": "https://css-seducteur-css.site/blogs/tutorials/html-tags",
-        "about": [
-          {
-            "@type": "Thing",
-            "@id": "https://css-seducteur-css.site/blogs/html",
-            "name": "HTML"
-          },
-          {
-            "@type": "Thing",
-            "@id": "https://css-seducteur-css.site/blogs/basique",
-            "name": "Basique"
-          },
-          {
-            "@type": "Thing",
-            "@id": "https://css-seducteur-css.site/blogs/développement web",
-            "name": "Développement Web"
-          }
-        ],
-        "isPartOf": {
-          "@type": "Blog",
-          "@id": "https://css-seducteur-css.site"
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://css-seducteur-css.site/blogs/tutorials/html-tags"
-        },
-        "keywords": "HTML, Basique, Développement Web",
-        "datePublished": "Wed Jan 08 2025",
-        "dateModified": "Wed Jan 08 2025"
-      }
-    </script>
-    <!-- sitemaps and co -->
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="generator" content="Astro v5.1.6" />
-    <meta name="robots" content="all" />
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="CSSéducteur - Tutoriels CSS" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://css-seducteur-css.site" />
-    <meta
-      property="og:description"
-      content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."
-    />
-    <meta
-      property="og:image"
-      content="https://css-seducteur-css.site/web-app-manifest-512x512.png"
-    />
-    <meta property="og:site_name" content="CSSéducteur" />
-    <meta property="og:locale" content="fr_FR" />
-    <link rel="stylesheet" href="/_astro/_tag_.D1ucBM1H.css" />
-    <script>
-      window.va =
-        window.va ||
-        function () {
-          (window.vaq = window.vaq || []).push(arguments);
-        };
-      var script = document.createElement("script");
-      script.defer = true;
-      script.src = "/_vercel/insights/script.js";
-      var head = document.querySelector("head");
-      head.appendChild(script);
-    </script>
-  </head>
-  <body class="m-[0px] dark:text-white">
-    <header class="dark:bg-color-1 shadow-sm">
-      <div class="flex items-center justify-between container p-2">
-        <a
-          class="flex items-center gap-2 no-underline text-color-contrast"
-          href="/"
-        >
-          <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">
-            CSSéducteur
-          </h1>
-          🚀
-        </a>
-        <nav>
-          <ul class="flex gap-4 space-x-4">
-            <li>
-              <a
-                href="/blogs/basique"
-                class="no-underline text-color-11 transition-all hover:text-color-contrast"
-                >Les basiques</a
-              >
-            </li>
-            <li>
-              <a
-                href="/blogs/tutorials"
-                class="no-underline text-color-11 transition-all hover:text-color-contrast"
-                >Tutoriels CSS</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main class="p-4 max-w-[800px] mx-auto text-color-contrast">
-      <article>
-        <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4">
-          Comprendre et Utiliser les Balises HTML
-        </h1>
-        <a
-          href="https://github.com/aretwojay"
-          class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"
-        >
-          <img
-            src="https://avatars.githubusercontent.com/u/81377220?v=4"
-            alt="R2J"
-            class="size-8 rounded-full"
-          />
-          <p>R2J</p>
-        </a>
-        <div class="flex gap-2 mb-6">
-          <a href="/blogs/html"
-            ><span
-              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-              >HTML</span
-            ></a
-          ><a href="/blogs/basique"
-            ><span
-              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-              >Basique</span
-            ></a
-          ><a href="/blogs/développement web"
-            ><span
-              class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-              >Développement Web</span
-            ></a
-          >
-        </div>
-        <p class="text-sm font-light">Temps estimé de lecture : 4 min</p>
-        <p class="font-extralight mt-2 mb-5">
-          Découvrez les balises HTML de base et leur utilisation pour structurer
-          le contenu d&#39;une page web. Apprenez à créer des titres, des
-          paragraphes, des liens, des images et des formulaires en HTML.
-        </p>
-        <div
-          class="prose dark:prose-invert prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl prose-headings:underline"
-        >
-          <h1 id="comprendre-et-utiliser-les-balises-html">
-            Comprendre et Utiliser les Balises HTML
-          </h1>
-          <p>
-            HTML (HyperText Markup Language) est la structure de base de toute
-            page web. Les balises HTML sont utilisées pour structurer et
-            organiser le contenu d’une page, définissant ainsi la structure d’un
-            site. Dans ce guide, nous allons explorer les principales balises
-            HTML et leur utilisation dans la création d’une page web.
-          </p>
-          <h2 id="1-introduction-aux-balises-html">
-            1. Introduction aux Balises HTML
-          </h2>
-          <p>
-            Les balises HTML sont des éléments qui entourent le contenu d’une
-            page web pour indiquer au navigateur comment ce contenu doit être
-            affiché. Chaque balise a un rôle spécifique, par exemple pour les
-            titres, les paragraphes, les liens, les images, etc. La plupart des
-            balises HTML sont entourées de <code>&#x3C;</code> et
-            <code>></code>, et certaines nécessitent une balise de fermeture
-            (comme <code>&#x3C;/p></code>).
-          </p>
-          <h3 id="structure-dune-balise-html">Structure d’une Balise HTML</h3>
-          <p>Une balise HTML de base se compose de trois parties :</p>
-          <ol>
-            <li>
-              <strong>Balise d’ouverture</strong> : Elle indique le début de
-              l’élément.
-            </li>
-            <li>
-              <strong>Contenu</strong> : Le texte ou d’autres éléments imbriqués
-              à l’intérieur de la balise.
-            </li>
-            <li>
-              <strong>Balise de fermeture</strong> : Elle marque la fin de
-              l’élément.
-            </li>
-          </ol>
-          <p>Exemple :</p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">>Ceci est un paragraphe.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <hr />
-          <h2 id="2-les-balises-structurelles-de-base">
-            2. Les Balises Structurelles de Base
-          </h2>
-          <p>
-            Certaines balises HTML sont utilisées pour créer la structure de
-            base d’une page web. Voici les plus courantes :
-          </p>
-          <h3 id="la-balise-html">La Balise <code>&#x3C;html></code></h3>
-          <p>
-            La balise <code>&#x3C;html></code> est la racine de tout document
-            HTML. Elle contient tous les autres éléments HTML sur la page.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">html</span><span style="color:#E1E4E8">></span></span>
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><title>CSSéducteur - Comprendre et Utiliser les Balises HTML</title><meta name="description" content="Découvrez les balises HTML de base et leur utilisation pour structurer le contenu d'une page web. Apprenez à créer des titres, des paragraphes, des liens, des images et des formulaires en HTML."><meta name="viewport" content="width=device-width"><!-- favicon  --><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><!-- add schema.org if setted --><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","proficiencyLevel":"Débutant","articleBody":"## Comprendre et Utiliser les Balises HTML\n\nHTML (HyperText Markup Language) est la structure de base de toute page web. Les balises HTML sont utilisées pour structurer et organiser le contenu d'une page, définissant ainsi la structure d'un site. Dans ce guide, nous allons explorer les principales balises HTML et leur utilisation dans la création d'une page web.\n\n## 1. Introduction aux Balises HTML\n\nLes balises HTML sont des éléments qui entourent le contenu d'une page web pour indiquer au navigateur comment ce contenu doit être affiché. Chaque balise a un rôle spécifique, par exemple pour les titres, les paragraphes, les liens, les images, etc. La plupart des balises HTML sont entourées de `<` et `>`, et certaines nécessitent une balise de fermeture (comme `</p>`).\n\n### Structure d'une Balise HTML\n\nUne balise HTML de base se compose de trois parties :\n\n1. **Balise d'ouverture** : Elle indique le début de l'élément.\n2. **Contenu** : Le texte ou d'autres éléments imbriqués à l'intérieur de la balise.\n3. **Balise de fermeture** : Elle marque la fin de l'élément.\n\nExemple :\n\n```html\n<p>Ceci est un paragraphe.</p>\n```\n\n---\n\n## 2. Les Balises Structurelles de Base\n\nCertaines balises HTML sont utilisées pour créer la structure de base d'une page web. Voici les plus courantes :\n\n### La Balise `<html>`\n\nLa balise `<html>` est la racine de tout document HTML. Elle contient tous les autres éléments HTML sur la page.\n\n```html\n<html>\n  <!-- Tout le contenu de la page HTML va ici -->\n</html>\n```\n\n### La Balise `<head>`\n\nLa balise `<head>` contient des informations de métadonnées sur la page, comme le titre, les liens vers les fichiers CSS, les scripts JavaScript et d'autres informations non visibles directement sur la page.\n\n```html\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Mon site web</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n```\n\n### La Balise `<body>`\n\nLa balise `<body>` contient le contenu visible de la page web. C'est ici que vous placez des éléments comme des paragraphes, des titres, des images, etc.\n\n```html\n<body>\n  <h1>Bienvenue sur mon site web</h1>\n  <p>Ceci est un paragraphe d'exemple.</p>\n</body>\n```\n\n---\n\n## 3. Les Balises de Contenu\n\nLes balises de contenu sont celles qui servent à structurer et afficher les éléments de la page web.\n\n### La Balise `<h1>`, `<h2>`, `<h3>`, etc\n\nLes balises `<h1>`, `<h2>`, `<h3>`, etc., sont utilisées pour définir les titres de la page. `<h1>` est le titre principal (le plus important) et les autres balises `<h2>`, `<h3>`, etc., sont des sous-titres de niveaux inférieurs.\n\n```html\n<h1>Titre principal de la page</h1>\n<h2>Sous-titre de niveau 2</h2>\n<h3>Sous-titre de niveau 3</h3>\n```\n\n### La Balise `<p>`\n\nLa balise `<p>` est utilisée pour définir un paragraphe de texte.\n\n```html\n<p>\n  Ceci est un paragraphe. Il peut contenir plusieurs phrases ou même des\n  éléments imbriqués.\n</p>\n```\n\n### La Balise `<a>`\n\nLa balise `<a>` est utilisée pour créer des liens hypertextes. Elle permet de lier une page à une autre ou de rediriger vers un autre site web.\n\n```html\n<a href=\"https://www.example.com\">Cliquez ici pour visiter mon site</a>\n```\n\n---\n\n## 4. Les Balises Multimédia\n\nHTML permet également d'ajouter des éléments multimédia à vos pages, comme des images, des vidéos ou de l'audio.\n\n### La Balise `<img>`\n\nLa balise `<img>` est utilisée pour afficher une image sur la page. Elle nécessite l'attribut `src` pour spécifier l'URL de l'image et `alt` pour fournir un texte alternatif.\n\n```html\n<img src=\"image.jpg\" alt=\"Description de l'image\" />\n```\n\n### La Balise `<video>`\n\nLa balise `<video>` permet d'intégrer des vidéos dans une page web. Vous pouvez spécifier plusieurs sources pour garantir la compatibilité entre différents navigateurs.\n\n```html\n<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\" />\n  <source src=\"video.ogg\" type=\"video/ogg\" />\n  Votre navigateur ne supporte pas la balise vidéo.\n</video>\n```\n\n### La Balise `<audio>`\n\nSimilaire à la balise `<video>`, la balise `<audio>` permet d'intégrer des fichiers audio dans une page web.\n\n```html\n<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mp3\" />\n  Votre navigateur ne supporte pas la balise audio.\n</audio>\n```\n\n---\n\n## 5. Les Balises de Formulaire\n\nLes balises de formulaire HTML permettent de collecter des informations auprès des utilisateurs. Voici les balises les plus courantes.\n\n### La Balise `<form>`\n\nLa balise `<form>` encapsule tous les éléments d'un formulaire. Elle inclut également des attributs comme `action` (l'URL où les données sont envoyées) et `method` (la méthode HTTP, généralement `GET` ou `POST`).\n\n```html\n<form action=\"/submit\" method=\"POST\">\n  <!-- Les autres éléments de formulaire vont ici -->\n</form>\n```\n\n### La Balise `<input>`\n\nLa balise `<input>` est utilisée pour créer des champs de saisie dans un formulaire. Elle peut être utilisée pour plusieurs types de champs, comme des textes, des cases à cocher, des boutons, etc.\n\n```html\n<input type=\"text\" name=\"username\" placeholder=\"Entrez votre nom\" />\n<input\n  type=\"password\"\n  name=\"password\"\n  placeholder=\"Entrez votre mot de passe\"\n/>\n<input type=\"submit\" value=\"Envoyer\" />\n```\n\n### La Balise `<select>`\n\nLa balise `<select>` crée un menu déroulant permettant à l'utilisateur de choisir parmi plusieurs options.\n\n```html\n<select name=\"fruits\">\n  <option value=\"apple\">Pomme</option>\n  <option value=\"banana\">Banane</option>\n  <option value=\"cherry\">Cerise</option>\n</select>\n```\n\n---\n\n## Conclusion\n\nLes balises HTML sont les éléments de base pour construire la structure d'une page web. En comprenant bien leur rôle et en utilisant la bonne balise pour chaque situation, vous pouvez créer des pages web bien structurées et accessibles. N'hésitez pas à explorer plus de balises HTML pour enrichir vos projets web. Continuez à pratiquer et à expérimenter pour devenir un expert du HTML !","articleSection":"Tutorials","wordCount":778,"headline":"Comprendre et Utiliser les Balises HTML","description":"Découvrez les balises HTML de base et leur utilisation pour structurer le contenu d'une page web. Apprenez à créer des titres, des paragraphes, des liens, des images et des formulaires en HTML.","author":{"@type":"Person","name":"R2J","image":"https://avatars.githubusercontent.com/u/81377220?v=4","url":"https://github.com/aretwojay"},"publisher":{"@type":"Organization","name":"CSSéducteur","logo":{"@type":"ImageObject","url":"https://css-seducteur-css.site/faivcon.svg"}},"url":"https://css-seducteur-css.site/blogs/tutorials/html-tags","about":[{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/html","name":"HTML"},{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/basique","name":"Basique"},{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/développement web","name":"Développement Web"}],"isPartOf":{"@type":"Blog","@id":"https://css-seducteur-css.site"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://css-seducteur-css.site/blogs/tutorials/html-tags"},"keywords":"HTML, Basique, Développement Web","datePublished":"Wed Jan 08 2025","dateModified":"Wed Jan 08 2025"}</script><!-- sitemaps and co --><link rel="sitemap" href="/sitemap-index.xml"><meta name="generator" content="Astro v5.1.6"><meta name="robots" content="all"><!-- Open Graph tags --><meta property="og:title" content="CSSéducteur - Tutoriels CSS"><meta property="og:type" content="website"><meta property="og:url" content="https://css-seducteur-css.site"><meta property="og:description" content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."><meta property="og:image" content="https://css-seducteur-css.site/web-app-manifest-512x512.png"><meta property="og:site_name" content="CSSéducteur"><meta property="og:locale" content="fr_FR"><link rel="stylesheet" href="/_astro/_tag_.D1ucBM1H.css"><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		var script = document.createElement('script');
+		script.defer = true;
+		script.src = '/_vercel/insights/script.js';
+		var head = document.querySelector('head');
+		head.appendChild(script);
+	</script></head> <body class="m-[0px] dark:text-white">  <header class="dark:bg-color-1 shadow-sm"> <div class="flex items-center justify-between container p-2"> <a class="flex items-center gap-2 no-underline text-color-contrast" href="/"> <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">CSSéducteur</h1>
+🚀
+</a> <nav> <ul class="flex gap-4 space-x-4"> <li> <a href="/blogs/basique" class="no-underline text-color-11 transition-all hover:text-color-contrast">Les basiques</a> </li> <li> <a href="/blogs/tutorials" class="no-underline text-color-11 transition-all hover:text-color-contrast">Tutoriels CSS</a> </li> </ul> </nav> </div> </header> <main class="p-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4"> Comprendre et Utiliser les Balises HTML </h1> <a href="https://github.com/aretwojay" class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"> <img src="https://avatars.githubusercontent.com/u/81377220?v=4" alt="R2J" class="size-8 rounded-full"> <p>R2J</p> </a> <div class="flex gap-2 mb-6"> <a href="/blogs/html"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">HTML</span></a><a href="/blogs/basique"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Basique</span></a><a href="/blogs/développement web"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Développement Web</span></a> </div> <p class="text-sm font-light">
+Temps estimé de lecture : 4 min  </p> <p class="font-extralight mt-2 mb-5">Découvrez les balises HTML de base et leur utilisation pour structurer le contenu d&#39;une page web. Apprenez à créer des titres, des paragraphes, des liens, des images et des formulaires en HTML.</p> <div class="prose dark:prose-invert
+  prose-h1:font-bold prose-h1:text-xl
+  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
+  prose-headings:underline">  <h2 id="comprendre-et-utiliser-les-balises-html">Comprendre et Utiliser les Balises HTML</h2>
+<p>HTML (HyperText Markup Language) est la structure de base de toute page web. Les balises HTML sont utilisées pour structurer et organiser le contenu d’une page, définissant ainsi la structure d’un site. Dans ce guide, nous allons explorer les principales balises HTML et leur utilisation dans la création d’une page web.</p>
+<h2 id="1-introduction-aux-balises-html">1. Introduction aux Balises HTML</h2>
+<p>Les balises HTML sont des éléments qui entourent le contenu d’une page web pour indiquer au navigateur comment ce contenu doit être affiché. Chaque balise a un rôle spécifique, par exemple pour les titres, les paragraphes, les liens, les images, etc. La plupart des balises HTML sont entourées de <code>&#x3C;</code> et <code>></code>, et certaines nécessitent une balise de fermeture (comme <code>&#x3C;/p></code>).</p>
+<h3 id="structure-dune-balise-html">Structure d’une Balise HTML</h3>
+<p>Une balise HTML de base se compose de trois parties :</p>
+<ol>
+<li><strong>Balise d’ouverture</strong> : Elle indique le début de l’élément.</li>
+<li><strong>Contenu</strong> : Le texte ou d’autres éléments imbriqués à l’intérieur de la balise.</li>
+<li><strong>Balise de fermeture</strong> : Elle marque la fin de l’élément.</li>
+</ol>
+<p>Exemple :</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">>Ceci est un paragraphe.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span></code></pre>
+<hr>
+<h2 id="2-les-balises-structurelles-de-base">2. Les Balises Structurelles de Base</h2>
+<p>Certaines balises HTML sont utilisées pour créer la structure de base d’une page web. Voici les plus courantes :</p>
+<h3 id="la-balise-html">La Balise <code>&#x3C;html></code></h3>
+<p>La balise <code>&#x3C;html></code> est la racine de tout document HTML. Elle contient tous les autres éléments HTML sur la page.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">html</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#6A737D">  &#x3C;!-- Tout le contenu de la page HTML va ici --></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">html</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <h3 id="la-balise-head">La Balise <code>&#x3C;head></code></h3>
-          <p>
-            La balise <code>&#x3C;head></code> contient des informations de
-            métadonnées sur la page, comme le titre, les liens vers les fichiers
-            CSS, les scripts JavaScript et d’autres informations non visibles
-            directement sur la page.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">head</span><span style="color:#E1E4E8">></span></span>
+<h3 id="la-balise-head">La Balise <code>&#x3C;head></code></h3>
+<p>La balise <code>&#x3C;head></code> contient des informations de métadonnées sur la page, comme le titre, les liens vers les fichiers CSS, les scripts JavaScript et d’autres informations non visibles directement sur la page.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">head</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">meta</span><span style="color:#B392F0"> charset</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"UTF-8"</span><span style="color:#E1E4E8"> /></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">meta</span><span style="color:#B392F0"> name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"viewport"</span><span style="color:#B392F0"> content</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"width=device-width, initial-scale=1.0"</span><span style="color:#E1E4E8"> /></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">title</span><span style="color:#E1E4E8">>Mon site web&#x3C;/</span><span style="color:#85E89D">title</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">link</span><span style="color:#B392F0"> rel</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"stylesheet"</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"styles.css"</span><span style="color:#E1E4E8"> /></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">head</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <h3 id="la-balise-body">La Balise <code>&#x3C;body></code></h3>
-          <p>
-            La balise <code>&#x3C;body></code> contient le contenu visible de la
-            page web. C’est ici que vous placez des éléments comme des
-            paragraphes, des titres, des images, etc.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">body</span><span style="color:#E1E4E8">></span></span>
+<h3 id="la-balise-body">La Balise <code>&#x3C;body></code></h3>
+<p>La balise <code>&#x3C;body></code> contient le contenu visible de la page web. C’est ici que vous placez des éléments comme des paragraphes, des titres, des images, etc.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">body</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">>Bienvenue sur mon site web&#x3C;/</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">>Ceci est un paragraphe d'exemple.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">body</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <hr />
-          <h2 id="3-les-balises-de-contenu">3. Les Balises de Contenu</h2>
-          <p>
-            Les balises de contenu sont celles qui servent à structurer et
-            afficher les éléments de la page web.
-          </p>
-          <h3 id="la-balise-h1-h2-h3-etc">
-            La Balise <code>&#x3C;h1></code>, <code>&#x3C;h2></code>,
-            <code>&#x3C;h3></code>, etc.
-          </h3>
-          <p>
-            Les balises <code>&#x3C;h1></code>, <code>&#x3C;h2></code>,
-            <code>&#x3C;h3></code>, etc., sont utilisées pour définir les titres
-            de la page. <code>&#x3C;h1></code> est le titre principal (le plus
-            important) et les autres balises <code>&#x3C;h2></code>,
-            <code>&#x3C;h3></code>, etc., sont des sous-titres de niveaux
-            inférieurs.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">>Titre principal de la page&#x3C;/</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">></span></span>
+<hr>
+<h2 id="3-les-balises-de-contenu">3. Les Balises de Contenu</h2>
+<p>Les balises de contenu sont celles qui servent à structurer et afficher les éléments de la page web.</p>
+<h3 id="la-balise-h1-h2-h3-etc">La Balise <code>&#x3C;h1></code>, <code>&#x3C;h2></code>, <code>&#x3C;h3></code>, etc</h3>
+<p>Les balises <code>&#x3C;h1></code>, <code>&#x3C;h2></code>, <code>&#x3C;h3></code>, etc., sont utilisées pour définir les titres de la page. <code>&#x3C;h1></code> est le titre principal (le plus important) et les autres balises <code>&#x3C;h2></code>, <code>&#x3C;h3></code>, etc., sont des sous-titres de niveaux inférieurs.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">>Titre principal de la page&#x3C;/</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">h2</span><span style="color:#E1E4E8">>Sous-titre de niveau 2&#x3C;/</span><span style="color:#85E89D">h2</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">h3</span><span style="color:#E1E4E8">>Sous-titre de niveau 3&#x3C;/</span><span style="color:#85E89D">h3</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <h3 id="la-balise-p">La Balise <code>&#x3C;p></code></h3>
-          <p>
-            La balise <code>&#x3C;p></code> est utilisée pour définir un
-            paragraphe de texte.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
+<h3 id="la-balise-p">La Balise <code>&#x3C;p></code></h3>
+<p>La balise <code>&#x3C;p></code> est utilisée pour définir un paragraphe de texte.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  Ceci est un paragraphe. Il peut contenir plusieurs phrases ou même des</span></span>
 <span class="line"><span style="color:#E1E4E8">  éléments imbriqués.</span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <h3 id="la-balise-a">La Balise <code>&#x3C;a></code></h3>
-          <p>
-            La balise <code>&#x3C;a></code> est utilisée pour créer des liens
-            hypertextes. Elle permet de lier une page à une autre ou de
-            rediriger vers un autre site web.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"https://www.example.com"</span><span style="color:#E1E4E8">>Cliquez ici pour visiter mon site&#x3C;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <hr />
-          <h2 id="4-les-balises-multimédia">4. Les Balises Multimédia</h2>
-          <p>
-            HTML permet également d’ajouter des éléments multimédia à vos pages,
-            comme des images, des vidéos ou de l’audio.
-          </p>
-          <h3 id="la-balise-img">La Balise <code>&#x3C;img></code></h3>
-          <p>
-            La balise <code>&#x3C;img></code> est utilisée pour afficher une
-            image sur la page. Elle nécessite l’attribut <code>src</code> pour
-            spécifier l’URL de l’image et <code>alt</code> pour fournir un texte
-            alternatif.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">img</span><span style="color:#B392F0"> src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"image.jpg"</span><span style="color:#B392F0"> alt</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Description de l'image"</span><span style="color:#E1E4E8"> /></span></span></code></pre>
-          <h3 id="la-balise-video">La Balise <code>&#x3C;video></code></h3>
-          <p>
-            La balise <code>&#x3C;video></code> permet d’intégrer des vidéos
-            dans une page web. Vous pouvez spécifier plusieurs sources pour
-            garantir la compatibilité entre différents navigateurs.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">video</span><span style="color:#B392F0"> controls</span><span style="color:#E1E4E8">></span></span>
+<h3 id="la-balise-a">La Balise <code>&#x3C;a></code></h3>
+<p>La balise <code>&#x3C;a></code> est utilisée pour créer des liens hypertextes. Elle permet de lier une page à une autre ou de rediriger vers un autre site web.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"https://www.example.com"</span><span style="color:#E1E4E8">>Cliquez ici pour visiter mon site&#x3C;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">></span></span></code></pre>
+<hr>
+<h2 id="4-les-balises-multimédia">4. Les Balises Multimédia</h2>
+<p>HTML permet également d’ajouter des éléments multimédia à vos pages, comme des images, des vidéos ou de l’audio.</p>
+<h3 id="la-balise-img">La Balise <code>&#x3C;img></code></h3>
+<p>La balise <code>&#x3C;img></code> est utilisée pour afficher une image sur la page. Elle nécessite l’attribut <code>src</code> pour spécifier l’URL de l’image et <code>alt</code> pour fournir un texte alternatif.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">img</span><span style="color:#B392F0"> src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"image.jpg"</span><span style="color:#B392F0"> alt</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Description de l'image"</span><span style="color:#E1E4E8"> /></span></span></code></pre>
+<h3 id="la-balise-video">La Balise <code>&#x3C;video></code></h3>
+<p>La balise <code>&#x3C;video></code> permet d’intégrer des vidéos dans une page web. Vous pouvez spécifier plusieurs sources pour garantir la compatibilité entre différents navigateurs.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">video</span><span style="color:#B392F0"> controls</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">source</span><span style="color:#B392F0"> src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"video.mp4"</span><span style="color:#B392F0"> type</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"video/mp4"</span><span style="color:#E1E4E8"> /></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">source</span><span style="color:#B392F0"> src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"video.ogg"</span><span style="color:#B392F0"> type</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"video/ogg"</span><span style="color:#E1E4E8"> /></span></span>
 <span class="line"><span style="color:#E1E4E8">  Votre navigateur ne supporte pas la balise vidéo.</span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">video</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <h3 id="la-balise-audio">La Balise <code>&#x3C;audio></code></h3>
-          <p>
-            Similaire à la balise <code>&#x3C;video></code>, la balise
-            <code>&#x3C;audio></code> permet d’intégrer des fichiers audio dans
-            une page web.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">audio</span><span style="color:#B392F0"> controls</span><span style="color:#E1E4E8">></span></span>
+<h3 id="la-balise-audio">La Balise <code>&#x3C;audio></code></h3>
+<p>Similaire à la balise <code>&#x3C;video></code>, la balise <code>&#x3C;audio></code> permet d’intégrer des fichiers audio dans une page web.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">audio</span><span style="color:#B392F0"> controls</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">source</span><span style="color:#B392F0"> src</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"audio.mp3"</span><span style="color:#B392F0"> type</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"audio/mp3"</span><span style="color:#E1E4E8"> /></span></span>
 <span class="line"><span style="color:#E1E4E8">  Votre navigateur ne supporte pas la balise audio.</span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">audio</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <hr />
-          <h2 id="5-les-balises-de-formulaire">5. Les Balises de Formulaire</h2>
-          <p>
-            Les balises de formulaire HTML permettent de collecter des
-            informations auprès des utilisateurs. Voici les balises les plus
-            courantes.
-          </p>
-          <h3 id="la-balise-form">La Balise <code>&#x3C;form></code></h3>
-          <p>
-            La balise <code>&#x3C;form></code> encapsule tous les éléments d’un
-            formulaire. Elle inclut également des attributs comme
-            <code>action</code> (l’URL où les données sont envoyées) et
-            <code>method</code> (la méthode HTTP, généralement
-            <code>GET</code> ou <code>POST</code>).
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">form</span><span style="color:#B392F0"> action</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/submit"</span><span style="color:#B392F0"> method</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"POST"</span><span style="color:#E1E4E8">></span></span>
+<hr>
+<h2 id="5-les-balises-de-formulaire">5. Les Balises de Formulaire</h2>
+<p>Les balises de formulaire HTML permettent de collecter des informations auprès des utilisateurs. Voici les balises les plus courantes.</p>
+<h3 id="la-balise-form">La Balise <code>&#x3C;form></code></h3>
+<p>La balise <code>&#x3C;form></code> encapsule tous les éléments d’un formulaire. Elle inclut également des attributs comme <code>action</code> (l’URL où les données sont envoyées) et <code>method</code> (la méthode HTTP, généralement <code>GET</code> ou <code>POST</code>).</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">form</span><span style="color:#B392F0"> action</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"/submit"</span><span style="color:#B392F0"> method</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"POST"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#6A737D">  &#x3C;!-- Les autres éléments de formulaire vont ici --></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">form</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <h3 id="la-balise-input">La Balise <code>&#x3C;input></code></h3>
-          <p>
-            La balise <code>&#x3C;input></code> est utilisée pour créer des
-            champs de saisie dans un formulaire. Elle peut être utilisée pour
-            plusieurs types de champs, comme des textes, des cases à cocher, des
-            boutons, etc.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">input</span><span style="color:#B392F0"> type</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"text"</span><span style="color:#B392F0"> name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"username"</span><span style="color:#B392F0"> placeholder</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Entrez votre nom"</span><span style="color:#E1E4E8"> /></span></span>
+<h3 id="la-balise-input">La Balise <code>&#x3C;input></code></h3>
+<p>La balise <code>&#x3C;input></code> est utilisée pour créer des champs de saisie dans un formulaire. Elle peut être utilisée pour plusieurs types de champs, comme des textes, des cases à cocher, des boutons, etc.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">input</span><span style="color:#B392F0"> type</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"text"</span><span style="color:#B392F0"> name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"username"</span><span style="color:#B392F0"> placeholder</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Entrez votre nom"</span><span style="color:#E1E4E8"> /></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">input</span></span>
 <span class="line"><span style="color:#B392F0">  type</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"password"</span></span>
 <span class="line"><span style="color:#B392F0">  name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"password"</span></span>
 <span class="line"><span style="color:#B392F0">  placeholder</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Entrez votre mot de passe"</span></span>
 <span class="line"><span style="color:#E1E4E8">/></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">input</span><span style="color:#B392F0"> type</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"submit"</span><span style="color:#B392F0"> value</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"Envoyer"</span><span style="color:#E1E4E8"> /></span></span></code></pre>
-          <h3 id="la-balise-select">La Balise <code>&#x3C;select></code></h3>
-          <p>
-            La balise <code>&#x3C;select></code> crée un menu déroulant
-            permettant à l’utilisateur de choisir parmi plusieurs options.
-          </p>
-          <pre
-            class="astro-code github-dark"
-            style="background-color: #24292e; color: #e1e4e8; overflow-x: auto"
-            tabindex="0"
-            data-language="html"
-          ><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">select</span><span style="color:#B392F0"> name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"fruits"</span><span style="color:#E1E4E8">></span></span>
+<h3 id="la-balise-select">La Balise <code>&#x3C;select></code></h3>
+<p>La balise <code>&#x3C;select></code> crée un menu déroulant permettant à l’utilisateur de choisir parmi plusieurs options.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">select</span><span style="color:#B392F0"> name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"fruits"</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">option</span><span style="color:#B392F0"> value</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"apple"</span><span style="color:#E1E4E8">>Pomme&#x3C;/</span><span style="color:#85E89D">option</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">option</span><span style="color:#B392F0"> value</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"banana"</span><span style="color:#E1E4E8">>Banane&#x3C;/</span><span style="color:#85E89D">option</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">option</span><span style="color:#B392F0"> value</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"cherry"</span><span style="color:#E1E4E8">>Cerise&#x3C;/</span><span style="color:#85E89D">option</span><span style="color:#E1E4E8">></span></span>
 <span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">select</span><span style="color:#E1E4E8">></span></span></code></pre>
-          <hr />
-          <h2 id="conclusion">Conclusion</h2>
-          <p>
-            Les balises HTML sont les éléments de base pour construire la
-            structure d’une page web. En comprenant bien leur rôle et en
-            utilisant la bonne balise pour chaque situation, vous pouvez créer
-            des pages web bien structurées et accessibles. N’hésitez pas à
-            explorer plus de balises HTML pour enrichir vos projets web.
-            Continuez à pratiquer et à expérimenter pour devenir un expert du
-            HTML !
-          </p>
-        </div>
-        <section class="mt-12">
-          <h2
-            class="text-[36px] max-md:text-3xl text-center font-semibold my-4"
-          >
-            Articles connexes
-          </h2>
-          <div class="grid gap-5">
-            <div class="h-full">
-              <a
-                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
-                href="/blogs/tutorials/introduction-to-css"
-              >
-                <section class="p-4 md:p-5 h-full">
-                  <div class="flex overflow-auto gap-2 mb-2">
-                    <span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >CSS</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Basique</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Développement Web</span
-                    >
-                  </div>
-                  <p class="text-[#92939c] font-light">10 décembre 2024</p>
-                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
-                    Introduction au CSS
-                  </h1>
-                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
-                    Apprenez les bases du CSS pour styliser vos pages web et
-                    créer des designs attrayants. Découvrez les sélecteurs, les
-                    propriétés courantes et les techniques responsives.
-                  </p>
-                </section>
-              </a>
-            </div>
-            <div class="h-full">
-              <a
-                class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
-                href="/blogs/tutorials/first-steps"
-              >
-                <section class="p-4 md:p-5 h-full">
-                  <div class="flex overflow-auto gap-2 mb-2">
-                    <span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >CSS</span
-                    ><span
-                      class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white"
-                      >Basique</span
-                    >
-                  </div>
-                  <p class="text-[#92939c] font-light">21 août 2024</p>
-                  <h1 class="text-xl font-bold text-gray-800 dark:text-white">
-                    Premier pas avec CSS
-                  </h1>
-                  <p class="mt-1 text-gray-500 dark:text-neutral-400">
-                    Découvrez les bases de CSS pour contrôler l&#39;apparence de
-                    vos pages web. Apprenez à ajouter du CSS à votre HTML, à
-                    utiliser des sélecteurs et des propriétés courantes, et à
-                    créer des mises en page simples.
-                  </p>
-                </section>
-              </a>
-            </div>
-          </div>
-        </section>
-      </article>
-    </main>
-    <footer class="text-color-contrast p-3 mt-7">
-      <div class="container mx-auto text-center font-extralight text-1">
-        <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p>
-      </div>
-    </footer>
-  </body>
-</html>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>Les balises HTML sont les éléments de base pour construire la structure d’une page web. En comprenant bien leur rôle et en utilisant la bonne balise pour chaque situation, vous pouvez créer des pages web bien structurées et accessibles. N’hésitez pas à explorer plus de balises HTML pour enrichir vos projets web. Continuez à pratiquer et à expérimenter pour devenir un expert du HTML !</p>  </div> <section class="mt-12"> <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
+Articles connexes
+</h2> <div class="grid gap-5"> <div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/introduction-to-css"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Basique</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Développement Web</span> </div> <p class="text-[#92939c] font-light"> 10 décembre 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Introduction au CSS </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Apprenez les bases du CSS pour styliser vos pages web et créer des designs attrayants. Découvrez les sélecteurs, les propriétés courantes et les techniques responsives. </p> </section> </a> </div><div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/first-steps"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Basique</span> </div> <p class="text-[#92939c] font-light"> 21 août 2024 </p> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Premier pas avec CSS </h1> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Découvrez les bases de CSS pour contrôler l&#39;apparence de vos pages web. Apprenez à ajouter du CSS à votre HTML, à utiliser des sélecteurs et des propriétés courantes, et à créer des mises en page simples. </p> </section> </a> </div> </div> </section> </article> </main> <footer class="text-color-contrast p-3 mt-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>
