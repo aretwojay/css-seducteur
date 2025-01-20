@@ -65,7 +65,7 @@ Les variables CSS peuvent changer dynamiquement en réponse à des interactions 
 
 Les variables peuvent être limitées à des éléments spécifiques, écrasant les définitions globales.
 
-### Exemple :
+### Exemple
 
 ```css
 :root {
@@ -98,7 +98,7 @@ Ici, le bouton dans `.card` utilise la variable `--couleur-bouton` locale, tandi
 
 Les variables CSS prennent en charge des valeurs de repli si la variable n'est pas définie.
 
-### Exemple :
+### Exemple
 
 ```css
 div {
@@ -112,7 +112,7 @@ La couleur `#95a5a6` est appliquée si `--couleur-indéfinie` n'est pas définie
 
 Une des utilisations les plus intéressantes des variables CSS est la thématisation dynamique. Vous pouvez modifier des variables avec JavaScript pour implémenter des modes clair et sombre, des préférences utilisateur, ou d'autres fonctionnalités interactives.
 
-### Exemple :
+### Exemple
 
 ```css
 :root {
@@ -133,13 +133,6 @@ button {
 
 ```html
 <button onclick="changerTheme()">Changer de Thème</button>
-
-<script>
-  function changerTheme() {
-    document.documentElement.style.setProperty("--couleur-fond", "#333333");
-    document.documentElement.style.setProperty("--couleur-texte", "#ffffff");
-  }
-</script>
 ```
 
 En cliquant sur le bouton, les variables `--couleur-fond` et `--couleur-texte` sont mises à jour dynamiquement pour basculer entre les thèmes clair et sombre.
@@ -156,7 +149,7 @@ Lors de l'utilisation de variables CSS pour la thématisation, veillez à assure
 2. **Non Utilisables dans les Media Queries**
    Les variables CSS ne sont pas directement prises en charge dans les media queries.
 
-   ### Solution :
+   ### Solution
 
    Utilisez des media queries pour redéfinir les variables :
 
