@@ -2,11 +2,12 @@
 title: Techniques Avancées en HTML5
 description: Plongez dans les fonctionnalités avancées d'HTML5 pour créer des pages web modernes, interactives et accessibles.
 tags: ["HTML5", "Techniques Avancées"]
-publishDate: 2024-10-15
+publishDate: 2025-01-20
 proficiencyLevel: Avancé
 author: r2j
 relatedPosts:
-  - first-steps
+  - innovative-css
+  - advanced-js
   - mastering-css-animations
 ---
 
@@ -57,10 +58,6 @@ Les éléments sémantiques d'HTML5 permettent de structurer le contenu de mani�
 </footer>
 ```
 
-````
-
----
-
 ## **2. Gestion des Médias avec HTML5**
 
 HTML5 facilite l'intégration et la gestion de médias comme l'audio et la vidéo sans plugins externes.
@@ -70,7 +67,7 @@ HTML5 facilite l'intégration et la gestion de médias comme l'audio et la vidé
 - Supporte plusieurs formats comme MP4, WebM, et Ogg.
 - Propriétés comme `controls`, `autoplay`, et `loop` offrent un contrôle total.
 
-### Exemple
+### Un petit exemple
 
 ```html
 <video controls width="640" height="360">
@@ -104,7 +101,7 @@ HTML5 introduit de nouveaux types de champs de formulaire, des attributs et des 
 - **`number`** : Champs numériques avec flèches.
 - **`date`**, **`time`**, **`datetime-local`** : Sélecteurs pour dates et heures.
 
-### Exemple
+### Un exemple
 
 ```html
 <form action="/submit" method="post">
@@ -159,20 +156,6 @@ La balise `<canvas>` permet de dessiner des graphiques, animations et jeux direc
   height="200"
   style="border:1px solid #000;"
 ></canvas>
-<script>
-  const canvas = document.getElementById("myCanvas");
-  const ctx = canvas.getContext("2d");
-
-  // Dessiner un rectangle
-  ctx.fillStyle = "blue";
-  ctx.fillRect(50, 50, 150, 100);
-
-  // Dessiner un cercle
-  ctx.beginPath();
-  ctx.arc(200, 150, 50, 0, Math.PI * 2, false);
-  ctx.fillStyle = "red";
-  ctx.fill();
-</script>
 ```
 
 ---
@@ -181,7 +164,7 @@ La balise `<canvas>` permet de dessiner des graphiques, animations et jeux direc
 
 HTML5 offre une API native pour permettre le glisser-déposer.
 
-### Exemple
+### Comme exemple
 
 ```html
 <div
@@ -194,21 +177,6 @@ HTML5 offre une API native pour permettre le glisser-déposer.
 <div id="drop-zone" style="width:200px; height:200px; border:2px dashed black;">
   Déposez ici
 </div>
-
-<script>
-  const dragItem = document.getElementById("drag-item");
-  const dropZone = document.getElementById("drop-zone");
-
-  dragItem.addEventListener("dragstart", (e) => {
-    e.dataTransfer.setData("text", "Ceci est un test");
-  });
-
-  dropZone.addEventListener("dragover", (e) => e.preventDefault());
-  dropZone.addEventListener("drop", (e) => {
-    e.preventDefault();
-    alert(e.dataTransfer.getData("text"));
-  });
-</script>
 ```
 
 ---
@@ -217,7 +185,7 @@ HTML5 offre une API native pour permettre le glisser-déposer.
 
 HTML5 encourage l'accessibilité avec des attributs ARIA (Accessible Rich Internet Applications) pour rendre les applications utilisables par les lecteurs d'écran.
 
-### Un exemple
+### Un dernier exemple
 
 ```html
 <button aria-label="Rechercher">🔍</button>
@@ -235,4 +203,3 @@ HTML5 encourage l'accessibilité avec des attributs ARIA (Accessible Rich Intern
 ## **Conclusion**
 
 HTML5 offre une panoplie de fonctionnalités avancées qui permettent de créer des sites modernes, interactifs et accessibles. En maîtrisant ces techniques, vous serez capable de concevoir des expériences utilisateur riches et performantes. Continuez à explorer et à innover ! 🚀
-````

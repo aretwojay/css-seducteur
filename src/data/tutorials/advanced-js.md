@@ -7,7 +7,7 @@ proficiencyLevel: Avancé
 author: r2j
 relatedPosts:
   - advanced-css
-  - discover-tailwind
+  - advanced-html5
 ---
 
 ## Techniques Avancées en JavaScript
