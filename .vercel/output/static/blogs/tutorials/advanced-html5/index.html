@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><title>CSSéducteur - Techniques Avancées en HTML5</title><meta name="description" content="Plongez dans les fonctionnalités avancées d'HTML5 pour créer des pages web modernes, interactives et accessibles."><meta name="viewport" content="width=device-width"><!-- favicon  --><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://css-seducteur-css.site/blogs/tutorials/advanced-html5"><!-- add schema.org if setted --><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","proficiencyLevel":"Avancé","articleBody":"## Techniques Avancées en HTML5\n\nHTML5 a révolutionné la manière de concevoir et de structurer les pages web. En plus de fournir des éléments de base pour le contenu, il offre des fonctionnalités avancées pour gérer les médias, le stockage, l'interactivité et bien plus encore. Cet article explore ces aspects pour élever vos compétences en développement web.\n\n---\n\n## **1. Structuration Avancée avec les Éléments Sémantiques**\n\nLes éléments sémantiques d'HTML5 permettent de structurer le contenu de manière claire, ce qui améliore l'accessibilité et le référencement (SEO).\n\n### 1.1 Les éléments principaux\n\n- **`<header>`** : En-tête d'une page ou d'une section.\n- **`<nav>`** : Conteneur pour les liens de navigation.\n- **`<main>`** : Contenu principal unique d'une page.\n- **`<article>`** : Contenu autonome pouvant être réutilisé.\n- **`<section>`** : Section d'un document thématique.\n- **`<footer>`** : Pied de page.\n\n### Exemple\n\n```html\n<header>\n  <h1>Bienvenue sur mon site</h1>\n</header>\n<nav>\n  <ul>\n    <li><a href=\"#about\">À propos</a></li>\n    <li><a href=\"#services\">Services</a></li>\n    <li><a href=\"#contact\">Contact</a></li>\n  </ul>\n</nav>\n<main>\n  <section id=\"about\">\n    <h2>À propos</h2>\n    <p>Ce site est dédié aux techniques avancées du web.</p>\n  </section>\n  <article>\n    <h2>Actualité</h2>\n    <p>Découvrez nos derniers articles sur le développement.</p>\n  </article>\n</main>\n<footer>\n  <p>&copy; 2024 Mon Site Web</p>\n</footer>\n```\n\n````\n\n---\n\n## **2. Gestion des Médias avec HTML5**\n\nHTML5 facilite l'intégration et la gestion de médias comme l'audio et la vidéo sans plugins externes.\n\n### 2.1 Balise `<video>`\n\n- Supporte plusieurs formats comme MP4, WebM, et Ogg.\n- Propriétés comme `controls`, `autoplay`, et `loop` offrent un contrôle total.\n\n### Exemple\n\n```html\n<video controls width=\"640\" height=\"360\">\n  <source src=\"video.mp4\" type=\"video/mp4\" />\n  <source src=\"video.webm\" type=\"video/webm\" />\n  Votre navigateur ne supporte pas les vidéos HTML5.\n</video>\n```\n\n### 2.2 Balise `<audio>`\n\n- Pratique pour intégrer des fichiers audio.\n\n```html\n<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\" />\n  Votre navigateur ne supporte pas l'audio HTML5.\n</audio>\n```\n\n---\n\n## **3. Formulaires HTML5 Améliorés**\n\nHTML5 introduit de nouveaux types de champs de formulaire, des attributs et des validations natives.\n\n### 3.1 Nouveaux types d'entrées\n\n- **`email`** : Vérifie automatiquement la validité d'une adresse email.\n- **`url`** : Accepte uniquement des URLs valides.\n- **`number`** : Champs numériques avec flèches.\n- **`date`**, **`time`**, **`datetime-local`** : Sélecteurs pour dates et heures.\n\n### Exemple\n\n```html\n<form action=\"/submit\" method=\"post\">\n  <label for=\"email\">Email :</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required />\n\n  <label for=\"age\">Âge :</label>\n  <input type=\"number\" id=\"age\" name=\"age\" min=\"1\" max=\"120\" />\n\n  <label for=\"birthday\">Date de naissance :</label>\n  <input type=\"date\" id=\"birthday\" name=\"birthday\" />\n\n  <button type=\"submit\">Envoyer</button>\n</form>\n```\n\n---\n\n## **4. Stockage Local avec Web Storage**\n\nHTML5 propose deux API de stockage local :\n\n- **`localStorage`** : Persiste les données même après fermeture du navigateur.\n- **`sessionStorage`** : Stocke des données valides uniquement pour la session courante.\n\n### Exemple avec `localStorage`\n\n```javascript\n// Stocker une donnée\nlocalStorage.setItem(\"username\", \"JohnDoe\");\n\n// Récupérer une donnée\nconst username = localStorage.getItem(\"username\");\nconsole.log(username);\n\n// Supprimer une donnée\nlocalStorage.removeItem(\"username\");\n```\n\n---\n\n## **5. HTML5 Canvas pour le Graphisme**\n\nLa balise `<canvas>` permet de dessiner des graphiques, animations et jeux directement dans le navigateur.\n\n### Exemple de dessin\n\n```html\n<canvas\n  id=\"myCanvas\"\n  width=\"400\"\n  height=\"200\"\n  style=\"border:1px solid #000;\"\n></canvas>\n<script>\n  const canvas = document.getElementById(\"myCanvas\");\n  const ctx = canvas.getContext(\"2d\");\n\n  // Dessiner un rectangle\n  ctx.fillStyle = \"blue\";\n  ctx.fillRect(50, 50, 150, 100);\n\n  // Dessiner un cercle\n  ctx.beginPath();\n  ctx.arc(200, 150, 50, 0, Math.PI * 2, false);\n  ctx.fillStyle = \"red\";\n  ctx.fill();\n</script>\n```\n\n---\n\n## **6. API Drag and Drop**\n\nHTML5 offre une API native pour permettre le glisser-déposer.\n\n### Exemple\n\n```html\n<div\n  id=\"drag-item\"\n  draggable=\"true\"\n  style=\"width:100px; height:100px; background:blue;\"\n>\n  Glissez-moi\n</div>\n<div id=\"drop-zone\" style=\"width:200px; height:200px; border:2px dashed black;\">\n  Déposez ici\n</div>\n\n<script>\n  const dragItem = document.getElementById(\"drag-item\");\n  const dropZone = document.getElementById(\"drop-zone\");\n\n  dragItem.addEventListener(\"dragstart\", (e) => {\n    e.dataTransfer.setData(\"text\", \"Ceci est un test\");\n  });\n\n  dropZone.addEventListener(\"dragover\", (e) => e.preventDefault());\n  dropZone.addEventListener(\"drop\", (e) => {\n    e.preventDefault();\n    alert(e.dataTransfer.getData(\"text\"));\n  });\n</script>\n```\n\n---\n\n## **7. Accessibilité et ARIA**\n\nHTML5 encourage l'accessibilité avec des attributs ARIA (Accessible Rich Internet Applications) pour rendre les applications utilisables par les lecteurs d'écran.\n\n### Un exemple\n\n```html\n<button aria-label=\"Rechercher\">🔍</button>\n<nav aria-labelledby=\"menu-heading\">\n  <h2 id=\"menu-heading\">Menu principal</h2>\n  <ul>\n    <li><a href=\"#home\">Accueil</a></li>\n    <li><a href=\"#services\">Services</a></li>\n  </ul>\n</nav>\n```\n\n---\n\n## **Conclusion**\n\nHTML5 offre une panoplie de fonctionnalités avancées qui permettent de créer des sites modernes, interactifs et accessibles. En maîtrisant ces techniques, vous serez capable de concevoir des expériences utilisateur riches et performantes. Continuez à explorer et à innover ! 🚀\n````","articleSection":"Tutorials","wordCount":660,"headline":"Techniques Avancées en HTML5","description":"Plongez dans les fonctionnalités avancées d'HTML5 pour créer des pages web modernes, interactives et accessibles.","author":{"@type":"Person","name":"R2J","image":"https://avatars.githubusercontent.com/u/81377220?v=4","url":"https://github.com/aretwojay"},"publisher":{"@type":"Organization","name":"CSSéducteur","logo":{"@type":"ImageObject","url":"https://css-seducteur-css.site/faivcon.svg"}},"url":"https://css-seducteur-css.site/blogs/tutorials/advanced-html5","about":[{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/html5","name":"HTML5"},{"@type":"Thing","@id":"https://css-seducteur-css.site/blogs/techniques avancées","name":"Techniques Avancées"}],"isPartOf":{"@type":"Blog","@id":"https://css-seducteur-css.site"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://css-seducteur-css.site/blogs/tutorials/advanced-html5"},"keywords":"HTML5, Techniques Avancées","datePublished":"Tue Oct 15 2024","dateModified":"Tue Oct 15 2024"}</script><!-- sitemaps and co --><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"><meta name="generator" content="Astro v5.1.6"><meta name="robots" content="all"><!-- Open Graph tags --><meta property="og:title" content="CSSéducteur - Tutoriels CSS"><meta property="og:type" content="website"><meta property="og:url" content="https://css-seducteur-css.site"><meta property="og:description" content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."><meta property="og:image" content="https://css-seducteur-css.site/web-app-manifest-512x512.png"><meta property="og:site_name" content="CSSéducteur"><meta property="og:locale" content="fr_FR"><link rel="stylesheet" href="/_astro/_tag_.DussYWLb.css"><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		var script = document.createElement('script');
+		script.defer = true;
+		script.src = '/_vercel/insights/script.js';
+		var head = document.querySelector('head');
+		head.appendChild(script);
+	</script></head> <body class="m-[0px] dark:text-white">  <header class="dark:bg-color-1 shadow-sm"> <div class="flex items-center justify-between container p-2"> <a class="flex items-center gap-2 no-underline text-color-contrast" href="/"> <h1 class="font-extralight text-3xl max-sm:text-xl ml-4">CSSéducteur</h1>
+🚀
+</a> <nav> <ul class="flex gap-4 space-x-4"> <li> <a href="/blogs/basique" class="no-underline text-color-11 transition-all hover:text-color-contrast">Les basiques</a> </li> <li> <a href="/blogs/tutorials" class="no-underline text-color-11 transition-all hover:text-color-contrast">Tutoriels CSS</a> </li> </ul> </nav> </div> </header> <main class="p-4 max-w-[800px] mx-auto text-color-contrast"> <article> <h1 class="text-[60px] max-sm:text-[36px] leading-none mt-7 mb-4"> Techniques Avancées en HTML5 </h1> <a href="https://github.com/aretwojay" class="w-max flex gap-2 items-center mb-6 transition-all hover:scale-[1.005]"> <img src="https://avatars.githubusercontent.com/u/81377220?v=4" alt="R2J" class="size-8 rounded-full"> <p>R2J</p> </a> <div class="flex gap-2 mb-6"> <a href="/blogs/html5"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">HTML5</span></a><a href="/blogs/techniques avancées"><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Techniques Avancées</span></a> </div> <p class="text-sm font-light">
+Temps estimé de lecture : 4 min  </p> <p class="font-extralight mt-2 mb-5">Plongez dans les fonctionnalités avancées d&#39;HTML5 pour créer des pages web modernes, interactives et accessibles.</p> <div class="prose dark:prose-invert
+  prose-h1:font-bold prose-h1:text-xl
+  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
+  prose-headings:underline">  <h2 id="techniques-avancées-en-html5">Techniques Avancées en HTML5</h2>
+<p>HTML5 a révolutionné la manière de concevoir et de structurer les pages web. En plus de fournir des éléments de base pour le contenu, il offre des fonctionnalités avancées pour gérer les médias, le stockage, l’interactivité et bien plus encore. Cet article explore ces aspects pour élever vos compétences en développement web.</p>
+<hr>
+<h2 id="1-structuration-avancée-avec-les-éléments-sémantiques"><strong>1. Structuration Avancée avec les Éléments Sémantiques</strong></h2>
+<p>Les éléments sémantiques d’HTML5 permettent de structurer le contenu de manière claire, ce qui améliore l’accessibilité et le référencement (SEO).</p>
+<h3 id="11-les-éléments-principaux">1.1 Les éléments principaux</h3>
+<ul>
+<li><strong><code>&#x3C;header></code></strong> : En-tête d’une page ou d’une section.</li>
+<li><strong><code>&#x3C;nav></code></strong> : Conteneur pour les liens de navigation.</li>
+<li><strong><code>&#x3C;main></code></strong> : Contenu principal unique d’une page.</li>
+<li><strong><code>&#x3C;article></code></strong> : Contenu autonome pouvant être réutilisé.</li>
+<li><strong><code>&#x3C;section></code></strong> : Section d’un document thématique.</li>
+<li><strong><code>&#x3C;footer></code></strong> : Pied de page.</li>
+</ul>
+<h3 id="exemple">Exemple</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">header</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">>Bienvenue sur mon site&#x3C;/</span><span style="color:#85E89D">h1</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">header</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">nav</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">ul</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">>&#x3C;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"#about"</span><span style="color:#E1E4E8">>À propos&#x3C;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">>&#x3C;/</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">>&#x3C;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"#services"</span><span style="color:#E1E4E8">>Services&#x3C;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">>&#x3C;/</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">>&#x3C;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> href</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"#contact"</span><span style="color:#E1E4E8">>Contact&#x3C;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">>&#x3C;/</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">ul</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">nav</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">main</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">section</span><span style="color:#B392F0"> id</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"about"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">h2</span><span style="color:#E1E4E8">>À propos&#x3C;/</span><span style="color:#85E89D">h2</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">>Ce site est dédié aux techniques avancées du web.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">section</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">article</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">h2</span><span style="color:#E1E4E8">>Actualité&#x3C;/</span><span style="color:#85E89D">h2</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">>Découvrez nos derniers articles sur le développement.&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">article</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">main</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">footer</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span><span style="color:#79B8FF">&#x26;copy;</span><span style="color:#E1E4E8"> 2024 Mon Site Web&#x3C;/</span><span style="color:#85E89D">p</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">footer</span><span style="color:#E1E4E8">></span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## **2. Gestion des Médias avec HTML5**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>HTML5 facilite l'intégration et la gestion de médias comme l'audio et la vidéo sans plugins externes.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### 2.1 Balise `&#x3C;video>`</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- Supporte plusieurs formats comme MP4, WebM, et Ogg.</span></span>
+<span class="line"><span>- Propriétés comme `controls`, `autoplay`, et `loop` offrent un contrôle total.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Exemple</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```html</span></span>
+<span class="line"><span>&#x3C;video controls width="640" height="360"></span></span>
+<span class="line"><span>  &#x3C;source src="video.mp4" type="video/mp4" /></span></span>
+<span class="line"><span>  &#x3C;source src="video.webm" type="video/webm" /></span></span>
+<span class="line"><span>  Votre navigateur ne supporte pas les vidéos HTML5.</span></span>
+<span class="line"><span>&#x3C;/video></span></span>
+<span class="line"><span>```</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### 2.2 Balise `&#x3C;audio>`</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- Pratique pour intégrer des fichiers audio.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```html</span></span>
+<span class="line"><span>&#x3C;audio controls></span></span>
+<span class="line"><span>  &#x3C;source src="audio.mp3" type="audio/mpeg" /></span></span>
+<span class="line"><span>  Votre navigateur ne supporte pas l'audio HTML5.</span></span>
+<span class="line"><span>&#x3C;/audio></span></span>
+<span class="line"><span>```</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## **3. Formulaires HTML5 Améliorés**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>HTML5 introduit de nouveaux types de champs de formulaire, des attributs et des validations natives.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### 3.1 Nouveaux types d'entrées</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- **`email`** : Vérifie automatiquement la validité d'une adresse email.</span></span>
+<span class="line"><span>- **`url`** : Accepte uniquement des URLs valides.</span></span>
+<span class="line"><span>- **`number`** : Champs numériques avec flèches.</span></span>
+<span class="line"><span>- **`date`**, **`time`**, **`datetime-local`** : Sélecteurs pour dates et heures.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Exemple</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```html</span></span>
+<span class="line"><span>&#x3C;form action="/submit" method="post"></span></span>
+<span class="line"><span>  &#x3C;label for="email">Email :&#x3C;/label></span></span>
+<span class="line"><span>  &#x3C;input type="email" id="email" name="email" required /></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  &#x3C;label for="age">Âge :&#x3C;/label></span></span>
+<span class="line"><span>  &#x3C;input type="number" id="age" name="age" min="1" max="120" /></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  &#x3C;label for="birthday">Date de naissance :&#x3C;/label></span></span>
+<span class="line"><span>  &#x3C;input type="date" id="birthday" name="birthday" /></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  &#x3C;button type="submit">Envoyer&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;/form></span></span>
+<span class="line"><span>```</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## **4. Stockage Local avec Web Storage**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>HTML5 propose deux API de stockage local :</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- **`localStorage`** : Persiste les données même après fermeture du navigateur.</span></span>
+<span class="line"><span>- **`sessionStorage`** : Stocke des données valides uniquement pour la session courante.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Exemple avec `localStorage`</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```javascript</span></span>
+<span class="line"><span>// Stocker une donnée</span></span>
+<span class="line"><span>localStorage.setItem("username", "JohnDoe");</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// Récupérer une donnée</span></span>
+<span class="line"><span>const username = localStorage.getItem("username");</span></span>
+<span class="line"><span>console.log(username);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// Supprimer une donnée</span></span>
+<span class="line"><span>localStorage.removeItem("username");</span></span>
+<span class="line"><span>```</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## **5. HTML5 Canvas pour le Graphisme**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>La balise `&#x3C;canvas>` permet de dessiner des graphiques, animations et jeux directement dans le navigateur.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Exemple de dessin</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```html</span></span>
+<span class="line"><span>&#x3C;canvas</span></span>
+<span class="line"><span>  id="myCanvas"</span></span>
+<span class="line"><span>  width="400"</span></span>
+<span class="line"><span>  height="200"</span></span>
+<span class="line"><span>  style="border:1px solid #000;"</span></span>
+<span class="line"><span>>&#x3C;/canvas></span></span>
+<span class="line"><span>&#x3C;script></span></span>
+<span class="line"><span>  const canvas = document.getElementById("myCanvas");</span></span>
+<span class="line"><span>  const ctx = canvas.getContext("2d");</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // Dessiner un rectangle</span></span>
+<span class="line"><span>  ctx.fillStyle = "blue";</span></span>
+<span class="line"><span>  ctx.fillRect(50, 50, 150, 100);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // Dessiner un cercle</span></span>
+<span class="line"><span>  ctx.beginPath();</span></span>
+<span class="line"><span>  ctx.arc(200, 150, 50, 0, Math.PI * 2, false);</span></span>
+<span class="line"><span>  ctx.fillStyle = "red";</span></span>
+<span class="line"><span>  ctx.fill();</span></span>
+<span class="line"><span>&#x3C;/script></span></span>
+<span class="line"><span>```</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## **6. API Drag and Drop**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>HTML5 offre une API native pour permettre le glisser-déposer.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Exemple</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```html</span></span>
+<span class="line"><span>&#x3C;div</span></span>
+<span class="line"><span>  id="drag-item"</span></span>
+<span class="line"><span>  draggable="true"</span></span>
+<span class="line"><span>  style="width:100px; height:100px; background:blue;"</span></span>
+<span class="line"><span>></span></span>
+<span class="line"><span>  Glissez-moi</span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>&#x3C;div id="drop-zone" style="width:200px; height:200px; border:2px dashed black;"></span></span>
+<span class="line"><span>  Déposez ici</span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#x3C;script></span></span>
+<span class="line"><span>  const dragItem = document.getElementById("drag-item");</span></span>
+<span class="line"><span>  const dropZone = document.getElementById("drop-zone");</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  dragItem.addEventListener("dragstart", (e) => {</span></span>
+<span class="line"><span>    e.dataTransfer.setData("text", "Ceci est un test");</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  dropZone.addEventListener("dragover", (e) => e.preventDefault());</span></span>
+<span class="line"><span>  dropZone.addEventListener("drop", (e) => {</span></span>
+<span class="line"><span>    e.preventDefault();</span></span>
+<span class="line"><span>    alert(e.dataTransfer.getData("text"));</span></span>
+<span class="line"><span>  });</span></span>
+<span class="line"><span>&#x3C;/script></span></span>
+<span class="line"><span>```</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## **7. Accessibilité et ARIA**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>HTML5 encourage l'accessibilité avec des attributs ARIA (Accessible Rich Internet Applications) pour rendre les applications utilisables par les lecteurs d'écran.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Un exemple</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```html</span></span>
+<span class="line"><span>&#x3C;button aria-label="Rechercher">🔍&#x3C;/button></span></span>
+<span class="line"><span>&#x3C;nav aria-labelledby="menu-heading"></span></span>
+<span class="line"><span>  &#x3C;h2 id="menu-heading">Menu principal&#x3C;/h2></span></span>
+<span class="line"><span>  &#x3C;ul></span></span>
+<span class="line"><span>    &#x3C;li>&#x3C;a href="#home">Accueil&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span>    &#x3C;li>&#x3C;a href="#services">Services&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span>  &#x3C;/ul></span></span>
+<span class="line"><span>&#x3C;/nav></span></span>
+<span class="line"><span>```</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## **Conclusion**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>HTML5 offre une panoplie de fonctionnalités avancées qui permettent de créer des sites modernes, interactifs et accessibles. En maîtrisant ces techniques, vous serez capable de concevoir des expériences utilisateur riches et performantes. Continuez à explorer et à innover ! 🚀</span></span></code></pre>  </div> <section class="mt-12"> <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
+Articles connexes
+</h2> <div class="grid gap-5"> <div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/first-steps"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Basique</span> </div> <p class="text-[#92939c] font-light"> 21 août 2024 </p> <div class="flex max-md:flex-col-reverse my-2 gap-1 justify-between md:items-center"> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Premier pas avec CSS </h1>  </div> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Découvrez les bases de CSS pour contrôler l&#39;apparence de vos pages web. Apprenez à ajouter du CSS à votre HTML, à utiliser des sélecteurs et des propriétés courantes, et à créer des mises en page simples. </p> </section> </a> </div><div class="h-full"> <a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href="/blogs/tutorials/mastering-css-animations"> <section class="p-4 md:p-5 h-full"> <div class="flex overflow-auto gap-2 mb-2"> <span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">CSS</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Animations</span><span class="inline-flex light:border items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white">Web Design</span> </div> <p class="text-[#92939c] font-light"> 11 décembre 2024 </p> <div class="flex max-md:flex-col-reverse my-2 gap-1 justify-between md:items-center"> <h1 class="text-xl font-bold text-gray-800 dark:text-white"> Maitriser les animations CSS </h1>  </div> <p class="mt-1 text-gray-500 dark:text-neutral-400"> Découvrez des techniques avancées d&#39;animation CSS pour créer des animations visuellement attrayantes et performantes. Apprenez à utiliser les keyframes, les transitions, et les meilleures pratiques pour optimiser les performances. </p> </section> </a> </div> </div> </section> </article> </main> <footer class="text-color-contrast p-3 mt-7"> <div class="container mx-auto text-center font-extralight text-1"> <p>&copy; 2025 CSSéducteur. All Rights Reserved.</p> </div> </footer>  </body></html>

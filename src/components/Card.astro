@@ -1,38 +1,58 @@
 ---
-import Badge from './Badge.astro';
+import Badge from "./Badge.astro";
 
 interface Props {
-    title: string;
-    description: string;
-    href?: string;
-    info?: string;
-    tags?: string[];
+  title: string;
+  description: string;
+  href?: string;
+  info?: string;
+  tags?: string[];
 }
 
 const { title, description, href = "#", info, tags } = Astro.props;
+const isRecent = info
+  ? new Date(info) > new Date(Date.now() - 1000 * 60 * 60 * 24 * 7)
+  : false;
 ---
-<a class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full" href={href}>
-    <section class="p-4 md:p-5 h-full">
-      {
-        tags && tags.length > 0 ? (
-          <div class="flex overflow-auto gap-2 mb-2">
-            {
-              tags?.map((tag) => (
-                  <Badge text={tag.toString()}/>
-              ))
-            }
-          </div>
-        ) : null
-      }
-  
-        <p class="text-[#92939c] font-light" >
-            {info}
-        </p>
+
+<a
+  class="flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 h-full"
+  href={href}
+>
+  <section class="p-4 md:p-5 h-full">
+    {
+      tags && tags.length > 0 ? (
+        <div class="flex overflow-auto gap-2 mb-2">
+          {tags?.map((tag) => (
+            <Badge text={tag.toString()} />
+          ))}
+        </div>
+      ) : null
+    }
+
+    <p class="text-[#92939c] font-light">
+      {info}
+    </p>
+    <div
+      class="flex max-md:flex-col-reverse my-2 gap-1 justify-between md:items-center"
+    >
       <h1 class="text-xl font-bold text-gray-800 dark:text-white">
         {title}
       </h1>
-      <p class="mt-1 text-gray-500 dark:text-neutral-400">
-        {description}
-      </p>
-    </section>
+      {
+        isRecent ? (
+          <div
+            class="flex items
+          -center gap-2 mb-2"
+          >
+            <Badge text="Nouveau" />
+          </div>
+        ) : null
+      }
+    </div>
+
+    <p class="mt-1 text-gray-500 dark:text-neutral-400">
+      {description}
+    </p>
+  </section>
 </a>

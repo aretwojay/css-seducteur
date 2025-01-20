@@ -10,7 +10,7 @@ relatedPosts:
   - advanced-css
 ---
 
-# Transitions et Animations CSS : Créer des Effets Dynamiques
+## Transitions et Animations CSS : Créer des Effets Dynamiques
 
 Les **transitions** et **animations CSS** sont des outils puissants pour ajouter du dynamisme et de l'interactivité à vos pages web sans avoir à recourir à JavaScript. Que vous souhaitiez améliorer l'expérience utilisateur avec des effets visuels subtils ou créer des animations complexes, CSS propose des solutions performantes et simples à utiliser.
 
@@ -171,7 +171,7 @@ Cet exemple fait tourner un élément à 360 degrés tout en diminuant son opaci
 
 Il est possible de créer une **enchaînement d'animations** en combinant plusieurs animations dans une même déclaration. Vous pouvez utiliser des `@keyframes` multiples ou appliquer plusieurs animations à un élément.
 
-#### Exemple :
+#### Exemple
 
 ```css
 @keyframes moveUp {
@@ -206,7 +206,7 @@ Dans cet exemple, deux animations se produisent simultanément :
 
 Les propriétés comme `scale()`, `rotate()`, `translate()`, et `skew()` peuvent être combinées avec des transitions et des animations pour créer des effets visuels dynamiques et fluides.
 
-#### Exemple :
+#### Pa rexemple
 
 ```css
 .element {

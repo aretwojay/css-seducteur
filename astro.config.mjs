@@ -26,7 +26,11 @@ export default defineConfig({
   }),
 
   integrations: [
-    sitemap(),
+    sitemap({
+      changefreq: "weekly",
+      priority: 0.7,
+      lastmod: new Date("2022-02-24"),
+    }),
     tailwind({
       // Disable injecting styles, import manually instead
       applyBaseStyles: true,

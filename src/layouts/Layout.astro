@@ -4,10 +4,11 @@ import Head from "../components/Head.astro";
 interface Props {
   title: string;
   description: string;
+  url: string;
   robots?: string;
   schema?: string;
 }
-const { title, description, robots, schema } = Astro.props;
+const { title, url, description, robots, schema } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,6 +16,7 @@ const { title, description, robots, schema } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <Head
+      url={url}
       title={title}
       description={description}
       robots={robots}

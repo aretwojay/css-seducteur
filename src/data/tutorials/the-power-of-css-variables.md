@@ -18,7 +18,7 @@ Les variables CSS, également appelées propriétés personnalisées, révolutio
 
 Les variables CSS sont déclarées à l'aide du préfixe `--` et sont accessibles dans tout le fichier CSS. Elles sont à portée limitée, ce qui signifie que vous pouvez les définir globalement ou au sein de sélecteurs spécifiques.
 
-### Exemple :
+### Par exemple
 
 ```css
 :root {
@@ -98,7 +98,7 @@ Ici, le bouton dans `.card` utilise la variable `--couleur-bouton` locale, tandi
 
 Les variables CSS prennent en charge des valeurs de repli si la variable n'est pas définie.
 
-### Exemple
+### Comme exemple
 
 ```css
 div {
@@ -112,7 +112,7 @@ La couleur `#95a5a6` est appliquée si `--couleur-indéfinie` n'est pas définie
 
 Une des utilisations les plus intéressantes des variables CSS est la thématisation dynamique. Vous pouvez modifier des variables avec JavaScript pour implémenter des modes clair et sombre, des préférences utilisateur, ou d'autres fonctionnalités interactives.
 
-### Exemple
+### Un exemple
 
 ```css
 :root {

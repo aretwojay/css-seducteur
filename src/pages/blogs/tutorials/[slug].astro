@@ -74,6 +74,7 @@ const schema: WithContext<TechArticle> = {
 ---
 
 <Layout
+  url={`https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`}
   title={`CSSéducteur - ${post.data.title}`}
   description={post.data.description}
   schema={JSON.stringify(schema)}

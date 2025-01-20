@@ -1,12 +1,13 @@
 ---
 interface Props {
   title: string;
+  url: string;
   description: string;
   robots?: string;
   schema?: string;
 }
 
-const { title, description, robots = "all", schema } = Astro.props;
+const { url, title, description, robots = "all", schema } = Astro.props;
 ---
 
 <title>{title}</title>
@@ -18,12 +19,18 @@ const { title, description, robots = "all", schema } = Astro.props;
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
+<link rel="canonical" href={url} />
 
 <!-- add schema.org if setted -->
 <script is:inline type="application/ld+json" set:html={schema} />
 
 <!-- sitemaps and co -->
-<link rel="sitemap" href="/sitemap-index.xml" />
+<link
+  rel="sitemap"
+  type="application/xml"
+  title="Sitemap"
+  href="/sitemap.xml"
+/>
 <meta name="generator" content={Astro.generator} />
 <meta name="robots" content={robots} />
 

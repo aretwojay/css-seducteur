@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import PostCards from "../../components/PostCards.astro";
 import Layout from "../../layouts/Layout.astro";
-import { sortByPublishDate } from "../../lib/utils";
+import { sortByPublishDate, WEBSITE_DOMAIN } from "../../lib/utils";
 
 export const prerender = true;
 
@@ -44,7 +44,12 @@ const description =
   "CSSéducteur, la référence en CSS et design web, vous propose des tutoriels, astuces et techniques avancées pour améliorer vos compétences en design web.";
 ---
 
-<Layout title={title} description={description} robots="none">
+<Layout
+  url={`https://${WEBSITE_DOMAIN}/blogs/${tag}`}
+  title={title}
+  description={description}
+  robots="none"
+>
   <Header />
   <main class="p-4 max-w-[800px] mx-auto">
     <section class="flex flex-col">
