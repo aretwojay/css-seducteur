@@ -10,7 +10,7 @@ import { sortByPublishDate, WEBSITE_DOMAIN } from "../lib/utils";
 export const prerender = true;
 
 const tutorialPosts = await getCollection("tutorials");
-const allTutorialPosts = sortByPublishDate(tutorialPosts, "desc").slice(0, 5);
+const allTutorialPosts = sortByPublishDate(tutorialPosts, "desc");
 const latestPosts = allTutorialPosts.slice(0, 5);
 const basicsPosts = allTutorialPosts
   .filter((post) =>
