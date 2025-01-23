@@ -1,0 +1,47 @@
+---
+import type { ContactPage, WithContext } from "schema-dts";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import { WEBSITE_DOMAIN } from "../../lib/utils";
+
+// Metadata for the page
+const title = "CSSéducteur - Contactez-nous";
+const description =
+  "Vous avez une question, une suggestion ou une demande de partenariat ? Contactez-nous dès maintenant ! Nous serons ravis de vous répondre.";
+const schema: WithContext<ContactPage> = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://css-seducteur-css.site/contact",
+  name: title,
+  headline: title,
+  description,
+  url: "https://css-seducteur-css.site/contact",
+  publisher: {
+    "@type": "Organization",
+    name: "CSSéducteur",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://css-seducteur-css.site/favicon.svg",
+    },
+  },
+};
+---
+
+<Layout
+  url={`https://${WEBSITE_DOMAIN}/contact`}
+  title={title}
+  description={description}
+  schema={JSON.stringify(schema)}
+>
+  <Header />
+  <main class="p-4 max-w-[800px] mx-auto">
+    <section class="flex flex-col">
+      <h1 class="text-[36px] text-center">Contactez-nous</h1>
+      <p class="text-center my-4">
+        Vous avez une question, une suggestion ou une demande de partenariat ?
+        Contactez-nous dès maintenant ! Nous serons ravis de vous répondre.
+      </p>
+      <p class="text-center my-4">Bientôt disponible.</p>
+    </section>
+  </main>
+</Layout>

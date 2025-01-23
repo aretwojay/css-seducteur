@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import type { Blog, WithContext } from "schema-dts";
-import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import PostCards from "../components/PostCards.astro";
 import Layout from "../layouts/Layout.astro";
@@ -55,16 +54,28 @@ const schema: WithContext<Blog> = {
 >
   <Header />
   <main class="dark:text-white p-4 max-w-[800px] mx-auto">
-    <section class="text-center">
-      <h1 class="text-[60px] leading-none mt-7 mb-4">
-        CSSéducteur, la référence en CSS et design web.
+    <section class="text-center py-12">
+      <h1
+        class="text-4xl sm:text-5xl lg:text-[60px] font-bold leading-none mt-7 mb-4"
+      >
+        CSSéducteur : La référence en CSS et design web pour améliorer vos
+        compétences
       </h1>
-      <span class="text-4">Rédigé et imaginé par CSSéducteur.</span>
-      <p class="font-extralight text-3 mt-7 mb-5">
-        CSSéducteur est un blog dédié à l'apprentissage du CSS et du design web.
-        Vous y trouverez des tutoriels, des astuces et des techniques avancées
-        pour améliorer vos compétences en design web.
+      <p class="text-xl sm:text-2xlmb-4 my-4">
+        Découvrez CSSéducteur, le blog incontournable pour apprendre et
+        maîtriser les techniques CSS avancées et le design web.
       </p>
+      <span class="text-lg">Rédigé et imaginé par CSSéducteur</span>
+
+      <p class="font-light text-lg sm:text-xlmt-7 my-5">
+        <strong>CSSéducteur</strong> est un blog dédié à l'apprentissage du CSS et
+        à l'optimisation du design web. Vous y trouverez des tutoriels détaillés,
+        des astuces pratiques et des techniques avancées pour améliorer vos compétences
+        en design web, du CSS de base aux concepts les plus sophistiqués.
+      </p>
+      <a href="/blogs/tutorials" class="font-semibold hover:underline">
+        Explorez nos articles pour devenir un expert du CSS !
+      </a>
     </section>
 
     <section class="flex flex-col my-6">
@@ -80,6 +91,155 @@ const schema: WithContext<Blog> = {
       </h1>
       <PostCards posts={latestPosts} />
     </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-12">
+      <h1 class="text-4xl font-bold text-center mb-8">
+        À propos de CSSéducteur
+      </h1>
+      <p class="text-lg mb-6">
+        Bienvenue sur <strong>CSSéducteur</strong>, votre destination de
+        référence pour maîtriser les
+        <strong>techniques avancées en CSS</strong> et transformer vos designs web
+        en véritables œuvres d'art numériques. Notre mission est de vous accompagner
+        dans votre apprentissage du CSS, en mettant à votre disposition des
+        <strong>ressources complètes</strong>, des <strong
+          >astuces pratiques</strong
+        >, et des <strong>tutoriels détaillés</strong>
+        qui s’adressent aussi bien aux débutants qu’aux experts du développement
+        web.
+      </p>
+      <p class="text-lg mb-6">
+        Chez CSSéducteur, nous croyons que le design web est bien plus qu'une
+        question d'apparence. Il s'agit de
+        <em class="italic">séduire vos visiteurs</em>, de leur offrir une <strong
+          >expérience utilisateur fluide</strong
+        >, et de faire en sorte que vos pages web se démarquent. Que vous
+        souhaitiez apprendre à utiliser
+        <strong>CSS Grid</strong>, créer des animations complexes, ou rendre
+        votre site totalement responsive, nous avons tout ce qu’il vous faut.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Notre Vision</h2>
+      <p class="text-lg mb-6">
+        Le web évolue rapidement, et les attentes des utilisateurs en matière de
+        design web évoluent tout autant. Notre vision chez CSSéducteur est de
+        fournir aux développeurs web et designers les outils nécessaires pour
+        rester à la pointe des tendances. Nous pensons que chaque site peut
+        devenir une source d'inspiration grâce à l'utilisation intelligente du
+        CSS.
+      </p>
+      <p class="text-lg mb-6">
+        Que vous créiez un portfolio, une boutique en ligne ou une application
+        web, nous vous aidons à exploiter pleinement les fonctionnalités
+        modernes du CSS, comme les animations clés, les transformations 3D, et
+        les variables CSS.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">
+        Pourquoi choisir CSSéducteur ?
+      </h2>
+      <p class="text-lg mb-6">
+        CSSéducteur se distingue par la richesse et la diversité des contenus
+        que nous proposons. Voici quelques raisons de nous faire confiance :
+      </p>
+      <ul class="list-disc pl-5 text-lg mb-6">
+        <li>
+          <strong>Contenu de qualité :</strong> Des tutoriels approfondis couvrant
+          des sujets essentiels, comme <em>Flexbox</em>, <em>CSS Grid</em>, ou
+          les
+          <strong>animations CSS avancées</strong>.
+        </li>
+        <li>
+          <strong>Exemples pratiques :</strong> Chaque concept est accompagné d’exemples
+          clairs et interactifs pour vous aider à comprendre et à appliquer immédiatement
+          vos connaissances.
+        </li>
+        <li>
+          <strong>Focus sur l’innovation :</strong> Nous mettons en avant les dernières
+          tendances en matière de design web et vous aidons à rester compétitif dans
+          un environnement en constante évolution.
+        </li>
+        <li>
+          <strong>Communauté engagée :</strong> Rejoignez une communauté de développeurs
+          et de designers qui partagent vos intérêts et vos ambitions.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">
+        Ce que vous apprendrez avec CSSéducteur
+      </h2>
+      <p class="text-lg mb-6">
+        Grâce à nos ressources et à nos guides, vous serez capable de
+        maîtriser :
+      </p>
+      <ul class="list-disc pl-5 text-lg mb-6">
+        <li>
+          <strong>CSS Grid :</strong> Créez des mises en page sophistiquées et adaptatives
+          avec facilité.
+        </li>
+        <li>
+          <strong>Animations CSS :</strong> Donnez vie à vos designs avec des animations
+          fluides et élégantes.
+        </li>
+        <li>
+          <strong>Design responsive :</strong> Apprenez à concevoir des sites qui
+          s’adaptent parfaitement à tous les types d’appareils.
+        </li>
+        <li>
+          <strong>Variables CSS :</strong> Simplifiez la gestion de vos styles avec
+          des variables réutilisables pour des designs cohérents.
+        </li>
+        <li>
+          <strong>Accessibilité :</strong> Rendre vos designs accessibles à tous,
+          quel que soit le contexte utilisateur.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Nos Ressources et Outils</h2>
+      <p class="text-lg mb-6">
+        Pour vous aider à tirer le meilleur parti du CSS, nous mettons à
+        disposition une gamme complète de ressources gratuites et premium :
+      </p>
+      <ul class="list-disc pl-5 text-lg mb-6">
+        <li>
+          <strong>Guides téléchargeables :</strong> Accédez à nos ebooks et fiches
+          pratiques pour un apprentissage hors ligne.
+        </li>
+        <li>
+          <strong>Exemples de code :</strong> Des snippets prêts à l’emploi pour
+          booster votre productivité.
+        </li>
+        <li>
+          <strong>Outils interactifs :</strong> Testez et expérimentez directement
+          vos idées grâce à nos outils en ligne.
+        </li>
+        <li>
+          <strong>Webinaires et tutoriels vidéo :</strong> Suivez nos formations
+          étape par étape et approfondissez vos connaissances.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">
+        Rejoignez notre communauté
+      </h2>
+      <p class="text-lg mb-6">
+        Être un <strong>CSSéducteur</strong>, c'est aussi faire partie d'une
+        communauté passionnée par le design web. Participez à nos discussions,
+        partagez vos idées, et découvrez les projets inspirants d’autres
+        membres. Ensemble, nous construisons un web plus beau et plus efficace.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Contactez-nous</h2>
+      <p class="text-lg mb-6">
+        Vous avez une question ou une suggestion ? Nous serions ravis de vous
+        entendre. Contactez-nous via notre formulaire de contact ou sur nos
+        réseaux sociaux pour toute demande ou collaboration.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-700"
+        >Contactez-nous dès maintenant</a
+      >
+    </section>
   </main>
 </Layout>
-<Footer />

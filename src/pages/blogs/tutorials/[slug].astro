@@ -1,7 +1,6 @@
 ---
 import { getCollection, getEntries, getEntry, render } from "astro:content";
 import type { TechArticle, WithContext } from "schema-dts";
-import Footer from "../../../components/Footer.astro";
 import Header from "../../../components/Header.astro";
 import PostCards from "../../../components/PostCards.astro";
 import PostTags from "../../../components/PostTags.astro";
@@ -117,5 +116,4 @@ const schema: WithContext<TechArticle> = {
       </section>
     </article>
   </main>
-  <Footer />
 </Layout>
