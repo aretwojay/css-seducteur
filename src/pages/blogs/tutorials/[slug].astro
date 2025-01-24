@@ -6,7 +6,7 @@ import PostCards from "../../../components/PostCards.astro";
 import PostTags from "../../../components/PostTags.astro";
 import Prose from "../../../components/Prose.astro";
 import Layout from "../../../layouts/Layout.astro";
-import { WEBSITE_DOMAIN } from "../../../lib/utils";
+import { sortByPublishDate, WEBSITE_DOMAIN } from "../../../lib/utils";
 
 export const prerender = true;
 
@@ -23,8 +23,12 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(post);
+// Get the author and related posts
 const author = await getEntry("authors", post.data.author.id);
-const relatedPosts = await getEntries(post.data.relatedPosts);
+const relatedPosts = sortByPublishDate(
+  await getEntries(post.data.relatedPosts),
+  "desc"
+);
 
 const schema: WithContext<TechArticle> = {
   "@context": "https://schema.org",
@@ -74,7 +78,7 @@ const schema: WithContext<TechArticle> = {
 
 <Layout
   url={`https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`}
-  title={`CSSéducteur - ${post.data.title}`}
+  title={`${post.data.title}`}
   description={post.data.description}
   schema={JSON.stringify(schema)}
 >
