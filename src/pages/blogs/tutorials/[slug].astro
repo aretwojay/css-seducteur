@@ -6,7 +6,7 @@ import PostCards from "../../../components/PostCards.astro";
 import PostTags from "../../../components/PostTags.astro";
 import Prose from "../../../components/Prose.astro";
 import Layout from "../../../layouts/Layout.astro";
-import { sortByPublishDate, WEBSITE_DOMAIN } from "../../../lib/utils";
+import { sortByPublishDate } from "../../../lib/utils";
 
 export const prerender = true;
 
@@ -77,7 +77,7 @@ const schema: WithContext<TechArticle> = {
 ---
 
 <Layout
-  url={`https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`}
+  url={new URL(Astro.url.pathname, Astro.site).toString()}
   title={`${post.data.title}`}
   description={post.data.description}
   schema={JSON.stringify(schema)}
@@ -113,9 +113,9 @@ const schema: WithContext<TechArticle> = {
       </Prose>
 
       <section class="mt-12">
-        <h2 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
+        <h1 class="text-[36px] max-md:text-3xl text-center font-semibold my-4">
           Articles connexes
-        </h2>
+        </h1>
         <PostCards posts={relatedPosts} />
       </section>
     </article>
