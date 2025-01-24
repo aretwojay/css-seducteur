@@ -35,16 +35,16 @@ const { url, title, description, robots = "all", schema } = Astro.props;
 <meta name="robots" content={robots} />
 
 <!-- Open Graph tags -->
-<meta property="og:title" content="CSSéducteur - Tutoriels CSS" />
+<meta property="og:title" content={title} />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://css-seducteur-css.site" />
-<meta
-  property="og:description"
-  content="CSSéducteur, le blog CSS pour les développeurs, offrant des tutoriels, des astuces et des techniques avancées pour améliorer vos compétences en design web."
-/>
+<meta property="og:url" content={url} />
+<meta property="og:description" content={description} />
 <meta
   property="og:image"
   content="https://css-seducteur-css.site/web-app-manifest-512x512.png"
 />
 <meta property="og:site_name" content="CSSéducteur" />
 <meta property="og:locale" content="fr_FR" />
+
+<!-- Twitter Card metadata -->
+<meta name="twitter:card" content="summary_large_image" />
