@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import type { Blog, WithContext } from "schema-dts";
+import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import PostCards from "../components/PostCards.astro";
 import Layout from "../layouts/Layout.astro";
@@ -78,6 +79,48 @@ const schema: WithContext<Blog> = {
       </a>
     </section>
 
+    <section class="py-12">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">
+          Pourquoi CSSéducteur est votre meilleur allié en CSS ?
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <Card
+            title="Expertise Inégalée 🥇"
+            description={`Bénéficiez de l'expertise de CSSéducteur en CSS et design web. Nos
+              tutoriels sont rédigés par des professionnels passionnés qui
+              maîtrisent les dernières tendances et techniques.`}
+          />
+          <Card
+            title="Contenu Actualisé 🚀"
+            description={`Restez à jour avec les dernières innovations en CSS. CSSéducteur
+              vous offre un contenu constamment mis à jour pour refléter
+              l'évolution rapide du web design.`}
+          />
+          <Card
+            title="Ressources Pratiques 🛠️"
+            description={`Accédez à une multitude de ressources pratiques : snippets de
+              code, outils interactifs, et exemples concrets pour appliquer
+              immédiatement vos nouvelles connaissances.`}
+          />
+          <Card
+            title="Communauté Engagée 🤝"
+            description={`Rejoignez une communauté dynamique de passionnés de CSS. Partagez
+              vos expériences, posez vos questions, et grandissez ensemble avec
+              CSSéducteur.`}
+          />
+        </div>
+        <div class="text-center mt-8">
+          <a
+            href="/blogs/tutorials"
+            class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300"
+          >
+            Explorez nos Tutoriels CSS
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="flex flex-col my-6">
       <h1 class="font-semibold text-[36px] text-center mb-4">
         Commencez par les bases
@@ -98,25 +141,23 @@ const schema: WithContext<Blog> = {
       </h1>
       <p class="text-lg mb-6">
         Bienvenue sur <strong>CSSéducteur</strong>, votre destination de
-        référence pour maîtriser les
-        <strong>techniques avancées en CSS</strong> et transformer vos designs web
-        en véritables œuvres d'art numériques. Notre mission est de vous accompagner
-        dans votre apprentissage du CSS, en mettant à votre disposition des
-        <strong>ressources complètes</strong>, des <strong
+        référence pour maîtriser les <strong>techniques avancées en CSS</strong>
+        et transformer vos designs web en véritables œuvres d'art numériques. Notre
+        mission est de vous accompagner dans votre apprentissage du CSS, en mettant
+        à votre disposition des <strong>ressources complètes</strong>, des <strong
           >astuces pratiques</strong
-        >, et des <strong>tutoriels détaillés</strong>
-        qui s’adressent aussi bien aux débutants qu’aux experts du développement
-        web.
+        >, et des <strong>tutoriels détaillés</strong> qui s’adressent aussi bien
+        aux débutants qu’aux experts du développement web.
       </p>
       <p class="text-lg mb-6">
         Chez CSSéducteur, nous croyons que le design web est bien plus qu'une
-        question d'apparence. Il s'agit de
-        <em class="italic">séduire vos visiteurs</em>, de leur offrir une <strong
-          >expérience utilisateur fluide</strong
-        >, et de faire en sorte que vos pages web se démarquent. Que vous
-        souhaitiez apprendre à utiliser
-        <strong>CSS Grid</strong>, créer des animations complexes, ou rendre
-        votre site totalement responsive, nous avons tout ce qu’il vous faut.
+        question d'apparence. Il s'agit de <em class="italic"
+          >séduire vos visiteurs</em
+        >, de leur offrir une <strong>expérience utilisateur fluide</strong>, et
+        de faire en sorte que vos pages web se démarquent. Que vous souhaitiez
+        apprendre à utiliser <strong>CSS Grid</strong>, créer des animations
+        complexes, ou rendre votre site totalement responsive, nous avons tout
+        ce qu’il vous faut.
       </p>
 
       <h2 class="text-2xl font-semibold mt-8 mb-4">Notre Vision</h2>
@@ -140,14 +181,13 @@ const schema: WithContext<Blog> = {
       </h2>
       <p class="text-lg mb-6">
         CSSéducteur se distingue par la richesse et la diversité des contenus
-        que nous proposons. Voici quelques raisons de nous faire confiance :
+        que nous proposons. Voici quelques raisons de nous faire confiance :
       </p>
       <ul class="list-disc pl-5 text-lg mb-6">
         <li>
           <strong>Contenu de qualité :</strong> Des tutoriels approfondis couvrant
           des sujets essentiels, comme <em>Flexbox</em>, <em>CSS Grid</em>, ou
-          les
-          <strong>animations CSS avancées</strong>.
+          les <strong>animations CSS avancées</strong>.
         </li>
         <li>
           <strong>Exemples pratiques :</strong> Chaque concept est accompagné d’exemples
@@ -169,8 +209,8 @@ const schema: WithContext<Blog> = {
         Ce que vous apprendrez avec CSSéducteur
       </h2>
       <p class="text-lg mb-6">
-        Grâce à nos ressources et à nos guides, vous serez capable de
-        maîtriser :
+        Grâce à nos ressources et à nos guides, vous serez capable de maîtriser
+        :
       </p>
       <ul class="list-disc pl-5 text-lg mb-6">
         <li>
@@ -198,7 +238,7 @@ const schema: WithContext<Blog> = {
       <h2 class="text-2xl font-semibold mt-8 mb-4">Nos Ressources et Outils</h2>
       <p class="text-lg mb-6">
         Pour vous aider à tirer le meilleur parti du CSS, nous mettons à
-        disposition une gamme complète de ressources gratuites et premium :
+        disposition une gamme complète de ressources gratuites et premium :
       </p>
       <ul class="list-disc pl-5 text-lg mb-6">
         <li>
@@ -238,8 +278,9 @@ const schema: WithContext<Blog> = {
       <a
         href="/contact"
         class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-700"
-        >Contactez-nous dès maintenant</a
       >
+        Contactez-nous dès maintenant
+      </a>
     </section>
   </main>
 </Layout>
