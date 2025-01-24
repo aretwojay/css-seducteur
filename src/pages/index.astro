@@ -5,7 +5,7 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import PostCards from "../components/PostCards.astro";
 import Layout from "../layouts/Layout.astro";
-import { sortByPublishDate, WEBSITE_DOMAIN } from "../lib/utils";
+import { sortByPublishDate } from "../lib/utils";
 
 export const prerender = true;
 
@@ -27,28 +27,28 @@ const description =
 const schema: WithContext<Blog> = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "@id": "https://css-seducteur-css.site",
+  "@id": new URL("", Astro.site).toString(),
   name: "CSSéducteur",
   headline: title,
   description,
-  url: "https://css-seducteur-css.site",
+  url: new URL("", Astro.site).toString(),
   publisher: {
     "@type": "Organization",
     name: "CSSéducteur",
     logo: {
       "@type": "ImageObject",
-      url: "https://css-seducteur-css.site/favicon.svg",
+      url: new URL("favicon.svg", Astro.site).toString(),
     },
   },
   blogPost: allTutorialPosts.map((post) => ({
-    "@id": `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
+    "@id": new URL(`/blogs/tutorials/${post.id}`, Astro.site).toString(),
     headline: post.data.title,
   })),
 };
 ---
 
 <Layout
-  url={`https://${WEBSITE_DOMAIN}`}
+  url={new URL("", Astro.site).toString()}
   title={title}
   description={description}
   schema={JSON.stringify(schema)}

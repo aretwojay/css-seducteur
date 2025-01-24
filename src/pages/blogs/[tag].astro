@@ -4,14 +4,12 @@ import { getCollection } from "astro:content";
 import Header from "../../components/Header.astro";
 import PostCards from "../../components/PostCards.astro";
 import Layout from "../../layouts/Layout.astro";
-import { sortByPublishDate, WEBSITE_DOMAIN } from "../../lib/utils";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
   const tutorials = await getCollection("tutorials");
-  const sortedTutorials = sortByPublishDate(tutorials, "desc");
-  const allTags = sortedTutorials
+  const allTags = tutorials
     .map((post) => post.data.tags.map((tag) => tag.toLowerCase()))
     .flat();
   const uniqueTags = [...new Set(allTags)];
@@ -20,7 +18,7 @@ export async function getStaticPaths() {
     (acc, tag) => {
       return {
         ...acc,
-        [tag]: sortedTutorials.filter((post) =>
+        [tag]: tutorials.filter((post) =>
           post.data.tags.map((tag) => tag.toLowerCase()).includes(tag)
         ),
       };
@@ -41,10 +39,11 @@ const { posts } = Astro.props;
 const title = `CSSéducteur - ${tag} articles`;
 const description =
   "CSSéducteur, la référence en CSS et design web, vous propose des tutoriels, astuces et techniques avancées pour améliorer vos compétences en design web.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <Layout
-  url={`https://${WEBSITE_DOMAIN}/blogs/${tag}`}
+  url={canonicalURL.toString()}
   title={title}
   description={description}
   robots="none"

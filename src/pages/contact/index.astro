@@ -11,17 +11,17 @@ const description =
 const schema: WithContext<ContactPage> = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "@id": "https://css-seducteur-css.site/contact",
+  "@id": new URL(Astro.url.pathname, Astro.site).toString(),
   name: title,
   headline: title,
   description,
-  url: "https://css-seducteur-css.site/contact",
+  url: new URL(Astro.url.pathname, Astro.site).toString(),
   publisher: {
     "@type": "Organization",
     name: "CSSéducteur",
     logo: {
       "@type": "ImageObject",
-      url: "https://css-seducteur-css.site/favicon.svg",
+      url: new URL("favicon.svg", Astro.site).toString(),
     },
   },
 };

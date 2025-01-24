@@ -4,7 +4,6 @@ import type { ItemList, WithContext } from "schema-dts";
 import Header from "../../../components/Header.astro";
 import PostCards from "../../../components/PostCards.astro";
 import Layout from "../../../layouts/Layout.astro";
-import { WEBSITE_DOMAIN } from "../../../lib/utils";
 
 export const prerender = true;
 
@@ -24,16 +23,17 @@ const schema: WithContext<ItemList> = {
   itemListElement: allTutorials.map((post, index) => ({
     "@type": "ListItem",
     position: index + 1,
-    url: `https://${WEBSITE_DOMAIN}/blogs/tutorials/${post.id}`,
+    url: new URL(Astro.url.pathname + "/" + post.id, Astro.site).toString(),
     name: post.data.title,
   })),
   description,
-  url: `https://${WEBSITE_DOMAIN}/blogs/tutorials`,
+  url: new URL(Astro.url.pathname, Astro.site).toString(),
 };
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <Layout
-  url={`https://${WEBSITE_DOMAIN}/blogs/tutorials`}
+  url={canonicalURL.toString()}
   title={title}
   description={description}
   schema={JSON.stringify(schema)}
