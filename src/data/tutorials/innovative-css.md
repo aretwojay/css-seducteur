@@ -20,7 +20,7 @@ Le CSS n’est pas seulement un outil pour la mise en page ; c’est un vérit
 
 ## **1. Textures et Illustrations Pures en CSS : Un Design CSSéducteur**
 
-Le CSS peut être utilisé pour créer des textures et des illustrations sans une seule image. L'utilisation combinée des dégradés et des ombres permet des designs impressionnants, parfaits pour un site **csséducteur**.
+Le CSS peut être utilisé pour créer des textures et des illustrations sans une seule image. L'utilisation combinée des dégradés et des ombres permet des designs impressionnants, parfaits pour un site CSSéducteur.
 
 ### Exemple : Fond texturé avec des dégradés
 
@@ -42,7 +42,7 @@ body {
 }
 ```
 
-💡 **Astuce** : Combinez plusieurs couches de dégradés pour simuler des textures complexes, idéales pour un design moderne et **csséducteur**.
+💡 **Astuce** : Combinez plusieurs couches de dégradés pour simuler des textures complexes, idéales pour un design moderne et CSSéducteur.
 
 ---
 
@@ -173,7 +173,7 @@ Appliquez des styles dynamiques en fonction des préférences de l’utilisateur
 
 ## **5. Design "Glassmorphism" : L'Esthétique CSSéductrice**
 
-Le glassmorphism, inspiré de l'esthétique du verre dépoli, est un style très tendance qui donne un effet **csséducteur** aux interfaces web.
+Le glassmorphism, inspiré de l'esthétique du verre dépoli, est un style très tendance qui donne un effet CSSéducteur aux interfaces web.
 
 ```css
 .glass {
@@ -187,13 +187,13 @@ Le glassmorphism, inspiré de l'esthétique du verre dépoli, est un style très
 }
 ```
 
-💡 **Astuce** : Ajoutez des ombres douces pour renforcer l'effet de profondeur et accentuer l’aspect **csséducteur**.
+💡 **Astuce** : Ajoutez des ombres douces pour renforcer l'effet de profondeur et accentuer l’aspect CSSéducteur.
 
 ---
 
 ## **6. Expérimentation avec les Variables CSS : Un Design Dynamique et CSSéducteur**
 
-Les variables CSS permettent de créer des designs dynamiques facilement modifiables. Utilisez-les pour un design adaptable et **csséducteur**.
+Les variables CSS permettent de créer des designs dynamiques facilement modifiables. Utilisez-les pour un design adaptable et CSSéducteur.
 
 ### Exemple : Palette de Couleurs Dynamique
 
@@ -223,7 +223,7 @@ button:hover {
 
 ### 7.1 Grille CSS avec "Masonry Layout"
 
-Reproduisez un effet "masonry" (grille décalée) en CSS pour un design **csséducteur** et moderne.
+Reproduisez un effet "masonry" (grille décalée) en CSS pour un design CSSéducteur et moderne.
 
 ```css
 .masonry {
@@ -241,7 +241,7 @@ Reproduisez un effet "masonry" (grille décalée) en CSS pour un design **csséd
 
 ### 7.2 Flexbox pour Alignement Parfait
 
-Utilisez `flexbox` pour centrer des éléments en quelques lignes et obtenir un alignement parfait dans votre design **csséducteur**.
+Utilisez `flexbox` pour centrer des éléments en quelques lignes et obtenir un alignement parfait dans votre design CSSéducteur.
 
 ```css
 .center {

@@ -12,7 +12,7 @@ relatedPosts:
 
 ## **Devenez un véritable CSSéducteur avec ces techniques avancées**
 
-Bienvenue dans cet article dédié à ceux qui souhaitent séduire les navigateurs web grâce à leur maîtrise du CSS. Découvrez des astuces avancées pour transformer vos designs et devenir un **CSSéducteur**.
+Bienvenue dans cet article dédié à ceux qui souhaitent séduire les navigateurs web grâce à leur maîtrise du CSS. Découvrez des astuces avancées pour transformer vos designs et devenir un CSSéducteur.
 
 ---
 

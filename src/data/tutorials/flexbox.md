@@ -194,7 +194,7 @@ Personnalise l'alignement d'un élément spécifique dans le conteneur.
 
 ## Conclusion : Devenez un CSSéducteur
 
-En maîtrisant Flexbox, vous êtes en bonne voie pour devenir un **CSSéducteur** des mises en page modernes. Flexbox offre une manière intuitive et puissante de créer des designs flexibles et adaptatifs. N'oubliez pas d'expérimenter avec ces concepts et d'explorer des combinaisons uniques.
+En maîtrisant Flexbox, vous êtes en bonne voie pour devenir un CSSéducteur des mises en page modernes. Flexbox offre une manière intuitive et puissante de créer des designs flexibles et adaptatifs. N'oubliez pas d'expérimenter avec ces concepts et d'explorer des combinaisons uniques.
 
 ### Ressources Supplémentaires
 
